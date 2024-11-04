@@ -168,6 +168,11 @@ function submitPolynomialData() {
         matrix.push(parseInt(input.value));
     }
 
+    // Заполняем коэффициенты до нужной степени значениями 1, если они не введены
+    for (let i = coefficients.length; i <= degree; i++) {
+        coefficients.push(1);
+    }
+
     const data = {
         matrixSize: { rows, columns },
         matrix: matrix,
