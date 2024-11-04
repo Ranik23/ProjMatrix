@@ -44,11 +44,74 @@ function setupPolynomialMode() {
     initializeCoefficientInput();
 }
 
+// Настройки для линейной формы
 function setupLinearFormMode() {
     document.getElementById('menu-container').style.display = 'none';
-    document.getElementById('matrix-input-container').style.display = 'none'; // Hide the matrix input container
-    document.getElementById('linear-form-next-button').style.display = 'block'; // Show the linear form "Next" button
-    document.getElementById('matrix-count-selection').style.display = 'block'; // Show the matrix count selection field
+    document.getElementById('matrix-input-container').style.display = 'none';
+    document.getElementById('linear-form-next-button').style.display = 'block';
+    document.getElementById('matrix-count-selection').style.display = 'block';
+    document.getElementById('linear-matrix-size-selection').style.display = 'block';
+}
+
+// Показать поля для выбора размера матриц и для ввода матриц
+function setupMatrixSizeSelection() {
+    document.getElementById('linear-matrix-size-selection').style.display = 'flex';
+    createMatrixFields();
+}
+
+// Создать поля для ввода матриц в зависимости от количества и размера
+function createMatrixFields() {
+    const matrixCount = parseInt(document.getElementById('matrix-count').value);
+    const rows = parseInt(document.getElementById('linear-matrix-rows').value);
+    const columns = parseInt(document.getElementById('linear-matrix-columns').value);
+    const container = document.getElementById('matrix-input-fields-container');
+    container.innerHTML = ''; // Очищаем контейнер
+
+    // Создаем поля ввода для каждой матрицы
+    for (let i = 1; i <= matrixCount; i++) {
+        const matrixLabel = document.createElement('h3');
+        matrixLabel.textContent = `Заполните матрицу X${i}`;
+        container.appendChild(matrixLabel);
+
+        // Создаем контейнер для текущей матрицы
+        const matrixContainer = document.createElement('div');
+        matrixContainer.classList.add('matrix-border');
+        matrixContainer.style.display = 'grid';
+        matrixContainer.style.gridTemplateColumns = `repeat(${columns}, 50px)`;
+
+        // Создаем отдельные ячейки ввода для каждой позиции в матрице
+        for (let j = 0; j < rows * columns; j++) {
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.value = 0;
+            input.min = 0;
+            input.max = 10;
+
+            input.addEventListener('focus', (event) => {
+                if (event.target.value === "0") {
+                    event.target.value = ''; // Убираем ноль при фокусе
+                }
+            });
+
+            input.addEventListener('blur', (event) => {
+                if (event.target.value === '') {
+                    event.target.value = 0; // Если пусто, ставим ноль
+                }
+            });
+
+            matrixContainer.appendChild(input);
+        }
+
+        container.appendChild(matrixContainer);
+    }
+
+    container.style.display = 'block';
+}
+
+// Proceed to the next step for the linear form mode
+function proceedToNextStep() {
+    // Implement any further actions needed based on the filled matrices
+    console.log("Proceeding to the next step in linear form mode");
 }
 
 // Proceed to the next step for the linear form mode
