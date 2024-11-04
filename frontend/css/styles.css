@@ -1,0 +1,277 @@
+/* Фон для всего тела страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../assets/images/matrix_background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Стили для шапки */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%; /* Увеличенная ширина */
+    max-width: 1200px;
+    height: 150px;
+    background-color: #d0e6f7; /* Обычный светло-голубой цвет без прозрачности */
+    margin-top: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+}
+
+/* Контейнер для логотипа */
+.logo-container {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Размер и стили логотипа */
+.logo {
+    height: 100px;
+    width: auto;
+    border-radius: 25px;
+}
+
+/* Контейнер и стиль для текста в шапке */
+.title-container {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.title {
+    margin: 0;
+    font-size: 3rem; /* Увеличенный текст для шапки */
+    font-weight: bold;
+    color: #003366;
+}
+
+
+/* Стили для светло-серого блока */
+
+.button-wrapper {
+    background-color: #f0f1f2;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1100px;
+    min-height: 39vw;
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрирование контента по вертикали */
+    flex-direction: column;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+
+/* Дополнительные стили для внутреннего контента */
+.button-wrapper .menu-container,
+.button-wrapper .matrix-input-container {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+/* Убедитесь, что кнопка находится в центре */
+.button-container {
+    display: flex; /* Flexbox для центрирования */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стили для кнопки */
+.start-button {
+    padding: 30px 70px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4ba3c3, #0066cc);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Эффект при наведении на кнопку */
+.start-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Эффект при нажатии на кнопку */
+.start-button:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #0066cc, #4ba3c3);
+}
+
+/* Стили для меню */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Расстояние между элементами */
+}
+
+.menu-item {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-item label {
+    margin-bottom: 5px;
+}
+
+.menu-item select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Стили для кнопки "Далее" */
+.next-button {
+    padding: 15px 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4ba3c3, #0066cc);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.next-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.next-button:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #0066cc, #4ba3c3);
+}
+
+/*Полином*/
+
+
+.menu-item {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.matrix-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Сетка для матрицы */
+#matrix-container {
+    display: grid;
+    gap: 8px; /* Отступы между числами */
+}
+
+#coefficient-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#coefficient-entry-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#coefficient-container input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#coefficient-display-container p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Контейнер с границей для матрицы */
+.matrix-border {
+    border: 2px solid #ccc; /* Цвет границы */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 20px; /* Отступ внутри границы */
+    background-color: #f9f9f9; /* Фоновый цвет для блока */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; /* Отступ снизу */
+}
+/* Стили для полей ввода чисел в матрице */
+#matrix-container input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Стиль для выбора размера матрицы на одной строке */
+.matrix-size-selection {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 5px;
+}
+
+.select-container {
+    display: inline-flex; /* Чтобы элементы выбора и '×' были на одной строке */
+    align-items: center;
+    gap: 5px;
+}
+
+.matrix-size-selection label,
+.select-container span {
+    white-space: nowrap;
+}
+
+.select-container select {
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: 50px;
+    text-align: center;
+}
