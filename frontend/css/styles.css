@@ -276,4 +276,33 @@ body {
     text-align: center;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Стили для поля ввода степени полинома */
+#polynomial-degree {
+    font-size: 1.2rem; /* Увеличение размера текста */
+    width: 50px; /* Ширина для улучшенной видимости */
+    height: 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Стили для ввода коэффициентов */
+#coefficient-input {
+    font-size: 1.5rem; /* Увеличение размера текста */
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
 

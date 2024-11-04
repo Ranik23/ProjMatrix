@@ -1,3 +1,7 @@
+// Инициализация переменных для коэффициентов
+let coefficients = [];
+let currentCoefficientIndex = 0;
+
 // Показать меню
 function showMenu() {
     document.getElementById('start-container').style.display = 'none';
@@ -20,7 +24,7 @@ function showMatrixInput() {
         // Создаем матрицу 3x3 при отображении формы
         createMatrixInputs();
 
-        // Запускаем ввод коэффициентов сразу, если значение m установлено по умолчанию
+        // Запускаем ввод коэффициентов
         initializeCoefficientInput();
     }
 }
@@ -42,8 +46,62 @@ function createMatrixInputs() {
         input.value = 0;
         input.min = 0;
         input.max = 10;
+
+        input.addEventListener('focus', (event) => {
+            if (event.target.value === "0") {
+                event.target.value = ''; // Убираем ноль при фокусе
+            }
+        });
+
+        input.addEventListener('blur', (event) => {
+            if (event.target.value === '') {
+                event.target.value = 0; // Если пусто, ставим ноль
+            }
+        });
+
         matrixContainer.appendChild(input);
     }
+
+    enableArrowNavigation();
+}
+
+// Включить навигацию по стрелкам
+function enableArrowNavigation() {
+    const matrixInputs = document.querySelectorAll('#matrix-container input');
+    const columns = parseInt(document.getElementById('matrix-columns').value);
+
+    matrixInputs.forEach((input, index) => {
+        input.addEventListener('keydown', (event) => {
+            switch (event.key) {
+                case 'ArrowRight':
+                    if (index % columns < columns - 1) {
+                        matrixInputs[index + 1].focus();
+                    }
+                    event.preventDefault();
+                    break;
+                case 'ArrowLeft':
+                    if (index % columns > 0) {
+                        matrixInputs[index - 1].focus();
+                    }
+                    event.preventDefault();
+                    break;
+                case 'ArrowDown':
+                    if (index + columns < matrixInputs.length) {
+                        matrixInputs[index + columns].focus();
+                    }
+                    event.preventDefault();
+                    break;
+                case 'ArrowUp':
+                    if (index - columns >= 0) {
+                        matrixInputs[index - columns].focus();
+                    }
+                    event.preventDefault();
+                    break;
+                default:
+                    break;
+            }
+        });
+    });
 }
 
 // Инициализировать ввод коэффициентов
@@ -121,7 +179,3 @@ function submitPolynomialData() {
 
     // Здесь можно отправить JSON на сервер
 }
-
-// Инициализация переменных
-let coefficients = [];
-let currentCoefficientIndex = 0;
