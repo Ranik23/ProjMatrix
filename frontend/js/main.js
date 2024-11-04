@@ -26,6 +26,7 @@ function showMatrixInput() {
 function setupPolynomialMode() {
     document.getElementById('menu-container').style.display = 'none';
     document.getElementById('matrix-input-container').style.display = 'flex';
+    document.getElementById('linear-form-next-button').style.display = 'none'; // Hide the linear form "Next" button
 
     // Устанавливаем значения по умолчанию для размера матрицы на 3x3
     document.getElementById('matrix-rows').value = "3";
@@ -46,18 +47,15 @@ function setupPolynomialMode() {
 // Настройки для линейной формы
 function setupLinearFormMode() {
     document.getElementById('menu-container').style.display = 'none';
-    document.getElementById('matrix-input-container').style.display = 'flex';
-
-    // Скрываем все элементы внутри контейнера для линейной формы
-    document.getElementById('polynomial-degree-container').style.display = 'none';
-    document.getElementById('coefficient-entry-container').style.display = 'none';
-    document.getElementById('coefficient-display-container').style.display = 'none';
-    document.getElementById('matrix-container').style.display = 'none';
-    document.querySelector('.matrix-size-selection').style.display = 'none';
-
-    // Оставляем только кнопку "Далее" видимой
+    document.getElementById('matrix-input-container').style.display = 'none'; // Hide the matrix input container
+    document.getElementById('linear-form-next-button').style.display = 'block'; // Show the linear form "Next" button
 }
 
+// Proceed to the next step for the linear form mode
+function proceedToNextStep() {
+    // Implement the actions for the "Next" button in linear form mode
+    console.log("Proceeding to the next step in linear form mode");
+}
 // Создать поля ввода матрицы
 function createMatrixInputs() {
     const rows = parseInt(document.getElementById('matrix-rows').value);
