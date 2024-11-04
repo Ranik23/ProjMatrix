@@ -8,25 +8,54 @@ function showMenu() {
     document.getElementById('menu-container').style.display = 'flex';
 }
 
-// Показать форму ввода матрицы
+// Показать форму ввода матрицы или линейной формы
 function showMatrixInput() {
     const dataInput = document.getElementById('data-input').value;
     const calculationType = document.getElementById('calculation-type').value;
 
-    if (dataInput === 'manual' && calculationType === 'polynomial') {
-        document.getElementById('menu-container').style.display = 'none';
-        document.getElementById('matrix-input-container').style.display = 'flex';
-
-        // Устанавливаем значения по умолчанию для размера матрицы на 3x3
-        document.getElementById('matrix-rows').value = "3";
-        document.getElementById('matrix-columns').value = "3";
-
-        // Создаем матрицу 3x3 при отображении формы
-        createMatrixInputs();
-
-        // Запускаем ввод коэффициентов
-        initializeCoefficientInput();
+    if (dataInput === 'manual') {
+        if (calculationType === 'polynomial') {
+            setupPolynomialMode();
+        } else if (calculationType === 'linear-form') {
+            setupLinearFormMode();
+        }
     }
+}
+
+// Настройки для полинома
+function setupPolynomialMode() {
+    document.getElementById('menu-container').style.display = 'none';
+    document.getElementById('matrix-input-container').style.display = 'flex';
+
+    // Устанавливаем значения по умолчанию для размера матрицы на 3x3
+    document.getElementById('matrix-rows').value = "3";
+    document.getElementById('matrix-columns').value = "3";
+
+    // Создаем матрицу 3x3 при отображении формы
+    createMatrixInputs();
+
+    // Показываем ввод для степени и коэффициентов
+    document.getElementById('polynomial-degree-container').style.display = 'block';
+    document.getElementById('coefficient-entry-container').style.display = 'block';
+    document.getElementById('coefficient-display-container').style.display = 'none';
+
+    // Запускаем ввод коэффициентов
+    initializeCoefficientInput();
+}
+
+// Настройки для линейной формы
+function setupLinearFormMode() {
+    document.getElementById('menu-container').style.display = 'none';
+    document.getElementById('matrix-input-container').style.display = 'flex';
+
+    // Скрываем все элементы внутри контейнера для линейной формы
+    document.getElementById('polynomial-degree-container').style.display = 'none';
+    document.getElementById('coefficient-entry-container').style.display = 'none';
+    document.getElementById('coefficient-display-container').style.display = 'none';
+    document.getElementById('matrix-container').style.display = 'none';
+    document.querySelector('.matrix-size-selection').style.display = 'none';
+
+    // Оставляем только кнопку "Далее" видимой
 }
 
 // Создать поля ввода матрицы
