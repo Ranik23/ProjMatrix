@@ -44,18 +44,20 @@ function setupPolynomialMode() {
     initializeCoefficientInput();
 }
 
-// Настройки для линейной формы
 function setupLinearFormMode() {
     document.getElementById('menu-container').style.display = 'none';
     document.getElementById('matrix-input-container').style.display = 'none'; // Hide the matrix input container
     document.getElementById('linear-form-next-button').style.display = 'block'; // Show the linear form "Next" button
+    document.getElementById('matrix-count-selection').style.display = 'block'; // Show the matrix count selection field
 }
 
 // Proceed to the next step for the linear form mode
 function proceedToNextStep() {
-    // Implement the actions for the "Next" button in linear form mode
-    console.log("Proceeding to the next step in linear form mode");
+    const matrixCount = document.getElementById('matrix-count').value;
+    console.log(`Number of matrices selected: ${matrixCount}`);
+    // Implement any further actions needed based on matrix count
 }
+
 // Создать поля ввода матрицы
 function createMatrixInputs() {
     const rows = parseInt(document.getElementById('matrix-rows').value);

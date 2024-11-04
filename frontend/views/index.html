@@ -95,7 +95,19 @@
         <button class="next-button" onclick="submitPolynomialData()">Далее</button>
     </div>
 
-    <!-- Кнопка Далее для линейной формы (скрыта изначально) -->
+    <!-- Поле для выбора количества матриц и кнопка Далее для линейной формы (скрыта изначально) -->
+    <div class="menu-item" id="matrix-count-selection" style="display: none;">
+        <label for="matrix-count">Количество матриц для заполнения:</label>
+        <select id="matrix-count">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+    </div>
     <button class="next-button" id="linear-form-next-button" style="display: none;" onclick="proceedToNextStep()">Далее</button>
 
 </div>
