@@ -14,9 +14,21 @@ function showMatrixInput() {
         } else if (calculationType === 'linear-form') {
             setupLinearFormMode();
         }
+    } else if (dataInput === 'generate' && calculationType === 'polynomial') {
+        showPolynomialGenerationPage();
     }
 }
 
 // Экспортируем функции в window, чтобы они были доступны глобально
 window.showMenu = showMenu;
 window.showMatrixInput = showMatrixInput;
+
+function showPolynomialGenerationPage() {
+    // Скрываем другие элементы страницы
+    document.getElementById('start-container').style.display = 'none';
+    document.getElementById('menu-container').style.display = 'none';
+    document.getElementById('polynomial-generation-container').style.display = 'block';
+}
+
+// Экспортируем функцию для глобального доступа
+window.showPolynomialGenerationPage = showPolynomialGenerationPage;

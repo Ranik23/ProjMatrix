@@ -27,3 +27,47 @@ function submitPolynomialData() {
 
     // Здесь можно отправить JSON на сервер
 }
+
+function initializeDefaultInputs() {
+    const rowsInput = document.getElementById('matrix-rows-generate');
+    const columnsInput = document.getElementById('matrix-columns-generate');
+    const degreeInput = document.getElementById('polynomial-degree-generate');
+
+    // Устанавливаем значения по умолчанию при загрузке
+    rowsInput.value = 3;
+    columnsInput.value = 3;
+    degreeInput.value = 1;
+
+    // Устанавливаем обработчики для автоматической замены значений
+    [rowsInput, columnsInput].forEach(input => {
+        const defaultValue = input.value;
+
+        input.addEventListener('focus', (event) => {
+            if (event.target.value === defaultValue) {
+                event.target.value = '';
+            }
+        });
+
+        input.addEventListener('blur', (event) => {
+            if (event.target.value === '') {
+                event.target.value = defaultValue;
+            }
+        });
+    });
+
+    // Обработчики для степени полинома
+    degreeInput.addEventListener('focus', (event) => {
+        if (event.target.value === "1") {
+            event.target.value = '';
+        }
+    });
+
+    degreeInput.addEventListener('blur', (event) => {
+        if (event.target.value === '') {
+            event.target.value = 1;
+        }
+    });
+}
+
+// Вызываем функцию при загрузке страницы или переключении на страницу генерации
+initializeDefaultInputs();
