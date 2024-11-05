@@ -16,6 +16,23 @@ function initializeCoefficientInput() {
         currentCoefficientIndex = 0;
         coefficients = [];
         updateCoefficientLabel();
+
+        // Установим значение по умолчанию для ввода коэффициентов
+        const input = document.getElementById('coefficient-input');
+        input.value = 1;
+
+        // Устанавливаем обработчики событий для очистки значения по умолчанию
+        input.addEventListener('focus', (event) => {
+            if (event.target.value === "1") {
+                event.target.value = '';
+            }
+        });
+
+        input.addEventListener('blur', (event) => {
+            if (event.target.value === '') {
+                event.target.value = 1;
+            }
+        });
     }
 }
 
@@ -85,3 +102,26 @@ function setupPolynomialMode() {
 }
 
 window.setupPolynomialMode = setupPolynomialMode;
+
+function initializePolynomialDegreeInput() {
+    const degreeInput = document.getElementById('polynomial-degree');
+
+    // Устанавливаем значение по умолчанию
+    degreeInput.value = 1;
+
+    // Обработчики событий для очистки и восстановления значения
+    degreeInput.addEventListener('focus', (event) => {
+        if (event.target.value === "1") {
+            event.target.value = '';
+        }
+    });
+
+    degreeInput.addEventListener('blur', (event) => {
+        if (event.target.value === '') {
+            event.target.value = 1;
+        }
+    });
+}
+
+// Вызываем настройку при загрузке или инициализации
+initializePolynomialDegreeInput();
