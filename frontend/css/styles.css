@@ -228,18 +228,21 @@ body {
 }
 
 /* Контейнер с границей для матрицы */
+/* Сетка для матрицы с отступами между ячейками */
 .matrix-border {
-    border: 2px solid #ccc; /* Цвет границы */
-    border-radius: 10px; /* Закругленные углы */
-    padding: 20px; /* Отступ внутри границы */
-    background-color: #f9f9f9; /* Фоновый цвет для блока */
-    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: grid;
+    gap: 10px; /* Отступы между ячейками */
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px; /* Отступ снизу */
+    margin-bottom: 15px;
 }
+
 /* Стили для полей ввода чисел в матрице */
-#matrix-container input {
+.matrix-border input {
     width: 50px;
     height: 40px;
     text-align: center;
