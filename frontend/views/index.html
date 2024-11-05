@@ -97,7 +97,7 @@
         </div>
 
         <!-- Поле для выбора количества матриц и кнопка Далее для линейной формы (скрыта изначально) -->
-        <div class="menu-item" id="matrix-count-selection" style="display: none;">
+        <div class="menu-item" id="matrix-count-selection" style="display: none;" onchange="resetLinearFormCoefficientInput()">
             <label for="matrix-count">Количество матриц для заполнения:</label>
             <select id="matrix-count" onchange="setupMatrixSizeSelection()">
                 <option value="1">1</option>
@@ -138,6 +138,16 @@
 
         <!-- Контейнер для ввода матриц для линейной формы -->
         <div id="matrix-input-fields-container" style="display: none;"></div>
+
+        <!-- Ввод коэффициентов для линейной формы, скрыт по умолчанию -->
+        <div class="menu-item" id="linear-coefficient-entry-container" style="display: none;">
+            <label id="linear-coefficient-label">Введите a₀:</label>
+            <input type="number" id="linear-coefficient-input" onkeypress="handleLinearCoefficientEnter(event)">
+        </div>
+
+        <!-- Контейнер для отображения введённых коэффициентов для линейной формы -->
+        <div class="menu-item" id="linear-coefficient-display-container" style="display: none; text-align: center;"></div>
+
 
         <!-- Кнопка Далее для линейной формы -->
         <button class="next-button" id="linear-form-next-button" style="display: none;" onclick="proceedToNextStep()">Далее</button>

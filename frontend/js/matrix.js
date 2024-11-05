@@ -1,10 +1,77 @@
-// matrix.js
-// matrix.js
+let linearFormCoefficients = [];
+let currentLinearCoefficientIndex = 0;
 
-// matrix.js
+// Функция для инициализации ввода коэффициентов при изменении количества матриц
+function resetLinearFormCoefficientInput() {
+    const matrixCount = parseInt(document.getElementById('matrix-count').value);
 
-// matrix.js
+    // Сбросить массив коэффициентов и индекс
+    linearFormCoefficients = [];
+    currentLinearCoefficientIndex = 0;
 
+    // Обновляем интерфейс: скрываем отображение старых коэффициентов, очищаем ввод
+    const coefficientContainer = document.getElementById('linear-coefficient-entry-container');
+    const coefficientDisplayContainer = document.getElementById('linear-coefficient-display-container');
+    const coefficientInput = document.getElementById('linear-coefficient-input');
+
+    // Скрываем старое отображение и показываем контейнер для ввода
+    coefficientContainer.style.display = 'block';
+    coefficientDisplayContainer.style.display = 'none';
+    coefficientDisplayContainer.textContent = ''; // Очищаем старое отображение
+    coefficientInput.value = ''; // Очищаем текущее значение ввода
+
+    // Запустить ввод заново
+    updateLinearCoefficientLabel();
+}
+
+function initializeLinearFormCoefficientInput() {
+    const matrixCount = parseInt(document.getElementById('matrix-count').value);
+
+    if (matrixCount >= 1) {
+        resetLinearFormCoefficientInput();
+    }
+}
+
+// Обработчик ввода коэффициента с помощью Enter
+function handleLinearCoefficientEnter(event) {
+    if (event.key === 'Enter') {
+        const input = document.getElementById('linear-coefficient-input');
+        const value = parseInt(input.value);
+
+        if (!isNaN(value)) {
+            linearFormCoefficients.push(value);
+            currentLinearCoefficientIndex++;
+
+            const matrixCount = parseInt(document.getElementById('matrix-count').value);
+            if (currentLinearCoefficientIndex < matrixCount) {
+                input.value = '';
+                updateLinearCoefficientLabel();
+            } else {
+                displayLinearFormCoefficients();
+            }
+        }
+    }
+}
+
+// Обновить метку для ввода коэффициентов
+function updateLinearCoefficientLabel() {
+    const label = document.getElementById('linear-coefficient-label');
+    label.textContent = `Введите a${currentLinearCoefficientIndex}:`;
+}
+
+// Показать введённые коэффициенты
+function displayLinearFormCoefficients() {
+    const coefficientDisplayContainer = document.getElementById('linear-coefficient-display-container');
+    const coefficientContainer = document.getElementById('linear-coefficient-entry-container');
+
+    coefficientContainer.style.display = 'none';
+    coefficientDisplayContainer.style.display = 'block';
+    coefficientDisplayContainer.textContent = `Коэффициенты: [${linearFormCoefficients.join(', ')}]`;
+}
+
+// Экспортируем функции для глобального доступа
+window.initializeLinearFormCoefficientInput = initializeLinearFormCoefficientInput;
+window.handleLinearCoefficientEnter = handleLinearCoefficientEnter;
 function createMatrixFields() {
     const matrixCount = parseInt(document.getElementById('matrix-count').value);
     const rows = parseInt(document.getElementById('linear-matrix-rows').value);
@@ -14,6 +81,7 @@ function createMatrixFields() {
 
     for (let i = 1; i <= matrixCount; i++) {
         const matrixLabel = document.createElement('h3');
+        matrixLabel.classList.add('matrix-title'); // Применяем класс
         matrixLabel.textContent = `Заполните матрицу X${i}`;
         container.appendChild(matrixLabel);
 
@@ -148,6 +216,7 @@ function setupLinearFormMode() {
 
     // Создаем матрицу по умолчанию
     setupMatrixSizeSelection();
+    initializeLinearFormCoefficientInput();
 }
 
 // Экспортируем функцию для глобального доступа
