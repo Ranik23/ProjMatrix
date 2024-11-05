@@ -14,8 +14,12 @@ function showMatrixInput() {
         } else if (calculationType === 'linear-form') {
             setupLinearFormMode();
         }
-    } else if (dataInput === 'generate' && calculationType === 'polynomial') {
-        showPolynomialGenerationPage();
+    } else if (dataInput === 'generate') {
+        if (calculationType === 'polynomial') {
+            showPolynomialGenerationPage();
+        } else if (calculationType === 'linear-form') {
+            showLinearFormGenerationPage();
+        }
     }
 }
 
@@ -32,3 +36,33 @@ function showPolynomialGenerationPage() {
 
 // Экспортируем функцию для глобального доступа
 window.showPolynomialGenerationPage = showPolynomialGenerationPage;
+
+function showLinearFormGenerationPage() {
+    // Скрываем другие элементы страницы
+    document.getElementById('start-container').style.display = 'none';
+    document.getElementById('menu-container').style.display = 'none';
+    document.getElementById('linear-form-generation-container').style.display = 'block';
+}
+
+// Функция для сбора данных
+function generateLinearFormData() {
+    const matrixCount = parseInt(document.getElementById('matrix-count-generate').value);
+    const rows = parseInt(document.getElementById('matrix-rows-generate-linear').value);
+    const columns = parseInt(document.getElementById('matrix-columns-generate-linear').value);
+
+    if (isNaN(rows) || rows < 1 || isNaN(columns) || columns < 1) {
+        alert("Пожалуйста, введите корректный размер матрицы (1 или больше).");
+        return;
+    }
+
+    const data = {
+        matrixCount: matrixCount,
+        matrixSize: { rows: rows, columns: columns }
+    };
+
+    console.log("Данные для генерации линейной формы:", JSON.stringify(data));
+    // Логику для отправки данных на сервер можно добавить здесь
+}
+
+window.showLinearFormGenerationPage = showLinearFormGenerationPage;
+window.generateLinearFormData = generateLinearFormData;

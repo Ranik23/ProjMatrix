@@ -389,3 +389,31 @@ input[type="number"] {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+.matrix-count-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.matrix-count-input input[type="number"] {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button.next-button {
+    display: block;
+    margin: 0 auto;
+}
+
+.linear-form-generation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}

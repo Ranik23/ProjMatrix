@@ -174,6 +174,28 @@
             <button class="next-button" onclick="generatePolynomialData()">Сгенерировать</button>
         </div>
 
+        <!-- Форма генерации матричной линейной формы (скрыта изначально) -->
+        <div class="linear-form-generation-container" id="linear-form-generation-container" style="display: none;">
+            <!-- Ввод количества матриц -->
+            <div class="menu-item matrix-count-input">
+                <label for="matrix-count-generate">Количество матриц для заполнения:</label>
+                <input type="number" id="matrix-count-generate" min="1" value="1" autocomplete="off" />
+            </div>
+
+            <!-- Ввод размера матриц (строки и столбцы) -->
+            <div class="menu-item matrix-size-input">
+                <label>Введите размер матриц:</label>
+                <div class="input-container">
+                    <input type="number" id="matrix-rows-generate-linear" min="1" value="3" autocomplete="off" />
+                    <span>×</span>
+                    <input type="number" id="matrix-columns-generate-linear" min="1" value="3" autocomplete="off" />
+                </div>
+            </div>
+
+            <!-- Кнопка для генерации данных -->
+            <button class="next-button" onclick="generateLinearFormData()">Сгенерировать</button>
+        </div>
+
     </div>
 
 <script src="../js/menu.js"></script>
