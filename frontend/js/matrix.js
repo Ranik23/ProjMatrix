@@ -17,27 +17,16 @@ function createMatrixFields() {
         matrixLabel.textContent = `Заполните матрицу X${i}`;
         container.appendChild(matrixLabel);
 
-        // Создаем контейнер для текущей матрицы и применяем нужные классы
         const matrixContainer = document.createElement('div');
         matrixContainer.classList.add('matrix-border');
-        matrixContainer.style.display = 'grid';
-        matrixContainer.style.gridTemplateColumns = `repeat(${columns}, 50px)`; // Используем ширину из стилей
+        matrixContainer.style.gridTemplateColumns = `repeat(${columns}, 50px)`; // Ширина input
 
-        // Создаем поля ввода для каждой ячейки матрицы
         for (let j = 0; j < rows * columns; j++) {
             const input = document.createElement('input');
             input.type = 'number';
             input.value = 0;
             input.min = 0;
             input.max = 10;
-
-            // Применяем стили непосредственно для соответствия полиномной странице
-            input.style.width = '50px';
-            input.style.height = '40px';
-            input.style.textAlign = 'center';
-            input.style.fontSize = '1rem';
-            input.style.border = '1px solid #ccc';
-            input.style.borderRadius = '5px';
 
             input.addEventListener('focus', (event) => {
                 if (event.target.value === "0") {
@@ -54,14 +43,16 @@ function createMatrixFields() {
             matrixContainer.appendChild(input);
         }
 
+        // Включаем навигацию по стрелкам для текущей матрицы
+        enableArrowNavigation(matrixContainer, columns);
+
         container.appendChild(matrixContainer);
     }
 
     container.style.display = 'block';
 }
 
-
-// Экспортируем функцию для глобального доступа
+// Экспортируем для глобального доступа
 window.createMatrixFields = createMatrixFields;
 
 
@@ -72,7 +63,7 @@ function createMatrixInputs() {
     const matrixContainer = document.getElementById('matrix-container');
     matrixContainer.innerHTML = ''; // Очищаем контейнер
 
-    matrixContainer.style.gridTemplateColumns = `repeat(${columns}, 50px)`;
+    matrixContainer.style.gridTemplateColumns = `repeat(${columns}, 50px)`; // Используем ширину для input
 
     for (let i = 0; i < rows * columns; i++) {
         const input = document.createElement('input');
@@ -96,13 +87,16 @@ function createMatrixInputs() {
         matrixContainer.appendChild(input);
     }
 
-    enableArrowNavigation();
+    // Включаем навигацию по стрелкам для матрицы на странице полинома
+    enableArrowNavigation(matrixContainer, columns);
 }
 
+// Экспортируем для глобального доступа
+window.createMatrixInputs = createMatrixInputs;
+
 // Включить навигацию по стрелкам
-function enableArrowNavigation() {
-    const matrixInputs = document.querySelectorAll('#matrix-container input');
-    const columns = parseInt(document.getElementById('matrix-columns').value);
+function enableArrowNavigation(container, columns) {
+    const matrixInputs = container.querySelectorAll('input');
 
     matrixInputs.forEach((input, index) => {
         input.addEventListener('keydown', (event) => {
