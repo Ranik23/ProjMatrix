@@ -100,3 +100,35 @@ function initializeLinearFormGenerationInputs() {
 
 // Вызываем функцию при загрузке страницы или переключении на страницу генерации линейной формы
 initializeLinearFormGenerationInputs();
+
+function validateMatrixValue(input) {
+    // Если введено значение с запятой, заменяем её на точку
+    input.value = input.value.replace(",", ".");
+
+    // Проверка корректного формата (целое или вещественное число с точкой)
+    if (!/^[-+]?\d+(\.\d+)?$/.test(input.value) && input.value !== "") {
+        alert("Введите корректное значение для матрицы (целое или вещественное число через точку).");
+        input.value = ""; // Сбрасываем к пустому значению
+    }
+}
+
+function validatePolynomialDegree(input) {
+    const value = parseInt(input.value);
+    if (isNaN(value) || value <= 0 || !Number.isInteger(value)) {
+        input.value = 1; // Значение по умолчанию
+        alert("Введите положительное целое число для степени полинома.");
+    }
+}
+
+function validateCoefficient(input) {
+    const value = input.value;
+    if (!/^[-+]?\d+(\.\d+)?$/.test(value)) {
+        input.value = 1; // Значение по умолчанию
+        alert("Введите корректное значение для коэффициента (целое или вещественное число через точку).");
+    }
+}
+
+// Экспортируем функции для использования в других файлах
+window.validateMatrixValue = validateMatrixValue;
+window.validatePolynomialDegree = validatePolynomialDegree;
+window.validateCoefficient = validateCoefficient;

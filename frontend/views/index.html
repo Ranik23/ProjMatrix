@@ -48,7 +48,10 @@
         <div class="matrix-input-container" id="matrix-input-container" style="display: none;">
             <!-- Контейнер с границей для матрицы -->
             <div class="matrix-border">
-                <div id="matrix-container"></div>
+                <div id="matrix-container">
+                    <!-- Пример поля ввода для значений матрицы -->
+                    <input type="text" oninput="validateMatrixValue(this)" onblur="validateMatrixValue(this)" placeholder="0">
+                </div>
             </div>
 
             <!-- Выбор размера матрицы в одну строку -->
@@ -80,13 +83,13 @@
             <!-- Ввод степени полинома -->
             <div class="menu-item" id="polynomial-degree-container">
                 <label for="polynomial-degree">Введите степень полинома (m):</label>
-                <input type="number" id="polynomial-degree" min="1" value="1" onchange="initializeCoefficientInput()">
+                <input type="number" id="polynomial-degree" min="1" value="1" onblur="validatePolynomialDegree(this)">
             </div>
 
             <!-- Ввод коэффициентов -->
             <div class="menu-item" id="coefficient-entry-container" style="display: none;">
                 <label id="coefficient-label">Введите a₀:</label>
-                <input type="number" id="coefficient-input" onkeypress="handleCoefficientEnter(event)">
+                <input type="text" id="coefficient-input" onblur="validateCoefficient(this)" value="1">
             </div>
 
             <!-- Контейнер для отображения введённых коэффициентов -->
@@ -142,7 +145,7 @@
         <!-- Ввод коэффициентов для линейной формы, скрыт по умолчанию -->
         <div class="menu-item" id="linear-coefficient-entry-container" style="display: none;">
             <label id="linear-coefficient-label">Введите a₀:</label>
-            <input type="number" id="linear-coefficient-input" onkeypress="handleLinearCoefficientEnter(event)">
+            <input type="text" id="linear-coefficient-input" onblur="validateCoefficient(this)" value="1">
         </div>
 
         <!-- Контейнер для отображения введённых коэффициентов для линейной формы -->
