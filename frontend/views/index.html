@@ -55,26 +55,26 @@
             <div class="menu-item matrix-size-selection">
                 <span>Размер: </span>
                 <span class="select-container">
-                <select id="matrix-rows" onchange="createMatrixInputs()">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3" selected>3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                </select>
-                <span>×</span>
-                <select id="matrix-columns" onchange="createMatrixInputs()">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3" selected>3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                </select>
-            </span>
+                    <select id="matrix-rows" onchange="createMatrixInputs()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                    <span>×</span>
+                    <select id="matrix-columns" onchange="createMatrixInputs()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </span>
             </div>
 
             <!-- Ввод степени полинома -->
@@ -114,26 +114,26 @@
         <div class="menu-item matrix-size-selection" id="linear-matrix-size-selection" style="display: none;">
             <span>Размер матриц: </span>
             <span class="select-container">
-            <select id="linear-matrix-rows" onchange="createMatrixFields()">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3" selected>3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-            </select>
-            <span>×</span>
-            <select id="linear-matrix-columns" onchange="createMatrixFields()">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3" selected>3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-            </select>
-        </span>
+                <select id="linear-matrix-rows" onchange="createMatrixFields()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <span>×</span>
+                <select id="linear-matrix-columns" onchange="createMatrixFields()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </span>
         </div>
 
         <!-- Контейнер для ввода матриц для линейной формы -->
@@ -147,7 +147,6 @@
 
         <!-- Контейнер для отображения введённых коэффициентов для линейной формы -->
         <div class="menu-item" id="linear-coefficient-display-container" style="display: none; text-align: center;"></div>
-
 
         <!-- Кнопка Далее для линейной формы -->
         <button class="next-button" id="linear-form-next-button" style="display: none;" onclick="proceedToNextStep()">Далее</button>
@@ -196,7 +195,8 @@
             <button class="next-button" onclick="generateLinearFormData()">Сгенерировать</button>
         </div>
 
-    </div>
+    </div> <!-- Закрывающий тег для inner-content -->
+</div> <!-- Закрывающий тег для button-wrapper -->
 
 <script src="../js/menu.js"></script>
 <script src="../js/matrix.js"></script>
