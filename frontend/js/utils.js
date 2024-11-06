@@ -128,6 +128,14 @@ function validateCoefficient(input) {
     }
 }
 
+function validatePositiveInteger(input) {
+    const value = input.value;
+    if (!/^[1-9]\d*$/.test(value)) { // Проверка на положительные целые числа
+        input.value = ""; // Сбрасываем к пустому значению
+        alert("Введите положительное целое число.");
+    }
+}
+
 // Экспортируем функции для использования в других файлах
 window.validateMatrixValue = validateMatrixValue;
 window.validatePolynomialDegree = validatePolynomialDegree;

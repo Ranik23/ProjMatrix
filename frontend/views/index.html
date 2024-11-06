@@ -160,20 +160,20 @@
             <div class="menu-item matrix-size-input">
                 <label>Введите размер матрицы:</label>
                 <div class="input-container">
-                    <input type="number" id="matrix-rows-generate" min="1" value="3" />
+                    <input type="number" id="matrix-rows-generate" min="1" value="3" onblur="validatePositiveInteger(this)">
                     <span>×</span>
-                    <input type="number" id="matrix-columns-generate" min="1" value="3" />
+                    <input type="number" id="matrix-columns-generate" min="1" value="3" onblur="validatePositiveInteger(this)">
                 </div>
             </div>
 
             <!-- Ввод степени полинома -->
             <div class="menu-item matrix-size-input">
                 <label for="polynomial-degree-generate">Введите степень полинома:</label>
-                <input type="number" id="polynomial-degree-generate" min="1" max="10" value="1">
+                <input type="number" id="polynomial-degree-generate" min="1" value="1" onblur="validatePositiveInteger(this)">
             </div>
 
             <!-- Кнопка для генерации данных -->
-            <button class="next-button" onclick="generatePolynomialData()">Сгенерировать</button>
+            <button class="next-button">Сгенерировать</button>
         </div>
 
         <!-- Форма генерации матричной линейной формы (скрыта изначально) -->
