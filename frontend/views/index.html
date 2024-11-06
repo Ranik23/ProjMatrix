@@ -89,7 +89,7 @@
             <!-- Ввод коэффициентов -->
             <div class="menu-item" id="coefficient-entry-container" style="display: none;">
                 <label id="coefficient-label">Введите a₀:</label>
-                <input type="text" id="coefficient-input" onblur="validateCoefficient(this)" value="1">
+                <input type="text" id="coefficient-input" onkeydown="handleCoefficientEnter(event)" onblur="validateCoefficient(this)" value="1">
             </div>
 
             <!-- Контейнер для отображения введённых коэффициентов -->
@@ -145,7 +145,7 @@
         <!-- Ввод коэффициентов для линейной формы, скрыт по умолчанию -->
         <div class="menu-item" id="linear-coefficient-entry-container" style="display: none;">
             <label id="linear-coefficient-label">Введите a₀:</label>
-            <input type="text" id="linear-coefficient-input" onblur="validateCoefficient(this)" value="1">
+            <input type="text" id="linear-coefficient-input" onkeydown="handleLinearCoefficientEnter(event)" onblur="validateCoefficient(this)" value="1">
         </div>
 
         <!-- Контейнер для отображения введённых коэффициентов для линейной формы -->
