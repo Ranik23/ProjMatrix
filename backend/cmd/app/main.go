@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
+	"net/http"
 )
 
 func main() {
@@ -22,9 +23,26 @@ func main() {
 	}
 	router := gin.Default()
 
-	// Тестовый маршрут
+	// Настройка статичстичеких файлов
+	router.Static("/assets", "/home/champ001/GolandProjects/ProjMatrix/frontend/assets")
+	router.Static("/css", "/home/champ001/GolandProjects/ProjMatrix/frontend/css")
+	router.Static("/js", "/home/champ001/GolandProjects/ProjMatrix/frontend/js")
+
+	// Настройка марштрутов для рендернига HTML-страниц
+	router.LoadHTMLGlob("/home/champ001/GolandProjects/ProjMatrix/frontend/views/*")
+
+	// Маршрут для главной страницы
 	router.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{"message": "Hello World"})
+		c.HTML(http.StatusOK, "index.html", nil)
+	})
+
+	router.GET("/index.html", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", nil)
+	})
+
+	// Маршрут для страницы результатов
+	router.GET("/results.html", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "results.html", nil)
 	})
 
 	// Запуск сервера
