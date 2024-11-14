@@ -36,12 +36,8 @@ func main() {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
 
-	router.GET("/index.html", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", nil)
-	})
-
 	// Маршрут для страницы результатов
-	router.GET("/results.html", func(c *gin.Context) {
+	router.GET("/results", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "results.html", nil)
 	})
 

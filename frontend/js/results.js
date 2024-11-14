@@ -2,7 +2,7 @@
 
 // Переход на главную страницу
 function goToHome() {
-    window.location.href = "index.html";
+    window.location.href = "/";
 }
 
 // Эта функция будет использоваться для загрузки и отображения результатов

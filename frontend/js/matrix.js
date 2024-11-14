@@ -73,7 +73,7 @@ function displayLinearFormCoefficients() {
 function proceedToNextStep() {
     // Вся необходимая логика для сбора данных может быть здесь
     // После завершения переход на страницу с результатами
-    window.location.href = "results.html";
+    window.location.href = "/results";
 }
 
 // Экспортируем функции для глобального доступа
