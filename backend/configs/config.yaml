@@ -1,0 +1,9 @@
+app:
+  name: "ProjMatrix"
+  environment: "development"
+  port: 8080
+
+logging:
+  level: "info"
+  format: "json"
+  file: "/home/champ001/GolandProjects/ProjMatrix/backend/logs/app.log"
