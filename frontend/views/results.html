@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Computation Results</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-$END$
+
+<!-- Шапка страницы -->
+<div class="header">
+    <div class="logo-container">
+        <img src="../assets/images/logo.png" alt="App Logo" class="logo">
+    </div>
+    <div class="title-container">
+        <h1 class="title">Результаты вычислений</h1>
+    </div>
+</div>
+
+<!-- Светло-серый блок для отображения результатов -->
+<div class="button-wrapper" id="button-wrapper">
+    <div class="inner-content">
+        <p>Здесь будут отображаться результаты ваших вычислений.</p>
+    </div>
+
+    <!-- Кнопка для возврата на главную страницу, закрепленная внизу блока -->
+    <div class="button-container" id="home-button-container">
+        <button onclick="goToHome()" class="start-button">Главная</button>
+    </div>
+</div>
+
+<script src="../js/results.js"></script>
+
 </body>
 </html>

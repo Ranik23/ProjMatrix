@@ -417,3 +417,10 @@ button.next-button {
     width: 100%;
     gap: 20px;
 }
+
+#home-button-container {
+    position: absolute;
+    bottom: 20px; /* Расстояние от нижнего края серого блока */
+    width: 100%;
+    text-align: center;
+}

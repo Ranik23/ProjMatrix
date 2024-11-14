@@ -7,10 +7,11 @@ function submitPolynomialData() {
 
     const matrixInputs = document.querySelectorAll('#matrix-container input');
     for (let input of matrixInputs) {
-        matrix.push(parseInt(input.value));
+        matrix.push(parseFloat(input.value));
     }
 
-    for (let i = coefficients.length; i <= degree; i++) {
+    const coefficients = [];
+    for (let i = 0; i <= degree; i++) {
         coefficients.push(1);
     }
 
@@ -23,7 +24,8 @@ function submitPolynomialData() {
 
     console.log(JSON.stringify(data)); // Вывод JSON в консоль для проверки
 
-    // Здесь можно отправить JSON на сервер
+    // Переход на страницу результатов после сбора данных
+    proceedToNextStep();
 }
 
 function initializeDefaultInputs() {

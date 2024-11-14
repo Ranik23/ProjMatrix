@@ -69,9 +69,18 @@ function displayLinearFormCoefficients() {
     coefficientDisplayContainer.textContent = `Коэффициенты: [${linearFormCoefficients.join(', ')}]`;
 }
 
+// Функция для перехода на страницу результатов
+function proceedToNextStep() {
+    // Вся необходимая логика для сбора данных может быть здесь
+    // После завершения переход на страницу с результатами
+    window.location.href = "results.html";
+}
+
 // Экспортируем функции для глобального доступа
 window.initializeLinearFormCoefficientInput = initializeLinearFormCoefficientInput;
 window.handleLinearCoefficientEnter = handleLinearCoefficientEnter;
+window.proceedToNextStep = proceedToNextStep;
+
 function createMatrixFields() {
     const matrixCount = parseInt(document.getElementById('matrix-count').value);
     const rows = parseInt(document.getElementById('linear-matrix-rows').value);

@@ -61,7 +61,9 @@ function generateLinearFormData() {
     };
 
     console.log("Данные для генерации линейной формы:", JSON.stringify(data));
-    // Логику для отправки данных на сервер можно добавить здесь
+
+    // Переход на страницу результатов после генерации
+    proceedToNextStep();
 }
 
 window.showLinearFormGenerationPage = showLinearFormGenerationPage;
