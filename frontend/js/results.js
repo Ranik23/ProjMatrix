@@ -1,5 +1,3 @@
-// results.js
-
 // Переход на главную страницу
 function goToHome() {
     window.location.href = "/";
