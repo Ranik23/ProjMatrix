@@ -96,32 +96,21 @@ function createMatrixFields() {
 
         const matrixContainer = document.createElement('div');
         matrixContainer.classList.add('matrix-border');
-        matrixContainer.style.gridTemplateColumns = `repeat(${columns}, 50px)`; // Ширина input
+        matrixContainer.id = `matrix-container-${i - 1}`; // Добавляем уникальный id
+        matrixContainer.style.gridTemplateColumns = `repeat(${columns}, 50px)`;
 
         for (let j = 0; j < rows * columns; j++) {
             const input = document.createElement('input');
             input.type = 'number';
             input.value = 0;
-            input.min = 0;
-            input.max = 10;
-
             input.addEventListener('focus', (event) => {
-                if (event.target.value === "0") {
-                    event.target.value = '';
-                }
+                if (event.target.value === "0") event.target.value = '';
             });
-
             input.addEventListener('blur', (event) => {
-                if (event.target.value === '') {
-                    event.target.value = 0;
-                }
+                if (event.target.value === '') event.target.value = 0;
             });
-
             matrixContainer.appendChild(input);
         }
-
-        // Включаем навигацию по стрелкам для текущей матрицы
-        enableArrowNavigation(matrixContainer, columns);
 
         container.appendChild(matrixContainer);
     }

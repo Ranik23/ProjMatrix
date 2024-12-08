@@ -10,22 +10,18 @@ function submitPolynomialData() {
         matrix.push(parseFloat(input.value));
     }
 
-    const coefficients = [];
-    for (let i = 0; i <= degree; i++) {
-        coefficients.push(1);
-    }
-
     const data = {
+        operationType: "manual-polynomial",
         matrixSize: { rows, columns },
         matrix: matrix,
-        degree: degree,
+        degree: degree+1,
         coefficients: coefficients,
     };
 
-    console.log(JSON.stringify(data)); // Вывод JSON в консоль для проверки
+    console.log("Отправка данных:", data);
 
     // Переход на страницу результатов после сбора данных
-    proceedToNextStep();
+    sendDataToServer("/api/submit", data);
 }
 
 function initializeDefaultInputs() {

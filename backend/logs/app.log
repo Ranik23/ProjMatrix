@@ -2,3 +2,159 @@
 2024/11/16 13:04:12 Starting the ProjMatrix server on 8080
 2024/11/17 11:20:32 Configuration loaded
 2024/11/17 11:20:32 Starting the ProjMatrix server on 8080
+2024/11/17 14:05:11 Configuration loaded
+2024/11/17 14:05:11 Starting the ProjMatrix server on 8080
+2024/12/04 13:21:19 Configuration loaded
+2024/12/04 13:21:19 Starting the ProjMatrix server on 8080
+2024/12/04 13:36:45 Configuration loaded
+2024/12/04 13:36:45 Starting the ProjMatrix server on 8080
+2024/12/04 14:14:21 Configuration loaded
+2024/12/04 14:14:21 Starting the ProjMatrix server on 8080
+2024/12/04 14:18:28 Configuration loaded
+2024/12/04 14:18:28 Starting the ProjMatrix server on 8080
+2024/12/05 11:23:07 Configuration loaded
+2024/12/05 11:23:07 Starting the ProjMatrix server on 8080
+2024/12/05 11:27:56 Configuration loaded
+2024/12/05 11:27:56 Starting the ProjMatrix server on 8080
+2024/12/05 12:04:11 Configuration loaded
+2024/12/05 12:04:11 Starting the ProjMatrix server on 8080
+2024/12/05 12:07:02 Configuration loaded
+2024/12/05 12:07:02 Starting the ProjMatrix server on 8080
+2024/12/05 12:09:53 Configuration loaded
+2024/12/05 12:09:53 Starting the ProjMatrix server on 8080
+2024/12/05 12:10:00 Получены данные для генерации линейной формы: {GenerationType:linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3}}
+2024/12/05 12:13:12 Configuration loaded
+2024/12/05 12:13:12 Starting the ProjMatrix server on 8080
+2024/12/05 12:13:21 
+Получены данные для генерации линейной формы:
+ {GenerationType:linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3}}
+
+2024/12/05 12:13:41 
+Получены данные для генерации линейной формы:
+ {GenerationType:linear-form MatrixCount:5 MatrixSize:{Rows:5 Columns:7}}
+
+2024/12/05 12:17:49 Configuration loaded
+2024/12/05 12:17:49 Starting the ProjMatrix server on 8080
+2024/12/05 12:18:51 Configuration loaded
+2024/12/05 12:18:51 Starting the ProjMatrix server on 8080
+2024/12/05 12:28:14 Configuration loaded
+2024/12/05 12:28:14 Starting the ProjMatrix server on 8080
+2024/12/05 12:28:26 Получены данные для генерации полинома: {GenerationType:polynomial MatrixSize:{Rows:3 Columns:3} Degree:1}
+2024/12/05 12:29:00 Получены данные для генерации полинома: {GenerationType:polynomial MatrixSize:{Rows:5 Columns:100} Degree:85}
+2024/12/05 12:35:59 Configuration loaded
+2024/12/05 12:35:59 Starting the ProjMatrix server on 8080
+2024/12/05 12:42:04 Configuration loaded
+2024/12/05 12:42:04 Starting the ProjMatrix server on 8080
+2024/12/05 12:43:53 Configuration loaded
+2024/12/05 12:43:53 Starting the ProjMatrix server on 8080
+2024/12/05 12:44:14 POST запрос получен на /api/manual-polynomial
+2024/12/05 12:44:14 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:1 Coefficients:[1 1]}
+2024/12/05 12:48:39 Configuration loaded
+2024/12/05 12:48:39 Starting the ProjMatrix server on 8080
+2024/12/05 12:49:50 Configuration loaded
+2024/12/05 12:49:50 Starting the ProjMatrix server on 8080
+2024/12/05 12:50:15 Получены данные для ручного заполнения линейной формы: {MatrixCount:2 MatrixSize:{Rows:3 Columns:3} Matrices:[[] []] Coefficients:[6]}
+2024/12/05 12:55:02 Configuration loaded
+2024/12/05 12:55:02 Starting the ProjMatrix server on 8080
+2024/12/05 12:55:45 POST запрос получен на /api/manual-polynomial
+2024/12/05 12:55:45 Получены данные: {MatrixSize:{Rows:4 Columns:5} Matrix:[68 7 0 42 0 8 87 0 1 7 4 -8 7 47 0 0 5 1 5 2] Degree:3 Coefficients:[1 1 1 1]}
+2024/12/05 12:56:32 Configuration loaded
+2024/12/05 12:56:32 Starting the ProjMatrix server on 8080
+2024/12/05 12:57:04 POST запрос получен на /api/manual-polynomial
+2024/12/05 12:57:04 Получены данные: {MatrixSize:{Rows:4 Columns:5} Matrix:[89 7 8 0 7 0 75 5 6 0 68 4 7 0 5 1 0 41 0 58] Degree:3 Coefficients:[1 1 1 1]}
+2024/12/05 12:58:01 Configuration loaded
+2024/12/05 12:58:01 Starting the ProjMatrix server on 8080
+2024/12/05 12:58:21 POST запрос получен на /api/manual-polynomial
+2024/12/05 12:58:21 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[8 0 1 1 9 0 1 1 1] Degree:3 Coefficients:[1 1 1 1]}
+2024/12/05 13:06:45 Configuration loaded
+2024/12/05 13:06:45 Starting the ProjMatrix server on 8080
+2024/12/05 13:07:17 
+Получены данные для ручного заполнения линейной формы:
+ {MatrixCount:2 MatrixSize:{Rows:3 Columns:3} Matrices:[[] []] Coefficients:[5]}
+
+2024/12/05 13:10:46 Configuration loaded
+2024/12/05 13:10:46 Starting the ProjMatrix server on 8080
+2024/12/05 13:10:48 Configuration loaded
+2024/12/05 13:10:48 Starting the ProjMatrix server on 8080
+2024/12/05 13:10:51 Configuration loaded
+2024/12/05 13:10:51 Starting the ProjMatrix server on 8080
+2024/12/05 13:11:18 
+Получены данные для ручного заполнения линейной формы:
+ {MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[]] Coefficients:[5]}
+
+2024/12/05 13:12:33 
+Получены данные для ручного заполнения линейной формы:
+ {MatrixCount:3 MatrixSize:{Rows:3 Columns:3} Matrices:[[] [] []] Coefficients:[5]}
+
+2024/12/05 13:16:11 Configuration loaded
+2024/12/05 13:16:11 Starting the ProjMatrix server on 8080
+2024/12/05 13:19:55 Configuration loaded
+2024/12/05 13:19:55 Starting the ProjMatrix server on 8080
+2024/12/05 13:20:10 POST запрос получен на /api/manual-polynomial
+2024/12/05 13:20:10 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:4 Coefficients:[1 1 1 1]}
+2024/12/05 13:21:05 Configuration loaded
+2024/12/05 13:21:05 Starting the ProjMatrix server on 8080
+2024/12/05 13:21:17 POST запрос получен на /api/manual-polynomial
+2024/12/05 13:21:17 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:6 Coefficients:[5 5 5 5 5 5]}
+2024/12/05 13:22:13 Configuration loaded
+2024/12/05 13:22:13 Starting the ProjMatrix server on 8080
+2024/12/05 13:22:24 POST запрос получен на /api/manual-polynomial
+2024/12/05 13:22:24 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:5 Coefficients:[8 7 5 4 5]}
+2024/12/05 13:43:53 Configuration loaded
+2024/12/05 13:43:53 Starting the ProjMatrix server on 8080
+2024/12/05 13:45:27 Configuration loaded
+2024/12/05 13:45:27 Starting the ProjMatrix server on 8080
+2024/12/05 13:45:35 POST запрос получен на /api/manual-polynomial
+2024/12/05 13:45:35 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/05 13:45:49 Ошибка привязки JSON: json: cannot unmarshal array into Go struct field .matrices of type float64
+2024/12/05 13:46:24 Ошибка привязки JSON: json: cannot unmarshal array into Go struct field .matrices of type float64
+2024/12/05 13:49:18 Configuration loaded
+2024/12/05 13:49:18 Starting the ProjMatrix server on 8080
+2024/12/05 13:49:45 
+Получены данные для ручного заполнения линейной формы:
+ {MatrixCount:2 MatrixSize:{Rows:3 Columns:3} Matrices:[[7 8 0 7 8 6 0 8 3] [5 5 3 5 4 7 0 1 8]] Coefficients:[4 5]}
+
+2024/12/05 16:40:38 Configuration loaded
+2024/12/05 16:40:38 Starting the ProjMatrix server on 8080
+2024/12/05 16:40:53 Получен запрос с operationType: manual-polynomial
+2024/12/05 16:40:53 Полученный тип данных:  manual-polynomial
+2024/12/05 16:41:34 Получен запрос с operationType: manual-polynomial
+2024/12/05 16:41:34 Полученный тип данных:  manual-polynomial
+2024/12/05 16:42:47 Configuration loaded
+2024/12/05 16:42:47 Starting the ProjMatrix server on 8080
+2024/12/05 16:42:54 Получен запрос с operationType: manual-polynomial
+2024/12/05 16:42:54 Полученный тип данных:  manual-polynomial
+2024/12/05 16:43:02 Configuration loaded
+2024/12/05 16:43:02 Starting the ProjMatrix server on 8080
+2024/12/05 16:43:10 Получен запрос с operationType: manual-linear-form
+2024/12/05 16:43:10 Полученный тип данных:  manual-linear-form
+2024/12/05 16:43:16 Получен запрос с operationType: generate-polynomial
+2024/12/05 16:43:16 Полученный тип данных:  generate-polynomial
+2024/12/05 16:43:24 Получен запрос с operationType: generate-linear-form
+2024/12/05 16:43:24 Полученный тип данных:  generate-linear-form
+2024/12/06 11:02:01 Configuration loaded
+2024/12/06 11:02:01 Starting the ProjMatrix server on 8080
+2024/12/06 11:02:23 Получен запрос с operationType: manual-polynomial
+2024/12/06 11:02:23 Ошибка привязки JSON к Polynomial: EOF
+2024/12/06 11:05:47 Configuration loaded
+2024/12/06 11:05:47 Starting the ProjMatrix server on 8080
+2024/12/06 11:05:57 Получен запрос с operationType: manual-polynomial
+2024/12/06 11:05:57 Ошибка привязки JSON к Polynomial: EOF
+2024/12/06 11:06:08 Получен запрос с operationType: manual-polynomial
+2024/12/06 11:06:08 Ошибка привязки JSON к Polynomial: EOF
+2024/12/06 11:06:08 Получен запрос с operationType: manual-polynomial
+2024/12/06 11:06:08 Ошибка привязки JSON к Polynomial: EOF
+2024/12/06 11:06:13 Получен запрос с operationType: generate-polynomial
+2024/12/06 11:06:13 Ошибка привязки JSON к Polynomial: EOF
+2024/12/06 11:06:18 Получен запрос с operationType: generate-polynomial
+2024/12/06 11:06:18 Ошибка привязки JSON к Polynomial: EOF
+2024/12/06 11:06:33 Получен запрос с operationType: generate-linear-form
+2024/12/06 11:06:33 Ошибка привязки JSON к LinearForm: EOF
+2024/12/06 11:15:17 Configuration loaded
+2024/12/06 11:15:17 Starting the ProjMatrix server on 8080
+2024/12/06 11:15:34 Получен запрос с operationType: manual-linear-form
+2024/12/06 11:15:34 Ошибка привязки JSON к LinearForm: unexpected end of JSON input
+2024/12/06 11:15:59 Configuration loaded
+2024/12/06 11:15:59 Starting the ProjMatrix server on 8080
+2024/12/06 11:16:14 Получен запрос с operationType: manual-polynomial
+2024/12/06 11:16:14 Ошибка привязки JSON к Polynomial: EOF

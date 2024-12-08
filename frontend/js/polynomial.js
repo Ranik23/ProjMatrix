@@ -125,3 +125,33 @@ function initializePolynomialDegreeInput() {
 
 // Вызываем настройку при загрузке или инициализации
 initializePolynomialDegreeInput();
+
+function generatePolynomialData() {
+    const rows = parseInt(document.getElementById('matrix-rows-generate').value);
+    const columns = parseInt(document.getElementById('matrix-columns-generate').value);
+    const degree = parseInt(document.getElementById('polynomial-degree-generate').value);
+
+    // Проверка корректности введенных данных
+    if (isNaN(rows) || rows < 1 || isNaN(columns) || columns < 1) {
+        alert("Пожалуйста, введите корректный размер матрицы (1 или больше).");
+        return;
+    }
+
+    if (isNaN(degree) || degree < 1) {
+        alert("Пожалуйста, введите корректную степень полинома (1 или больше).");
+        return;
+    }
+
+    // Формирование JSON
+    const data = {
+        operationType: "generate-polynomial",
+        matrixSize: { rows: rows, columns: columns },
+        degree: degree
+    };
+
+    console.log("Данные для генерации полинома:", JSON.stringify(data));
+
+    // Отправка данных на сервер
+    sendDataToServer("/api/submit", data);
+}
+window.generatePolynomialData = generatePolynomialData;

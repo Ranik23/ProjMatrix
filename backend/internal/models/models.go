@@ -1,18 +1,22 @@
 package models
 
-type Matrix struct {
-	Rows int         `json:"rows"`
-	Cols int         `json:"cols"`
-	Data [][]float64 `json:"data"`
+type MatrixSize struct {
+	Rows    int `json:"rows"`
+	Columns int `json:"columns"`
 }
 
 type Polynomial struct {
-	Coefficients []float64 `json:"coefficients"`
-	Degree       int       `json:"degree"`
+	OperationType string     `json:"operationType"`
+	MatrixSize    MatrixSize `json:"matrixSize"`
+	Matrix        []float64  `json:"matrix,omitempty"`
+	Degree        int        `json:"degree"`
+	Coefficients  []float64  `json:"coefficients,omitempty"`
 }
 
 type LinearForm struct {
-	Coefficients []float64 `json:"coefficients"`
-	Matrices     []Matrix  `json:"matrices"`
-	Count        int       `json:"count"`
+	OperationType string      `json:"operationType"`
+	MatrixCount   int         `json:"matrixCount"`
+	MatrixSize    MatrixSize  `json:"matrixSize"`
+	Matrices      [][]float64 `json:"matrices,omitempty"`
+	Coefficients  []float64   `json:"coefficients,omitempty"`
 }
