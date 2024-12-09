@@ -59,6 +59,7 @@ body {
 
 /* Стили для светло-серого блока */
 .button-wrapper {
+    position: relative;
     background-color: #f0f1f2;
     border-radius: 20px;
     width: 90%;
@@ -424,3 +425,57 @@ button.next-button {
     width: 100%;
     text-align: center;
 }
+
+/* Контейнер для матрицы на странице результатов */
+.result-matrix-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Прямоугольный блок для всей матрицы */
+.result-matrix-border {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Таблица для матрицы */
+.result-matrix-border table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+/* Ячейки матрицы */
+.result-matrix-border td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 5px;
+    width: 60px; /* Устанавливаем фиксированную ширину */
+    height: 50px; /* Устанавливаем фиксированную высоту */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ячейки при наведении */
+.result-matrix-border td:hover {
+    background-color: #e6f7ff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Центрирование заголовков */
+.result-matrix-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+

@@ -21,13 +21,47 @@
 <!-- Светло-серый блок для отображения результатов -->
 <div class="button-wrapper" id="button-wrapper">
     <div class="inner-content">
-        <p>Здесь будут отображаться результаты ваших вычислений.</p>
+        <h2>Результаты:</h2>
+
+        <!-- Тип операции -->
+        <p><strong>Тип операции:</strong> {{ .OperationType }}</p>
+
+        <!-- Результирующая матрица -->
+        {{ if .ResultMatrix }}
+        <h3 class="result-matrix-title">Результирующая матрица:</h3>
+        <div class="result-matrix-container">
+            <div class="result-matrix-border">
+                <table>
+                    <tbody>
+                    {{ range .ResultMatrix }}
+                    <tr>
+                        {{ range . }}
+                        <td>{{ printf "%.2f" . }}</td>
+                        {{ end }}
+                    </tr>
+                    {{ end }}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {{ else }}
+        <p>Результирующая матрица не отображается для данной операции.</p>
+        {{ end }}
+
+        <!-- Время выполнения -->
+        <h3>Время выполнения:</h3>
+        <ul>
+            <li><strong>Параллельные вычисления:</strong> {{ printf "%.9f" .TimeParallelCalc }} сек</li>
+            <li><strong>Последовательные вычисления:</strong> {{ printf "%.9f" .TimeCalc }} сек</li>
+        </ul>
+
+        <!-- Кнопка для возврата на главную страницу -->
+
+        <button onclick="goToHome()" class="next-button">Главная</button>
     </div>
 
-    <!-- Кнопка для возврата на главную страницу, закрепленная внизу блока -->
-    <div class="button-container" id="home-button-container">
-        <button onclick="goToHome()" class="start-button">Главная</button>
-    </div>
+
+
 </div>
 
 <script src="../js/results.js"></script>
