@@ -1,160 +1,396 @@
-2024/11/16 13:04:12 Configuration loaded
-2024/11/16 13:04:12 Starting the ProjMatrix server on 8080
-2024/11/17 11:20:32 Configuration loaded
-2024/11/17 11:20:32 Starting the ProjMatrix server on 8080
-2024/11/17 14:05:11 Configuration loaded
-2024/11/17 14:05:11 Starting the ProjMatrix server on 8080
-2024/12/04 13:21:19 Configuration loaded
-2024/12/04 13:21:19 Starting the ProjMatrix server on 8080
-2024/12/04 13:36:45 Configuration loaded
-2024/12/04 13:36:45 Starting the ProjMatrix server on 8080
-2024/12/04 14:14:21 Configuration loaded
-2024/12/04 14:14:21 Starting the ProjMatrix server on 8080
-2024/12/04 14:18:28 Configuration loaded
-2024/12/04 14:18:28 Starting the ProjMatrix server on 8080
-2024/12/05 11:23:07 Configuration loaded
-2024/12/05 11:23:07 Starting the ProjMatrix server on 8080
-2024/12/05 11:27:56 Configuration loaded
-2024/12/05 11:27:56 Starting the ProjMatrix server on 8080
-2024/12/05 12:04:11 Configuration loaded
-2024/12/05 12:04:11 Starting the ProjMatrix server on 8080
-2024/12/05 12:07:02 Configuration loaded
-2024/12/05 12:07:02 Starting the ProjMatrix server on 8080
-2024/12/05 12:09:53 Configuration loaded
-2024/12/05 12:09:53 Starting the ProjMatrix server on 8080
-2024/12/05 12:10:00 Получены данные для генерации линейной формы: {GenerationType:linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3}}
-2024/12/05 12:13:12 Configuration loaded
-2024/12/05 12:13:12 Starting the ProjMatrix server on 8080
-2024/12/05 12:13:21 
-Получены данные для генерации линейной формы:
- {GenerationType:linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3}}
+2024/12/08 15:24:03 Configuration loaded
+2024/12/08 15:24:03 Starting the ProjMatrix server on 8080
+2024/12/08 15:24:47 Получен запрос с operationType: manual-linear-form
+2024/12/08 15:24:47 Ошибка привязки JSON к LinearForm: EOF
+2024/12/08 15:24:49 Получен запрос с operationType: manual-linear-form
+2024/12/08 15:24:49 Ошибка привязки JSON к LinearForm: EOF
+2024/12/09 13:40:44 Configuration loaded
+2024/12/09 13:40:44 Starting the ProjMatrix server on 8080
+2024/12/09 13:42:49 Неизвестный operationType: manual-polynomial
+2024/12/09 13:46:56 Configuration loaded
+2024/12/09 13:46:56 Starting the ProjMatrix server on 8080
+2024/12/09 13:47:20 Получена структура Polynomial: {manual-polynomial {3 3} [1 23 3 8 4 3 22 99 1] 4 [2 4 5 6]}
+2024/12/09 13:47:20 Получен запрос с operationType: manual-polynomial
+2024/12/09 13:48:38 Получена структура LinearForm: {manual-linear-form 2 {3 3} [[1 3 0 0 2 4 5 6 5] [3 6 8 6 36 7 2 36 0]] [3 6]}
+2024/12/09 13:48:38 Получен запрос с operationType: manual-linear-form
+2024/12/09 13:49:27 Получена структура Polynomial: {generate-polynomial {3 3} [] 3 []}
+2024/12/09 13:49:27 Получен запрос с operationType: generate-polynomial
+2024/12/09 13:49:53 Получена структура LinearForm: {generate-linear-form 5 {3 3} [] []}
+2024/12/09 13:49:53 Получен запрос с operationType: generate-linear-form
+2024/12/09 14:11:11 Configuration loaded
+2024/12/09 14:11:11 Starting the ProjMatrix server on 8080
+2024/12/09 14:11:30 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[4 45 5 8 23 5 8 0 6] Degree:5 Coefficients:[5 6 6 7 7]}
+2024/12/09 14:11:30 Получена структура Polynomial: {manual-polynomial {3 3} [4 45 5 8 23 5 8 0 6] 5 [5 6 6 7 7]}
+2024/12/09 14:12:29 Обработка генерации полинома: {OperationType:generate-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[] Degree:1 Coefficients:[]}
+2024/12/09 14:12:29 Получена структура Polynomial: {generate-polynomial {3 3} [] 1 []}
+2024/12/09 14:13:42 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 14:13:42 Получена структура Polynomial: {manual-polynomial {3 3} [0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 14:20:36 Configuration loaded
+2024/12/09 14:20:36 Starting the ProjMatrix server on 8080
+2024/12/09 14:20:50 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[3 2 0 4 1 6 6 0 5] Degree:6 Coefficients:[5 6 7 8 8 5]}
+2024/12/09 14:20:50 Получена структура Polynomial: {manual-polynomial {3 3} [3 2 0 4 1 6 6 0 5] 6 [5 6 7 8 8 5]}
+2024/12/09 14:22:35 Configuration loaded
+2024/12/09 14:22:35 Starting the ProjMatrix server on 8080
+2024/12/09 14:22:51 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 14:22:51 Получена структура Polynomial: {manual-polynomial {3 3} [0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 14:26:21 Configuration loaded
+2024/12/09 14:26:21 Starting the ProjMatrix server on 8080
+2024/12/09 14:28:42 Configuration loaded
+2024/12/09 14:28:42 Starting the ProjMatrix server on 8080
+2024/12/09 14:40:06 Configuration loaded
+2024/12/09 14:40:06 Starting the ProjMatrix server on 8080
+2024/12/09 14:40:12 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 14:40:12 Получена структура Polynomial: {manual-polynomial {3 3} [0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 14:41:35 Configuration loaded
+2024/12/09 14:41:35 Starting the ProjMatrix server on 8080
+2024/12/09 14:41:39 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 14:41:39 Получена структура Polynomial: {manual-polynomial {3 3} [0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 14:42:57 Configuration loaded
+2024/12/09 14:42:57 Starting the ProjMatrix server on 8080
+2024/12/09 14:43:00 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 14:43:00 Получена структура Polynomial: {manual-polynomial {3 3} [0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 14:43:07 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 14:43:07 Получена структура Polynomial: {manual-polynomial {3 3} [0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 14:45:24 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 14:45:24 Получена структура Polynomial: {manual-polynomial {3 3} [0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 14:45:31 Configuration loaded
+2024/12/09 14:45:31 Starting the ProjMatrix server on 8080
+2024/12/09 14:45:38 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 14:45:38 Получена структура Polynomial: {manual-polynomial {3 3} [0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 14:46:19 Configuration loaded
+2024/12/09 14:46:19 Starting the ProjMatrix server on 8080
+2024/12/09 14:46:30 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 14:46:30 Получена структура Polynomial: {manual-polynomial {3 3} [0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 15:41:01 Configuration loaded
+2024/12/09 15:41:01 Starting the ProjMatrix server on 8080
+2024/12/09 15:41:10 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:5 Columns:5} Matrix:[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 15:41:10 Получена структура Polynomial: {manual-polynomial {5 5} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 15:41:22 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 15:41:22 Получена структура Polynomial: {manual-polynomial {3 3} [0 0 0 0 0 0 0 0 0] 2 []}
+2024/12/09 17:10:48 Configuration loaded
+2024/12/09 17:10:48 Starting the ProjMatrix server on 8080
+2024/12/09 17:11:22 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 2 9 6 3 4 6 7 8] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 17:11:22 Получена структура Polynomial: {manual-polynomial {3 3} [1 2 9 6 3 4 6 7 8] 4 [5 6 7 8]}
+2024/12/09 17:12:48 Configuration loaded
+2024/12/09 17:12:48 Starting the ProjMatrix server on 8080
+2024/12/09 17:12:54 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 2 9 6 3 4 6 7 8] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 17:12:54 Получена структура Polynomial: {manual-polynomial {3 3} [1 2 9 6 3 4 6 7 8] 4 [5 6 7 8]}
+2024/12/09 17:12:54 results:  <nil>
+2024/12/09 17:12:54 
 
-2024/12/05 12:13:41 
-Получены данные для генерации линейной формы:
- {GenerationType:linear-form MatrixCount:5 MatrixSize:{Rows:5 Columns:7}}
+2024/12/09 17:13:29 results:  <nil>
+2024/12/09 17:13:29 
 
-2024/12/05 12:17:49 Configuration loaded
-2024/12/05 12:17:49 Starting the ProjMatrix server on 8080
-2024/12/05 12:18:51 Configuration loaded
-2024/12/05 12:18:51 Starting the ProjMatrix server on 8080
-2024/12/05 12:28:14 Configuration loaded
-2024/12/05 12:28:14 Starting the ProjMatrix server on 8080
-2024/12/05 12:28:26 Получены данные для генерации полинома: {GenerationType:polynomial MatrixSize:{Rows:3 Columns:3} Degree:1}
-2024/12/05 12:29:00 Получены данные для генерации полинома: {GenerationType:polynomial MatrixSize:{Rows:5 Columns:100} Degree:85}
-2024/12/05 12:35:59 Configuration loaded
-2024/12/05 12:35:59 Starting the ProjMatrix server on 8080
-2024/12/05 12:42:04 Configuration loaded
-2024/12/05 12:42:04 Starting the ProjMatrix server on 8080
-2024/12/05 12:43:53 Configuration loaded
-2024/12/05 12:43:53 Starting the ProjMatrix server on 8080
-2024/12/05 12:44:14 POST запрос получен на /api/manual-polynomial
-2024/12/05 12:44:14 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:1 Coefficients:[1 1]}
-2024/12/05 12:48:39 Configuration loaded
-2024/12/05 12:48:39 Starting the ProjMatrix server on 8080
-2024/12/05 12:49:50 Configuration loaded
-2024/12/05 12:49:50 Starting the ProjMatrix server on 8080
-2024/12/05 12:50:15 Получены данные для ручного заполнения линейной формы: {MatrixCount:2 MatrixSize:{Rows:3 Columns:3} Matrices:[[] []] Coefficients:[6]}
-2024/12/05 12:55:02 Configuration loaded
-2024/12/05 12:55:02 Starting the ProjMatrix server on 8080
-2024/12/05 12:55:45 POST запрос получен на /api/manual-polynomial
-2024/12/05 12:55:45 Получены данные: {MatrixSize:{Rows:4 Columns:5} Matrix:[68 7 0 42 0 8 87 0 1 7 4 -8 7 47 0 0 5 1 5 2] Degree:3 Coefficients:[1 1 1 1]}
-2024/12/05 12:56:32 Configuration loaded
-2024/12/05 12:56:32 Starting the ProjMatrix server on 8080
-2024/12/05 12:57:04 POST запрос получен на /api/manual-polynomial
-2024/12/05 12:57:04 Получены данные: {MatrixSize:{Rows:4 Columns:5} Matrix:[89 7 8 0 7 0 75 5 6 0 68 4 7 0 5 1 0 41 0 58] Degree:3 Coefficients:[1 1 1 1]}
-2024/12/05 12:58:01 Configuration loaded
-2024/12/05 12:58:01 Starting the ProjMatrix server on 8080
-2024/12/05 12:58:21 POST запрос получен на /api/manual-polynomial
-2024/12/05 12:58:21 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[8 0 1 1 9 0 1 1 1] Degree:3 Coefficients:[1 1 1 1]}
-2024/12/05 13:06:45 Configuration loaded
-2024/12/05 13:06:45 Starting the ProjMatrix server on 8080
-2024/12/05 13:07:17 
-Получены данные для ручного заполнения линейной формы:
- {MatrixCount:2 MatrixSize:{Rows:3 Columns:3} Matrices:[[] []] Coefficients:[5]}
+2024/12/09 17:16:25 Configuration loaded
+2024/12/09 17:16:25 Starting the ProjMatrix server on 8080
+2024/12/09 17:16:44 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 2 4 6 7 5 1 6 9] Degree:6 Coefficients:[4 5 6 7 8 9]}
+2024/12/09 17:16:44 result ДО КОНТЕКТСА:  {manual-polynomial [[677033 1.32497e+06 1.54741e+06] [1.512593e+06 2.961397e+06 3.459429e+06] [1.618011e+06 3.166388e+06 3.698351e+06]] 3.459e-06 0}
+2024/12/09 17:16:44 Получена структура Polynomial: {manual-polynomial {3 3} [1 2 4 6 7 5 1 6 9] 6 [4 5 6 7 8 9]}
+2024/12/09 17:22:51 Configuration loaded
+2024/12/09 17:22:51 Starting the ProjMatrix server on 8080
+2024/12/09 17:22:57 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 2 4 6 7 5 1 6 9] Degree:6 Coefficients:[4 5 6 7 8 9]}
+2024/12/09 17:22:57 result ДО КОНТЕКТСА:  {manual-polynomial [[677033 1.32497e+06 1.54741e+06] [1.512593e+06 2.961397e+06 3.459429e+06] [1.618011e+06 3.166388e+06 3.698351e+06]] 2.291e-06 0}
+2024/12/09 17:22:57 Получена структура Polynomial: {manual-polynomial {3 3} [1 2 4 6 7 5 1 6 9] 6 [4 5 6 7 8 9]}
+2024/12/09 17:23:55 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 17:23:56 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 17:23:56 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 17:23:57 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 17:23:57 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 17:23:57 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 17:23:57 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 17:23:59 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 17:24:06 Configuration loaded
+2024/12/09 17:24:06 Starting the ProjMatrix server on 8080
+2024/12/09 17:24:06 Configuration loaded
+2024/12/09 17:24:06 Starting the ProjMatrix server on 8080
+2024/12/09 17:24:06 Error starting server: listen tcp :8080: bind: address already in use
+2024/12/09 17:24:14 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 17:24:29 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[2 12 7 3 2 0 4 5 6] Degree:5 Coefficients:[5 6 7 8 8]}
+2024/12/09 17:24:29 result ДО КОНТЕКТСА:  {manual-polynomial [[71381 121885 80010] [20190 38481 24675] [63345 113550 74801]] 5.583e-06 0}
+2024/12/09 17:24:29 Получена структура Polynomial: {manual-polynomial {3 3} [2 12 7 3 2 0 4 5 6] 5 [5 6 7 8 8]}
+2024/12/09 17:47:12 Configuration loaded
+2024/12/09 17:47:12 Starting the ProjMatrix server on 8080
+2024/12/09 21:20:41 Configuration loaded
+2024/12/09 21:20:41 Starting the ProjMatrix server on 8080
+2024/12/09 21:22:01 Configuration loaded
+2024/12/09 21:22:01 Starting the ProjMatrix server on 8080
+2024/12/09 21:22:24 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[3 4 5 0 2 67 7 3 1] Degree:4 Coefficients:[4 5 6 6]}
+2024/12/09 21:22:24 Получена структура Polynomial: {manual-polynomial {3 3} [3 4 5 0 2 67 7 3 1] 4 [4 5 6 6]}
+2024/12/09 21:22:25 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[3 4 5 0 2 67 7 3 1] Degree:4 Coefficients:[4 5 6 6]}
+2024/12/09 21:22:25 Получена структура Polynomial: {manual-polynomial {3 3} [3 4 5 0 2 67 7 3 1] 4 [4 5 6 6]}
+2024/12/09 21:40:29 Configuration loaded
+2024/12/09 21:40:29 Starting the ProjMatrix server on 8080
+2024/12/09 21:41:04 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 45 132 4 5 23 5 -9 456] Degree:4 Coefficients:[3 4 5 6]}
+2024/12/09 21:41:04 Получена структура Polynomial: {manual-polynomial {3 3} [1 45 132 4 5 23 5 -9 456] 4 [3 4 5 6]}
+2024/12/09 21:43:46 Configuration loaded
+2024/12/09 21:43:46 Starting the ProjMatrix server on 8080
+2024/12/09 21:44:07 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:44:07 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:44:10 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:44:10 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:45:38 Configuration loaded
+2024/12/09 21:45:38 Starting the ProjMatrix server on 8080
+2024/12/09 21:45:50 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:45:50 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:10 Configuration loaded
+2024/12/09 21:46:10 Starting the ProjMatrix server on 8080
+2024/12/09 21:46:14 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:14 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:15 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:15 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:15 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:15 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:16 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:16 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:16 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:16 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:16 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:16 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:16 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:16 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:16 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:16 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:16 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:16 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:17 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:17 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:17 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:17 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:18 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:18 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:18 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:18 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:18 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:18 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:18 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:18 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:18 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:18 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:46:18 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:46:18 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:48:36 Configuration loaded
+2024/12/09 21:48:36 Starting the ProjMatrix server on 8080
+2024/12/09 21:48:39 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:48:39 
+РЕЗУЛЬТАТ СТРУКТУРА ДЛЯ ПЕРАДАЧИ
 
-2024/12/05 13:10:46 Configuration loaded
-2024/12/05 13:10:46 Starting the ProjMatrix server on 8080
-2024/12/05 13:10:48 Configuration loaded
-2024/12/05 13:10:48 Starting the ProjMatrix server on 8080
-2024/12/05 13:10:51 Configuration loaded
-2024/12/05 13:10:51 Starting the ProjMatrix server on 8080
-2024/12/05 13:11:18 
-Получены данные для ручного заполнения линейной формы:
- {MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[]] Coefficients:[5]}
+{manual-polynomial [[118106 525108 310998] [9897 78377 49548] [14280 254352 59189]] 2.292e-06 0}
 
-2024/12/05 13:12:33 
-Получены данные для ручного заполнения линейной формы:
- {MatrixCount:3 MatrixSize:{Rows:3 Columns:3} Matrices:[[] [] []] Coefficients:[5]}
+2024/12/09 21:48:39 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 21:48:40 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[23 4 34 1 6 9 0 56 2] Degree:4 Coefficients:[5 6 7 8]}
+2024/12/09 21:48:40 
+РЕЗУЛЬТАТ СТРУКТУРА ДЛЯ ПЕРАДАЧИ
 
-2024/12/05 13:16:11 Configuration loaded
-2024/12/05 13:16:11 Starting the ProjMatrix server on 8080
-2024/12/05 13:19:55 Configuration loaded
-2024/12/05 13:19:55 Starting the ProjMatrix server on 8080
-2024/12/05 13:20:10 POST запрос получен на /api/manual-polynomial
-2024/12/05 13:20:10 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:4 Coefficients:[1 1 1 1]}
-2024/12/05 13:21:05 Configuration loaded
-2024/12/05 13:21:05 Starting the ProjMatrix server on 8080
-2024/12/05 13:21:17 POST запрос получен на /api/manual-polynomial
-2024/12/05 13:21:17 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:6 Coefficients:[5 5 5 5 5 5]}
-2024/12/05 13:22:13 Configuration loaded
-2024/12/05 13:22:13 Starting the ProjMatrix server on 8080
-2024/12/05 13:22:24 POST запрос получен на /api/manual-polynomial
-2024/12/05 13:22:24 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:5 Coefficients:[8 7 5 4 5]}
-2024/12/05 13:43:53 Configuration loaded
-2024/12/05 13:43:53 Starting the ProjMatrix server on 8080
-2024/12/05 13:45:27 Configuration loaded
-2024/12/05 13:45:27 Starting the ProjMatrix server on 8080
-2024/12/05 13:45:35 POST запрос получен на /api/manual-polynomial
-2024/12/05 13:45:35 Получены данные: {MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
-2024/12/05 13:45:49 Ошибка привязки JSON: json: cannot unmarshal array into Go struct field .matrices of type float64
-2024/12/05 13:46:24 Ошибка привязки JSON: json: cannot unmarshal array into Go struct field .matrices of type float64
-2024/12/05 13:49:18 Configuration loaded
-2024/12/05 13:49:18 Starting the ProjMatrix server on 8080
-2024/12/05 13:49:45 
-Получены данные для ручного заполнения линейной формы:
- {MatrixCount:2 MatrixSize:{Rows:3 Columns:3} Matrices:[[7 8 0 7 8 6 0 8 3] [5 5 3 5 4 7 0 1 8]] Coefficients:[4 5]}
+{manual-polynomial [[118106 525108 310998] [9897 78377 49548] [14280 254352 59189]] 2.667e-06 0}
 
-2024/12/05 16:40:38 Configuration loaded
-2024/12/05 16:40:38 Starting the ProjMatrix server on 8080
-2024/12/05 16:40:53 Получен запрос с operationType: manual-polynomial
-2024/12/05 16:40:53 Полученный тип данных:  manual-polynomial
-2024/12/05 16:41:34 Получен запрос с operationType: manual-polynomial
-2024/12/05 16:41:34 Полученный тип данных:  manual-polynomial
-2024/12/05 16:42:47 Configuration loaded
-2024/12/05 16:42:47 Starting the ProjMatrix server on 8080
-2024/12/05 16:42:54 Получен запрос с operationType: manual-polynomial
-2024/12/05 16:42:54 Полученный тип данных:  manual-polynomial
-2024/12/05 16:43:02 Configuration loaded
-2024/12/05 16:43:02 Starting the ProjMatrix server on 8080
-2024/12/05 16:43:10 Получен запрос с operationType: manual-linear-form
-2024/12/05 16:43:10 Полученный тип данных:  manual-linear-form
-2024/12/05 16:43:16 Получен запрос с operationType: generate-polynomial
-2024/12/05 16:43:16 Полученный тип данных:  generate-polynomial
-2024/12/05 16:43:24 Получен запрос с operationType: generate-linear-form
-2024/12/05 16:43:24 Полученный тип данных:  generate-linear-form
-2024/12/06 11:02:01 Configuration loaded
-2024/12/06 11:02:01 Starting the ProjMatrix server on 8080
-2024/12/06 11:02:23 Получен запрос с operationType: manual-polynomial
-2024/12/06 11:02:23 Ошибка привязки JSON к Polynomial: EOF
-2024/12/06 11:05:47 Configuration loaded
-2024/12/06 11:05:47 Starting the ProjMatrix server on 8080
-2024/12/06 11:05:57 Получен запрос с operationType: manual-polynomial
-2024/12/06 11:05:57 Ошибка привязки JSON к Polynomial: EOF
-2024/12/06 11:06:08 Получен запрос с operationType: manual-polynomial
-2024/12/06 11:06:08 Ошибка привязки JSON к Polynomial: EOF
-2024/12/06 11:06:08 Получен запрос с operationType: manual-polynomial
-2024/12/06 11:06:08 Ошибка привязки JSON к Polynomial: EOF
-2024/12/06 11:06:13 Получен запрос с operationType: generate-polynomial
-2024/12/06 11:06:13 Ошибка привязки JSON к Polynomial: EOF
-2024/12/06 11:06:18 Получен запрос с operationType: generate-polynomial
-2024/12/06 11:06:18 Ошибка привязки JSON к Polynomial: EOF
-2024/12/06 11:06:33 Получен запрос с operationType: generate-linear-form
-2024/12/06 11:06:33 Ошибка привязки JSON к LinearForm: EOF
-2024/12/06 11:15:17 Configuration loaded
-2024/12/06 11:15:17 Starting the ProjMatrix server on 8080
-2024/12/06 11:15:34 Получен запрос с operationType: manual-linear-form
-2024/12/06 11:15:34 Ошибка привязки JSON к LinearForm: unexpected end of JSON input
-2024/12/06 11:15:59 Configuration loaded
-2024/12/06 11:15:59 Starting the ProjMatrix server on 8080
-2024/12/06 11:16:14 Получен запрос с operationType: manual-polynomial
-2024/12/06 11:16:14 Ошибка привязки JSON к Polynomial: EOF
+2024/12/09 21:48:40 Получена структура Polynomial: {manual-polynomial {3 3} [23 4 34 1 6 9 0 56 2] 4 [5 6 7 8]}
+2024/12/09 22:53:30 Configuration loaded
+2024/12/09 22:53:30 Starting the ProjMatrix server on 8080
+2024/12/09 22:53:58 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 2 5 26 3 5 6 6 6] Degree:4 Coefficients:[5 6 6 7]}
+2024/12/09 22:53:58 Получена структура Polynomial: {manual-polynomial {3 3} [1 2 5 26 3 5 6 6 6] 4 [5 6 6 7]}
+2024/12/09 22:54:14 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 22:54:14 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 22:54:15 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 22:54:15 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 22:54:15 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 22:54:36 Configuration loaded
+2024/12/09 22:54:36 Starting the ProjMatrix server on 8080
+2024/12/09 22:54:38 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 22:54:46 Configuration loaded
+2024/12/09 22:54:46 Starting the ProjMatrix server on 8080
+2024/12/09 22:54:59 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[3 3 3 4 1 63 5 4 6] Degree:4 Coefficients:[4 5 6 67]}
+2024/12/09 22:54:59 Получена структура Polynomial: {manual-polynomial {3 3} [3 3 3 4 1 63 5 4 6] 4 [4 5 6 67]}
+2024/12/09 22:57:47 Configuration loaded
+2024/12/09 22:57:47 Starting the ProjMatrix server on 8080
+2024/12/09 22:58:02 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 4 6 3 2 6 0 4 5] Degree:3 Coefficients:[4 5 6]}
+2024/12/09 22:58:02 Получена структура Polynomial: {manual-polynomial {3 3} [1 4 6 3 2 6 0 4 5] 3 [4 5 6]}
+2024/12/09 23:01:52 Configuration loaded
+2024/12/09 23:01:52 Starting the ProjMatrix server on 8080
+2024/12/09 23:02:13 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 4 24 2 3 6 9 66 5] Degree:4 Coefficients:[3 4 56 6]}
+2024/12/09 23:02:13 Получена структура Polynomial: {manual-polynomial {3 3} [1 4 24 2 3 6 9 66 5] 4 [3 4 56 6]}
+2024/12/09 23:11:16 Configuration loaded
+2024/12/09 23:11:16 Starting the ProjMatrix server on 8080
+2024/12/09 23:11:38 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 3 7 22 4 7 5 5 6] Degree:5 Coefficients:[45 6 7 7 8]}
+2024/12/09 23:11:38 Получена структура Polynomial: {manual-polynomial {3 3} [1 3 7 22 4 7 5 5 6] 5 [45 6 7 7 8]}
+2024/12/09 23:12:18 Configuration loaded
+2024/12/09 23:12:18 Starting the ProjMatrix server on 8080
+2024/12/09 23:12:22 Configuration loaded
+2024/12/09 23:12:22 Starting the ProjMatrix server on 8080
+2024/12/09 23:12:42 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[2 5 5 4 3 6 7 7 1] Degree:4 Coefficients:[3 4 5 6]}
+2024/12/09 23:12:42 Получена структура Polynomial: {manual-polynomial {3 3} [2 5 5 4 3 6 7 7 1] 4 [3 4 5 6]}
+2024/12/09 23:12:42 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[4344 5060 4445] [4622 5356 4924] [5649 6223 4603]] 2.209e-06 0}
+2024/12/09 23:15:02 Configuration loaded
+2024/12/09 23:15:02 Starting the ProjMatrix server on 8080
+2024/12/09 23:15:22 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 23 5 2 3 6 33 8 9] Degree:4 Coefficients:[3 4 5 6]}
+2024/12/09 23:15:22 Получена структура Polynomial: {manual-polynomial {3 3} [1 23 5 2 3 6 33 8 9] 4 [3 4 5 6]}
+2024/12/09 23:15:22 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[41147 41408 22224] [19746 34748 14750] [72410 81557 58545]] 2.042e-06 0}
+2024/12/09 23:15:59 Configuration loaded
+2024/12/09 23:15:59 Starting the ProjMatrix server on 8080
+2024/12/09 23:16:14 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 2 5 3 3 4 5 3 1] Degree:3 Coefficients:[3 4 5]}
+2024/12/09 23:16:14 Получена структура Polynomial: {manual-polynomial {3 3} [1 2 5 3 3 4 5 3 1] 3 [3 4 5]}
+2024/12/09 23:16:14 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[167 123 110] [172 150 171] [115 122 197]] 3.125e-06 0}
+2024/12/09 23:18:38 Configuration loaded
+2024/12/09 23:18:38 Starting the ProjMatrix server on 8080
+2024/12/09 23:18:51 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 2 1 5 3 4 0 5 6] Degree:3 Coefficients:[4 5 6]}
+2024/12/09 23:18:51 Получена структура Polynomial: {manual-polynomial {3 3} [1 2 1 5 3 4 0 5 6] 3 [4 5 6]}
+2024/12/09 23:18:51 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[75 88 95] [145 253 266] [150 295 370]] 1.958e-06 0}
+2024/12/09 23:20:39 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[21 1 5 6 45 5 3 7 4 5 53 6 3 5 85 8 5 2 1 1 1 8 83 5 6 3 7 3 7 1 2 5 7 8 3 5 6 83 5 3 8 3 7 9 9 9 9 9 8] Degree:21 Coefficients:[1 3 15 15 235 26 26 346 37 37 37 457 45 623 25 235 235 235 25 25 2]}
+2024/12/09 23:20:39 Получена структура Polynomial: {manual-polynomial {7 7} [21 1 5 6 45 5 3 7 4 5 53 6 3 5 85 8 5 2 1 1 1 8 83 5 6 3 7 3 7 1 2 5 7 8 3 5 6 83 5 3 8 3 7 9 9 9 9 9 8] 21 [1 3 15 15 235 26 26 346 37 37 37 457 45 623 25 235 235 235 25 25 2]}
+2024/12/09 23:20:39 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[1.1685347685216554e+38 1.1087792214908853e+38 5.880162140695972e+37 9.495353900992133e+37 8.442067372872059e+37 3.2676110433970633e+37 2.0877738175225994e+37] [2.442274504467966e+38 2.322142883408546e+38 1.2285540521876565e+38 1.981495912178058e+38 1.7636658892456407e+38 6.830995338624123e+37 4.3618737451069615e+37] [1.6236195188311582e+38 1.5396255434816675e+38 8.171275047393458e+37 1.3201534535719189e+38 1.1731405575573117e+38 4.539894220810502e+37 2.9013495779206754e+37] [3.079185083504009e+38 2.9165588957916814e+38 1.5502780921548008e+38 2.5083639111172827e+38 2.225443932835898e+38 8.6092397475395e+37 5.505595277556148e+37] [6.645392932316893e+37 6.307030882285578e+37 3.343876889667992e+37 5.3989311470154735e+37 4.8007220653691285e+37 1.8583191555443883e+37 1.1872482499698768e+37] [2.3040224115982616e+38 2.1864140794556542e+38 1.159347665782173e+38 1.8717826220569256e+38 1.6644976482026166e+38 6.442824988721486e+37 4.116190131409295e+37] [1.2946491230184485e+38 1.2284305166445124e+38 6.515081949185294e+37 1.0522648840357277e+38 9.353259714446254e+37 3.620307474649941e+37 2.313296129713928e+37]] 6.6666e-05 0}
+2024/12/09 23:23:25 Configuration loaded
+2024/12/09 23:23:25 Starting the ProjMatrix server on 8080
+2024/12/09 23:23:42 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[15 125 512512 51 51 15 5 15 51] Degree:6 Coefficients:[1423 152 15 125 15 1551]}
+2024/12/09 23:23:42 Получена структура Polynomial: {manual-polynomial {3 3} [15 125 512512 51 51 15 5 15 51] 6 [1423 152 15 125 15 1551]}
+2024/12/09 23:23:42 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[4.637527115987774e+18 1.1588745489367112e+19 5.327459482761384e+21] [5.302349069184632e+17 1.582242146620607e+18 3.514059162572468e+19] [5.299786945554413e+16 1.574811861970234e+17 5.003508397613443e+18]] 5.375e-06 0}
+2024/12/09 23:29:13 Configuration loaded
+2024/12/09 23:29:13 Starting the ProjMatrix server on 8080
+2024/12/09 23:29:31 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 4 3 6 5 5 6 1 1] Degree:3 Coefficients:[3 4 5]}
+2024/12/09 23:29:31 Получена структура Polynomial: {manual-polynomial {3 3} [1 4 3 6 5 5 6 1 1] 3 [3 4 5]}
+2024/12/09 23:29:31 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[222 151 142] [354 293 260] [114 154 127]] 3.625e-06 0}
+2024/12/09 23:31:28 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[222 151 142] [354 293 260] [114 154 127]] 3.625e-06 0}
+2024/12/09 23:38:19 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[2 3 5 26 6 5 0 6 26 26 5 26 7 9 6 0 26 5 53 7 9 12 6 5 0 5 8 0 0 6 7 8 7 0 6 1 1 4 7 3 73 62 42 1 3 7 7 4 526] Degree:7 Coefficients:[5 6 7 7 8 8 8]}
+2024/12/09 23:38:19 Получена структура Polynomial: {manual-polynomial {7 7} [2 3 5 26 6 5 0 6 26 26 5 26 7 9 6 0 26 5 53 7 9 12 6 5 0 5 8 0 0 6 7 8 7 0 6 1 1 4 7 3 73 62 42 1 3 7 7 4 526] 7 [5 6 7 7 8 8 8]}
+2024/12/09 23:38:20 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[2.6212525054253e+13 9.63381397373e+11 2.462974219626e+12 5.800107071253e+12 5.117252561412e+12 3.519461208942e+12 3.25330627053745e+14] [2.98510538177756e+14 1.0796050308635e+13 2.762584322614e+13 6.5776262598061e+13 5.7713301780371e+13 3.8102229598887e+13 3.704811600170558e+15] [2.9233264864618e+14 1.0554599939728e+13 2.7013843359057e+13 6.4392963836974e+13 5.6461780686296e+13 3.7216533488974e+13 3.628199711284013e+15] [3.7012072217073e+13 1.351490496568e+12 3.457489552975e+12 8.177898278757e+12 7.197734345632e+12 4.899481247507e+12 4.59383828747072e+14] [1.66985662876471e+14 6.02146021151e+12 1.5412488056399e+13 3.6770192030402e+13 3.2227679798285e+13 2.1171281800101e+13 2.072486841207736e+15] [1.887228500671274e+15 6.7936861990803e+13 1.73959309793538e+14 4.15481147854805e+14 3.63872858183005e+14 2.39569733146565e+14 2.3423732387087244e+16] [1.3777841324131426e+16 4.95589943537602e+14 1.268900340537129e+15 3.032333737113146e+15 2.655168725583724e+15 1.739675748357058e+15 1.710030372436057e+17]] 1.2375e-05 0}
+2024/12/09 23:42:24 Configuration loaded
+2024/12/09 23:42:24 Starting the ProjMatrix server on 8080
+2024/12/09 23:42:30 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 23:42:40 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[14 41 5 4 4 5 0 4 5] Degree:3 Coefficients:[4 5 5]}
+2024/12/09 23:42:40 Получена структура Polynomial: {manual-polynomial {3 3} [14 41 5 4 4 5 0 4 5] 3 [4 5 5]}
+2024/12/09 23:42:40 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[1874 3995 1525] [380 1024 350] [80 200 254]] 3.125e-06 0}
+2024/12/09 23:43:23 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[1 3 4 0 6 7 7 4 4 3 4 5 7 0 4 6 4 4 5 7 7 4 4 4 7 7 7 7 8 8 67 0 47 2 0 7 7 2 0 2 4 4 8 7 7 7 6 0 2] Degree:6 Coefficients:[2 4 5 6 7 7]}
+2024/12/09 23:43:23 Получена структура Polynomial: {manual-polynomial {7 7} [1 3 4 0 6 7 7 4 4 3 4 5 7 0 4 6 4 4 5 7 7 4 4 4 7 7 7 7 8 8 67 0 47 2 0 7 7 2 0 2 4 4 8 7 7 7 6 0 2] 6 [2 4 5 6 7 7]}
+2024/12/09 23:43:23 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[1.97462774e+08 2.27642517e+08 7.81769888e+08 9.4474828e+07 6.09376544e+08 1.83817231e+08 1.41730002e+08] [1.74840959e+08 2.01443006e+08 6.9122421e+08 8.3571835e+07 5.38758615e+08 1.62428703e+08 1.25267557e+08] [2.12177287e+08 2.44431197e+08 8.3759554e+08 1.01554106e+08 6.53130954e+08 1.9735588e+08 1.52152212e+08] [2.62627054e+08 3.02620102e+08 1.038277911e+09 1.25649484e+08 8.09390096e+08 2.44204581e+08 1.88322554e+08] [1.305746959e+09 1.505406401e+09 5.179671888e+09 6.23770181e+08 4.034984349e+09 1.213035849e+09 9.35947776e+08] [1.17716808e+08 1.35531735e+08 4.63600064e+08 5.6320971e+07 3.61583815e+08 1.09391881e+08 8.4318998e+07] [2.39912926e+08 2.76351877e+08 9.48096283e+08 1.1468697e+08 7.38957929e+08 2.2271242e+08 1.71802885e+08]] 3.5458e-05 0}
+2024/12/09 23:44:17 Обработка ручного ввода линейной формы: {OperationType:manual-linear-form MatrixCount:7 MatrixSize:{Rows:3 Columns:3} Matrices:[[0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0]] Coefficients:[]}
+2024/12/09 23:44:17 Получена структура LinearForm: {manual-linear-form 7 {3 3} [[0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0]] []}
+2024/12/09 23:44:17 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[1.97462774e+08 2.27642517e+08 7.81769888e+08 9.4474828e+07 6.09376544e+08 1.83817231e+08 1.41730002e+08] [1.74840959e+08 2.01443006e+08 6.9122421e+08 8.3571835e+07 5.38758615e+08 1.62428703e+08 1.25267557e+08] [2.12177287e+08 2.44431197e+08 8.3759554e+08 1.01554106e+08 6.53130954e+08 1.9735588e+08 1.52152212e+08] [2.62627054e+08 3.02620102e+08 1.038277911e+09 1.25649484e+08 8.09390096e+08 2.44204581e+08 1.88322554e+08] [1.305746959e+09 1.505406401e+09 5.179671888e+09 6.23770181e+08 4.034984349e+09 1.213035849e+09 9.35947776e+08] [1.17716808e+08 1.35531735e+08 4.63600064e+08 5.6320971e+07 3.61583815e+08 1.09391881e+08 8.4318998e+07] [2.39912926e+08 2.76351877e+08 9.48096283e+08 1.1468697e+08 7.38957929e+08 2.2271242e+08 1.71802885e+08]] 3.5458e-05 0}
+2024/12/09 23:44:31 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[0 0 0 0 0 0 0 0 0] Degree:2 Coefficients:[]}
+2024/12/09 23:45:35 Configuration loaded
+2024/12/09 23:45:35 Starting the ProjMatrix server on 8080
+2024/12/09 23:46:13 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[14 14 4125 5 15 12515 1255 15 15 125 23 51 251 21 15 5 51 5 235 1 51 55 1125 15 5 511 151 25 1 25 1 51 151 511 51 2525 12 5.2351551e+07 1 5 125 5 51 51 5 515 51 5 15] Degree:13 Coefficients:[42 4 24 12 53 125 12 5 12 53 125 152 5]}
+2024/12/09 23:46:13 Получена структура Polynomial: {manual-polynomial {7 7} [14 14 4125 5 15 12515 1255 15 15 125 23 51 251 21 15 5 51 5 235 1 51 55 1125 15 5 511 151 25 1 25 1 51 151 511 51 2525 12 5.2351551e+07 1 5 125 5 51 51 5 515 51 5 15] 13 [42 4 24 12 53 125 12 5 12 53 125 152 5]}
+2024/12/09 23:46:13 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[2.195634969925174e+53 7.532201875759289e+52 5.745972827254416e+55 8.053506952549397e+52 3.394085399324185e+54 9.162960334497841e+52 7.425011982017713e+53] [4.473226999576753e+51 1.531103829931994e+51 1.4033127818168855e+54 1.6361172656149628e+51 6.897268547620706e+52 1.8575426528835798e+51 1.5088283409018695e+52] [1.1708119174152142e+50 3.5249743629099826e+49 3.629931868154112e+53 3.635431933624373e+49 1.5585445593641595e+51 3.602154577001772e+49 3.4039970809312033e+50] [3.043802831690135e+51 1.0246625816199767e+51 2.1145403416051678e+54 1.0902276495310206e+51 4.6055449416863853e+52 1.2185781343360119e+51 1.0072992554259894e+52] [8.995766805100844e+51 3.084512576603397e+51 2.456977076815277e+54 3.2975861053317206e+51 1.3898181487501723e+53 3.750287763049362e+51 3.040395108176887e+52] [9.10083552689693e+52 4.0313437399512353e+52 3.8332425430125215e+56 6.748865724881169e+52 1.121795516540019e+54 3.662997484828584e+53 2.701185311021822e+53] [3.3169031537859046e+50 1.0211648170968169e+50 9.034491257172539e+53 1.0663273982666085e+50 4.509435017343318e+51 1.1653578791231248e+50 9.858554593224249e+50]] 4.0083e-05 0}
+2024/12/09 23:46:34 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[2.195634969925174e+53 7.532201875759289e+52 5.745972827254416e+55 8.053506952549397e+52 3.394085399324185e+54 9.162960334497841e+52 7.425011982017713e+53] [4.473226999576753e+51 1.531103829931994e+51 1.4033127818168855e+54 1.6361172656149628e+51 6.897268547620706e+52 1.8575426528835798e+51 1.5088283409018695e+52] [1.1708119174152142e+50 3.5249743629099826e+49 3.629931868154112e+53 3.635431933624373e+49 1.5585445593641595e+51 3.602154577001772e+49 3.4039970809312033e+50] [3.043802831690135e+51 1.0246625816199767e+51 2.1145403416051678e+54 1.0902276495310206e+51 4.6055449416863853e+52 1.2185781343360119e+51 1.0072992554259894e+52] [8.995766805100844e+51 3.084512576603397e+51 2.456977076815277e+54 3.2975861053317206e+51 1.3898181487501723e+53 3.750287763049362e+51 3.040395108176887e+52] [9.10083552689693e+52 4.0313437399512353e+52 3.8332425430125215e+56 6.748865724881169e+52 1.121795516540019e+54 3.662997484828584e+53 2.701185311021822e+53] [3.3169031537859046e+50 1.0211648170968169e+50 9.034491257172539e+53 1.0663273982666085e+50 4.509435017343318e+51 1.1653578791231248e+50 9.858554593224249e+50]] 4.0083e-05 0}
+2024/12/09 23:46:49 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[12 1 0 1 13 1 1 1 1] Degree:4 Coefficients:[4 4 4 4]}
+2024/12/09 23:46:49 Получена структура Polynomial: {manual-polynomial {3 3} [12 1 0 1 13 1 1 1 1] 4 [4 4 4 4]}
+2024/12/09 23:46:49 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[7696 1988 108] [2096 9792 800] [800 908 84]] 2.875e-06 0}
+2024/12/09 23:47:03 Configuration loaded
+2024/12/09 23:47:03 Starting the ProjMatrix server on 8080
+2024/12/09 23:47:06 
+РЕЗУЛЬТАТЫ
+
+ { [] 0 0}
+2024/12/09 23:47:33 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[52 5 5 52 52 52 25 2 2 2 2 5 2 2 2 5 2 252 2 5 2 55 5 25 522 5 2 2 25 5 2 55 0 0 5 5 25 2 52 52 5 0 0 5 2 25 2 5 5] Degree:6 Coefficients:[2352 345 2 35 235 2]}
+2024/12/09 23:47:33 Получена структура Polynomial: {manual-polynomial {7 7} [52 5 5 52 52 52 25 2 2 2 2 5 2 2 2 5 2 252 2 5 2 55 5 25 522 5 2 2 25 5 2 55 0 0 5 5 25 2 52 52 5 0 0 5 2 25 2 5 5] 6 [2352 345 2 35 235 2]}
+2024/12/09 23:47:33 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[1.707914089958e+12 1.78508788205e+11 7.11961901524e+11 1.4968320416679e+13 3.35617692958e+11 2.33772864119e+11 1.44048400884e+11] [9.4209779431e+10 9.819580034e+09 3.9301080644e+10 8.26331362173e+11 1.8427367143e+10 1.284353262e+10 7.915878161e+09] [5.826634706131e+12 6.0118045252e+11 2.43705402828e+12 5.1251888402534e+13 1.120745571079e+12 7.82977953496e+11 4.82941293371e+11] [1.2434267440501e+13 1.28427658526e+12 5.199374984113e+12 1.09341794292377e+14 2.395610997389e+12 1.67316979206e+12 1.032003505507e+12] [1.369517894328e+12 1.4205655524e+11 5.72048044618e+11 1.2028946049538e+13 2.65627481109e+11 1.85304130165e+11 1.14282827723e+11] [1.37921749024e+12 1.43013182235e+11 5.76243075495e+11 1.2117577752071e+13 2.67361119509e+11 1.86476570113e+11 1.14969152044e+11] [6.19100064398e+11 6.388743031e+10 2.58918732741e+11 5.445051105423e+12 1.19148976798e+11 8.3255398155e+10 5.1347079724e+10]] 1.1667e-05 0}
+2024/12/09 23:50:56 Configuration loaded
+2024/12/09 23:50:56 Starting the ProjMatrix server on 8080
+2024/12/09 23:51:00 
+РЕЗУЛЬТАТЫ
+
+ { [] 0 0}
+2024/12/09 23:51:34 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[0 4.112412e+06 141 42 1 14 42 141 0 214 1 4 14 414 24 2 14 24 0 14212 4 24 1244 414 4 124 1421 0 12 41 2.143124e+06 15 1 4 12 0 4 413 0 0 0 124 0 0 0 14 1423 1 4] Degree:5 Coefficients:[4 214 1234 24 43]}
+2024/12/09 23:51:34 Получена структура Polynomial: {manual-polynomial {7 7} [0 4.112412e+06 141 42 1 14 42 141 0 214 1 4 14 414 24 2 14 24 0 14212 4 24 1244 414 4 124 1421 0 12 41 2.143124e+06 15 1 4 12 0 4 413 0 0 0 124 0 0 0 14 1423 1 4] 5 [4 214 1234 24 43]}
+2024/12/09 23:51:34 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[1.449585420777252e+19 3.868437355180467e+18 2.4555549785801084e+20 1.4082920497162773e+17 4.1327601570215744e+17 2.3143292763890573e+19 4.252514415680588e+19] [1.567348037891805e+15 1.4495788112592292e+19 2.192253629114718e+17 1.72844609296075e+15 1.4726232930243252e+16 8.487278735511689e+17 1.513064253627082e+15] [7.3215069932664e+13 2.488083688951702e+18 2.6945061895549734e+17 9.344765830989e+13 2.50914792175151e+15 2.4454961499387144e+16 5.8272792420188e+14] [4.712723936362986e+15 3.5938996227107743e+18 2.0241266432595904e+17 1.38269973781418e+14 2.779414525889172e+15 2.502848612334189e+16 3.3958191376164452e+16] [1.2968164027492178e+18 1.699098780900142e+18 3.704660163973539e+18 2.4488873068486904e+16 2.6903766465504592e+17 7.865006216193656e+18 3.775055622633292e+18] [6.54288795527832e+14 5.0666331095292e+14 1.286705322841888e+15 3.95107965531856e+14 5.2152693404294e+13 2.3263136938179578e+17 8.33959082685276e+14] [6.12271468164723e+14 1.2956210723100846e+19 7.74747633990023e+17 2.20953247082946e+14 1.155380917060444e+15 4.331120784794473e+16 2.326283721267938e+17]] 1.5084e-05 0}
+2024/12/09 23:56:32 Configuration loaded
+2024/12/09 23:56:32 Starting the ProjMatrix server on 8080
+2024/12/09 23:57:03 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[52354 2 535 523 5 235 0 23 5235 23 25 523 2323 523 235 55 535 235 235 235 5 25 5 5 23 52 352 2 235 2 23 525 0 0 55 523 5 253 0 52 35 223 35 3 35 52 5 2 5] Degree:7 Coefficients:[3.4523523e+07 52 35 235 235 235 25]}
+2024/12/09 23:57:03 Получена структура Polynomial: {manual-polynomial {7 7} [52354 2 535 523 5 235 0 23 5235 23 25 523 2323 523 235 55 535 235 235 235 5 25 5 5 23 52 352 2 235 2 23 525 0 0 55 523 5 253 0 52 35 223 35 3 35 52 5 2 5] 7 [3.4523523e+07 52 35 235 235 235 25]}
+2024/12/09 23:57:03 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[5.1514452017323554e+29 2.888903656419796e+25 5.330173913240829e+27 5.172658825164527e+27 8.090062061737628e+25 2.3736554287003696e+27 1.1190697964318595e+25] [5.3686751987521716e+26 5.476517609873123e+23 5.570362855053486e+24 5.399800287695564e+24 1.3911271132148366e+23 2.7059465611062956e+24 7.385754677850464e+22] [2.37176752082119e+27 1.3913568813344948e+23 2.4540741616344874e+25 2.3815452691350454e+25 3.731228805970195e+23 1.0931254651449213e+25 5.225984755987161e+22] [2.8340187312829603e+26 1.6451584651915696e+22 2.932361769563458e+24 2.8456992612267253e+24 4.4566056442012e+22 1.306094939735852e+24 6.223695934476945e+21] [2.3163570138656503e+27 1.3017999833870458e+23 2.3967235917494238e+25 2.325896275849242e+25 3.638009781589836e+23 1.0673312093593187e+25 5.035292315955392e+22] [5.164368400728933e+27 2.9041844803324385e+23 5.343547961713262e+25 5.185636699381819e+25 8.111211513805138e+23 2.379646210296497e+25 1.1228446172391252e+23] [3.4670287740952585e+26 1.9786011000144474e+22 3.5873272494949523e+24 3.481312054609421e+24 5.44841745987055e+22 1.5976730406781266e+24 7.572835518484122e+21]] 3.1458e-05 0}
+2024/12/09 23:58:55 Configuration loaded
+2024/12/09 23:58:55 Starting the ProjMatrix server on 8080
+2024/12/09 23:59:17 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[5 23 35 2 0 35 0 5 523 5 523 523 0 52 2 5 3 0 5 25 0 52 35 25 5 2 32 3 35 23 23 235 5 5 52 23 5 23 5 35 23 2 5235 2 35 235 2 25 0] Degree:6 Coefficients:[523 523 52 35 25 5]}
+2024/12/09 23:59:17 Получена структура Polynomial: {manual-polynomial {7 7} [5 23 35 2 0 35 0 5 523 5 523 523 0 52 2 5 3 0 5 25 0 52 35 25 5 2 32 3 35 23 23 235 5 5 52 23 5 23 5 35 23 2 5235 2 35 235 2 25 0] 6 [523 523 52 35 25 5]}
+2024/12/09 23:59:17 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[2.2814471345561e+13 1.4450098212677e+13 2.963996763475e+12 1.7786788499954e+13 1.2289020587701e+13 2.746891901528e+12 2.316144222074e+12] [5.67012045757747e+14 3.71707526414851e+14 7.2181467707863e+13 4.59111372068037e+14 3.20079682693152e+14 6.6917347077092e+13 5.9751442048203e+13] [5.460506101553e+12 3.586774596872e+12 7.3720439807e+11 4.381072991873e+12 3.06498449784e+12 6.89777584005e+11 5.683872437e+11] [3.6859318437518e+13 2.3441368463156e+13 4.685160163889e+12 2.9012229201991e+13 2.0014560526378e+13 4.322469667453e+12 3.785392128665e+12] [5.0179450342512e+13 3.471001659166e+13 5.735873477142e+12 4.4623284004038e+13 3.0462450051859e+13 5.071177156765e+12 5.926760056663e+12] [9.008209159784e+12 6.473216072596e+12 1.17267173182e+12 7.944426486902e+12 5.698061446438e+12 1.10543638142e+12 1.027431454763e+12] [2.3158631255192e+14 1.3045473052032e+14 2.2517420837372e+13 1.67116500204442e+14 1.12812581471898e+14 2.0134086346655e+13 2.1927331586709e+13]] 2.0708e-05 0}
+2024/12/10 00:03:23 Configuration loaded
+2024/12/10 00:03:23 Starting the ProjMatrix server on 8080
+2024/12/10 00:03:51 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[3.252354e+06 2323 55 23 5 35 52 35 2 5 5 235 235 23 23 5 23 5 23 5235 5 52 235 5 5 35 5 523 35 235 32523 5 23 23 23 235 0 5 23 0 55 53 0 2 35 0 23 5235 0] Degree:6 Coefficients:[52 235 235 235 2345 235]}
+2024/12/10 00:03:51 Получена структура Polynomial: {manual-polynomial {7 7} [3.252354e+06 2323 55 23 5 35 52 35 2 5 5 235 235 23 23 5 23 5 23 5235 5 52 235 5 5 35 5 523 35 235 32523 5 23 23 23 235 0 5 23 0 55 53 0 2 35 0 23 5235 0] 6 [52 235 235 235 2345 235]}
+2024/12/10 00:03:51 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[8.551814258741679e+34 6.108158881819049e+31 1.4476629286732984e+30 6.048711135164374e+29 1.3591199963426387e+29 9.292609581349428e+29 1.367847477551036e+30] [9.208151431917719e+29 6.576949669098686e+26 1.5587686189449494e+25 6.512939444090402e+24 1.4634301970794194e+24 1.0005812121954273e+25 1.4728274591895451e+25] [6.147278630545096e+29 4.3907121262112715e+26 1.0406198282824596e+25 4.34797946450975e+24 9.769727373069197e+23 6.67978426028483e+24 9.83246284833188e+24] [1.367390577094099e+30 9.766628046169547e+26 2.314737705642199e+25 9.671574266502613e+24 2.1731621266652288e+24 1.485840094704987e+25 2.1871169214675766e+25] [9.265641594035828e+29 6.618012189429046e+26 1.5685014151080417e+25 6.553603326856446e+24 1.4725670324461124e+24 1.0068284003943935e+25 1.4820231368291326e+25] [6.179259159217483e+30 4.4135543142622886e+27 1.0460335248801376e+26 4.370599331883566e+25 9.820553197554102e+24 6.714533455966106e+25 9.883615100697289e+25] [9.959890435404179e+27 7.11388150655601e+24 1.6860251339327284e+23 7.0446463878209915e+22 1.582903150778765e+22 1.0822821285025867e+23 1.5930670921082517e+23]] 1.7167e-05 0}
+2024/12/10 00:07:18 Configuration loaded
+2024/12/10 00:07:18 Starting the ProjMatrix server on 8080
+2024/12/10 00:07:45 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[623 234523 0 62 23 0 36 0 6 662346 3 34623 0 2 632 42346 234 23 46 3623 632 2346 23236 23 66 236 6 23 236 6 5346 46 23 23 23 23 623 233 4623 2346 6 6 6 236 23 46 3246 0 63] Degree:6 Coefficients:[35235 2 35 235 23 52]}
+2024/12/10 00:07:45 Получена структура Polynomial: {manual-polynomial {7 7} [623 234523 0 62 23 0 36 0 6 662346 3 34623 0 2 632 42346 234 23 46 3623 632 2346 23236 23 66 236 6 23 236 6 5346 46 23 23 23 23 623 233 4623 2346 6 6 6 236 23 46 3246 0 63] 6 [35235 2 35 235 23 52]}
+2024/12/10 00:07:45 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[1.4633855477543478e+26 9.60020478978226e+27 1.203004205124288e+27 5.931213031644716e+24 6.761161362435931e+25 8.211496080138936e+26 1.4347601422146608e+26] [3.449595727149568e+24 3.409593807657868e+26 2.711332967710333e+28 1.6493323009687645e+25 1.4275662308739554e+27 1.6409214479587668e+25 3.028060979011314e+24] [2.644019648632098e+25 1.7350973837862245e+27 3.475278770136487e+26 1.1500659507369163e+24 1.9069107502059897e+25 1.4834978302869815e+26 2.5921305562903142e+25] [1.452512913706424e+25 9.550780126168804e+26 6.390520247495161e+26 9.02478133091578e+23 3.406927941729689e+25 8.144796868349309e+25 1.423414873444673e+25] [3.3070758077556364e+22 3.324689805506107e+24 2.7338292719978546e+26 1.6624104916906392e+23 1.439405956197748e+25 1.5581491412206254e+23 2.8847806188002117e+22] [4.648604021091303e+23 3.100093560189943e+25 1.2156555112567877e+26 9.0091247976887e+22 6.413876364140968e+24 2.5963137816612863e+24 4.543415532132208e+23] [1.6844287648955425e+23 1.1064370786237972e+25 4.5575692440067426e+24 8.754567698058653e+21 2.4487623951069352e+23 9.448948481466581e+23 1.65116262006249e+23]] 3.9375e-05 0}
+2024/12/10 00:08:07 Configuration loaded
+2024/12/10 00:08:07 Starting the ProjMatrix server on 8080
+2024/12/10 00:08:29 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[12 24 1 1234 4 2 4 4 1423 1212 12 34 123412 1 1 34123 412 123 4 4 2 344 41 234 123412 12 123 4 12 4123 124 412 43 412 1 4 41 3 4 1123 4 234 12 412 4 12 0 31234 12] Degree:5 Coefficients:[234 12 4 124 12]}
+2024/12/10 00:08:29 Получена структура Polynomial: {manual-polynomial {7 7} [12 24 1 1234 4 2 4 4 1423 1212 12 34 123412 1 1 34123 412 123 4 4 2 344 41 234 123412 12 123 4 12 4123 124 412 43 412 1 4 41 3 4 1123 4 234 12 412 4 12 0 31234 12] 5 [234 12 4 124 12]}
+2024/12/10 00:08:29 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[7.761261333468592e+16 2.4580978358642108e+16 5.322976401397733e+16 2.784070018479882e+19 3.205251878051316e+15 5.42670192659959e+16 1.007044824997124e+15] [1.754040024033208e+15 5.8895943270492744e+16 1.2761049882746736e+16 4.848063598066898e+17 9.42263064373266e+16 1.1272253484388317e+18 1.957266956010721e+16] [9.349357028411756e+15 3.175799387746891e+17 3.791982623050883e+16 2.918525582641462e+18 1.0845431483715286e+17 2.8928684067935836e+18 2.2203087291829656e+16] [7.761312178717567e+18 2.437813089502603e+18 5.320910767957672e+18 2.78411110423131e+21 3.19287542575534e+17 5.233514443127852e+18 1.0047750588815128e+17] [2.6144105701772136e+16 4.788715094653237e+16 2.1851202668694584e+16 9.31982094727833e+18 1.8668003818812144e+16 3.768846829463893e+17 3.95092046555944e+15] [5.24696312062264e+14 3.907587149086756e+15 6.18270879643588e+14 1.767567664312286e+17 8.166042124338828e+15 2.2660046565757744e+16 1.701803339251776e+15] [9.33053806715896e+14 9.428289805999208e+15 3.26841672036248e+15 3.198552888106526e+17 6.7582820103566e+15 2.6161886982458416e+17 1.395686946972106e+15]] 1.4583e-05 0}
+2024/12/10 00:10:23 Configuration loaded
+2024/12/10 00:10:23 Starting the ProjMatrix server on 8080
+2024/12/10 00:10:40 
+РЕЗУЛЬТАТЫ
+
+ { [] 0 0}
+2024/12/10 00:11:07 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:7 Columns:7} Matrix:[1234 2 412 341241 4 124 42 12 44 12 24 2412 124 12 41 2 12 1224 12 12 412 4124 12 412 4 112 12 4 4 4 4 2 4 4 12 14 24 124 12 12 1 24 1 44 24 12 24 412 12] Degree:6 Coefficients:[4 2 34 24 24 234]}
+2024/12/10 00:11:07 Получена структура Polynomial: {manual-polynomial {7 7} [1234 2 412 341241 4 124 42 12 44 12 24 2412 124 12 41 2 12 1224 12 12 412 4124 12 412 4 112 12 4 4 4 4 2 4 4 12 14 24 124 12 12 1 24 1 44 24 12 24 412 12] 6 [4 2 34 24 24 234]}
+2024/12/10 00:11:07 
+РЕЗУЛЬТАТЫ
+
+ {manual-polynomial [[1.7276363931422043e+24 4.5446579418804414e+21 3.075055082790261e+23 1.587738301681583e+26 3.7047827860913134e+22 6.203586370361465e+22 4.010551896692512e+22] [5.703488513294208e+21 1.657513045809482e+19 5.8338506127845635e+20 1.5911095041571202e+22 1.5392327484604927e+20 2.2453218750275015e+19 9.865535980707193e+18] [2.3234270633889574e+22 6.592919093293082e+19 2.8140873564962176e+21 5.798553409936081e+23 5.949962329170045e+20 2.762493247723259e+20 1.6436014210749668e+20] [1.9188390049634737e+24 5.589363737480031e+21 1.9270381167275283e+23 1.1557399974369407e+24 5.204562307564146e+22 6.04801578368035e+21 2.3070449199856718e+21] [1.874567730245291e+21 5.457468556827485e+18 1.8906688572286327e+20 2.0814590172499157e+21 5.078563361655285e+19 6.250206022663928e+18 2.4834488115771356e+18] [6.764436568221872e+21 1.968527706925479e+19 6.84503698038955e+20 1.0159299230925024e+22 1.830971343429833e+20 2.3504289525195035e+19 9.60032511544669e+18] [5.611075656571048e+20 1.614814300414928e+18 6.17712170316459e+19 6.718204213098337e+21 1.482322675867913e+19 4.057883324463308e+18 2.2131414793524265e+18]] 2.8042e-05 0}
