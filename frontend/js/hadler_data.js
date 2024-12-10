@@ -1,4 +1,7 @@
 function sendDataToServer(url, payload) {
+    // Показываем индикатор загрузки
+    showLoadingOverlay();
+
     fetch(url, {
         method: "POST",
         headers: {
@@ -19,5 +22,10 @@ function sendDataToServer(url, payload) {
         })
         .catch(error => {
             console.error("Ошибка отправки данных:", error);
+            alert("Произошла ошибка при вычислениях. Попробуйте ещё раз.");
+        })
+        .finally(() => {
+            // Скрываем индикатор загрузки
+            hideLoadingOverlay();
         });
 }

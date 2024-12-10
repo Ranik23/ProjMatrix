@@ -112,3 +112,12 @@ function submitLinearFormData() {
 // Экспортируем функцию для глобального доступа
 window.submitLinearFormData = submitLinearFormData;
 
+function showLoadingOverlay() {
+    const loadingOverlay = document.getElementById("loading-overlay");
+    loadingOverlay.style.display = "flex";
+}
+
+function hideLoadingOverlay() {
+    const loadingOverlay = document.getElementById("loading-overlay");
+    loadingOverlay.style.display = "none";
+}
