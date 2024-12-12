@@ -1,5 +1,3 @@
-// polynomial.js
-
 let coefficients = [];
 let currentCoefficientIndex = 0;
 
@@ -38,10 +36,6 @@ function initializeCoefficientInput() {
 
 // Экспортируем функцию в window
 window.initializeCoefficientInput = initializeCoefficientInput;
-
-
-// Обработчик для ввода коэффициента
-// polynomial.js
 
 function handleCoefficientEnter(event) {
     if (event.key === 'Enter') {
@@ -82,7 +76,6 @@ function displayCoefficients() {
     coefficientDisplayContainer.textContent = `Коэффициенты: [${coefficients.join(', ')}]`;
 }
 
-// polynomial.js
 function setupPolynomialMode() {
     document.getElementById('menu-container').style.display = 'none';
     document.getElementById('matrix-input-container').style.display = 'flex';
@@ -155,3 +148,28 @@ function generatePolynomialData() {
     sendDataToServer("/api/submit", data);
 }
 window.generatePolynomialData = generatePolynomialData;
+
+function submitPolynomialData() {
+    const rows = parseInt(document.getElementById('matrix-rows').value);
+    const columns = parseInt(document.getElementById('matrix-columns').value);
+    const matrix = [];
+    const degree = parseInt(document.getElementById('polynomial-degree').value);
+
+    const matrixInputs = document.querySelectorAll('#matrix-container input');
+    for (let input of matrixInputs) {
+        matrix.push(parseFloat(input.value));
+    }
+
+    const data = {
+        operationType: "manual-polynomial",
+        matrixSize: { rows, columns },
+        matrix: matrix,
+        degree: degree+1,
+        coefficients: coefficients,
+    };
+
+    console.log("Отправка данных:", data);
+
+    // Переход на страницу результатов после сбора данных
+    sendDataToServer("/api/submit", data);
+}

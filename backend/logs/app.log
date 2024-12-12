@@ -583,3 +583,25 @@
 2024/12/12 14:38:05 Получена структура LinearForm: {generate-linear-form 1000 {600 600} [] []}
 2024/12/12 14:38:21 Обработка генерации линейной формы: {OperationType:generate-linear-form MatrixCount:1000 MatrixSize:{Rows:1000 Columns:1000} Matrices:[] Coefficients:[]}
 2024/12/12 14:39:25 Получена структура LinearForm: {generate-linear-form 1000 {1000 1000} [] []}
+2024/12/12 21:42:40 Configuration loaded
+2024/12/12 21:42:40 Starting the ProjMatrix server on 8080
+2024/12/12 21:43:17 Обработка генерации полинома: {OperationType:generate-polynomial MatrixSize:{Rows:500 Columns:500} Matrix:[] Degree:100 Coefficients:[]}
+2024/12/12 21:43:19 Обработка генерации полинома: {OperationType:generate-polynomial MatrixSize:{Rows:500 Columns:500} Matrix:[] Degree:100 Coefficients:[]}
+2024/12/12 21:43:54 Получена структура Polynomial: {generate-polynomial {500 500} [] 100 []}
+2024/12/12 21:43:54 Получена структура Polynomial: {generate-polynomial {500 500} [] 100 []}
+2024/12/12 21:44:13 Обработка генерации полинома: {OperationType:generate-polynomial MatrixSize:{Rows:500 Columns:500} Matrix:[] Degree:100 Coefficients:[]}
+2024/12/12 21:44:56 Получена структура Polynomial: {generate-polynomial {500 500} [] 100 []}
+2024/12/12 21:46:38 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[15 236 26 26 326372 236 2476 2472 2764] Degree:6 Coefficients:[2 3 4 5 6 7]}
+2024/12/12 21:46:38 Получена структура Polynomial: {manual-polynomial {3 3} [15 236 26 26 326372 236 2476 2472 2764] 6 [2 3 4 5 6 7]}
+2024/12/12 21:46:39 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[14 14 14 62 263 51 261 234 15] Degree:6 Coefficients:[2 3 4 5 6 7]}
+2024/12/12 21:46:39 Получена структура Polynomial: {manual-polynomial {3 3} [14 14 14 62 263 51 261 234 15] 6 [2 3 4 5 6 7]}
+2024/12/12 21:54:16 Configuration loaded
+2024/12/12 21:54:16 Starting the ProjMatrix server on 8080
+2024/12/12 21:54:51 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:5 Columns:5} Matrix:[253 235 5 23 5 0 23523 3 5 235 55 23 5325 35 23 23 23 5235 232 523 552 232 5 55 35] Degree:6 Coefficients:[523 45 23 523 5 23]}
+2024/12/12 21:54:51 Получена структура Polynomial: {manual-polynomial {5 5} [253 235 5 23 5 0 23523 3 5 235 55 23 5325 35 23 23 23 5235 232 523 552 232 5 55 35] 6 [523 45 23 523 5 23]}
+2024/12/12 21:55:10 Обработка генерации полинома: {OperationType:generate-polynomial MatrixSize:{Rows:500 Columns:500} Matrix:[] Degree:300 Coefficients:[]}
+2024/12/12 21:56:53 Получена структура Polynomial: {generate-polynomial {500 500} [] 300 []}
+2024/12/12 21:57:22 Обработка ручного ввода линейной формы: {OperationType:manual-linear-form MatrixCount:3 MatrixSize:{Rows:3 Columns:3} Matrices:[[223523 2 5 5 55 23 23 535 5] [3 5 235 23 5 23 5 23 52] [52 34 52 35 23 5 52 253 23]] Coefficients:[15 543 2]}
+2024/12/12 21:57:22 Получена структура LinearForm: {manual-linear-form 3 {3 3} [[223523 2 5 5 55 23 23 535 5] [3 5 235 23 5 23 5 23 52] [52 34 52 35 23 5 52 253 23]] [15 543 2]}
+2024/12/12 21:57:42 Обработка генерации линейной формы: {OperationType:generate-linear-form MatrixCount:206 MatrixSize:{Rows:200 Columns:200} Matrices:[] Coefficients:[]}
+2024/12/12 21:57:42 Получена структура LinearForm: {generate-linear-form 206 {200 200} [] []}

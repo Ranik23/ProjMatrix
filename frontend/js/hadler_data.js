@@ -1,5 +1,4 @@
 function sendDataToServer(url, payload) {
-    // Показываем индикатор загрузки
     showLoadingOverlay();
 
     fetch(url, {
@@ -17,7 +16,6 @@ function sendDataToServer(url, payload) {
         })
         .then(result => {
             console.log("Ответ от сервера:", result);
-            // После успешной отправки переходим на страницу результатов
             proceedToNextStep();
         })
         .catch(error => {
