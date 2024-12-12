@@ -4,10 +4,12 @@ import (
 	"ProjMatrix/internal/entity"
 	pol "ProjMatrix/internal/usecase/polynomial"
 	mtrx "ProjMatrix/pkg/matrix"
+	"ProjMatrix/pkg/wpool"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
+	"runtime"
 )
 
 func handleManualPolynomial(c *gin.Context, p *entity.Polynomial) error {
@@ -24,11 +26,21 @@ func handleManualPolynomial(c *gin.Context, p *entity.Polynomial) error {
 		return fmt.Errorf("не удалось вычислить полином: %w", err)
 	}
 
+	pool := wpool.NewWorkerPool(runtime.NumCPU())
+	pool.Start()
+
+	_, par_timeCalc, err := pol.ParallelPolynomialCalculation(matrix, identityMatrix, p.Coefficients, pool)
+	if err != nil {
+		return fmt.Errorf("не удалось вычислить полином: %w", err)
+	}
+	pool.Wait()
+	pool.Stop()
+
 	entity.ResultOfCalculations = entity.CalculationResult{
 		OperationType:    p.OperationType,
 		ResultMatrix:     resultMatrix,
 		TimeCalc:         timeCalc,
-		TimeParallelCalc: 0.0, // заглушка
+		TimeParallelCalc: par_timeCalc, // заглушка
 	}
 
 	c.Redirect(http.StatusFound, "/results")

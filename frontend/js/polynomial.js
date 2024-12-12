@@ -46,7 +46,7 @@ window.initializeCoefficientInput = initializeCoefficientInput;
 function handleCoefficientEnter(event) {
     if (event.key === 'Enter') {
         const input = document.getElementById('coefficient-input');
-        const value = parseInt(input.value);
+        const value = parseFloat(input.value);
 
         if (!isNaN(value)) {
             coefficients.push(value);
