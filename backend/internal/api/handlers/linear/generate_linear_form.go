@@ -6,6 +6,7 @@ import (
 	mtrx "ProjMatrix/pkg/matrix"
 	"ProjMatrix/pkg/wpool"
 	"fmt"
+	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -15,7 +16,8 @@ import (
 func handleGeneratedLinearForm(c *gin.Context, l *entity.LinearForm) error {
 	log.Printf("Обработка генерации линейной формы: %+v\n", *l)
 
-	//parallel_result := ParallelPolynomialCalculation()
+	session := sessions.Default(c)
+
 	matrices := make([][][]float64, l.MatrixCount)
 	for i := 0; i < l.MatrixCount; i++ {
 		matrix := mtrx.GenerateMatrix(l.MatrixSize.Rows, l.MatrixSize.Columns)
@@ -39,11 +41,17 @@ func handleGeneratedLinearForm(c *gin.Context, l *entity.LinearForm) error {
 	pool.Wait()
 	pool.Stop()
 
-	entity.ResultOfCalculations = entity.CalculationResult{
+	result := entity.CalculationResult{
 		OperationType:    l.OperationType,
 		ResultMatrix:     nil,
 		TimeCalc:         timeCalc,
 		TimeParallelCalc: par_timeCalc,
+	}
+
+	session.Set("calculationResult", result)
+	err = session.Save()
+	if err != nil {
+		return fmt.Errorf("ошибка сохранения сессии: %w\n", err)
 	}
 
 	c.Redirect(http.StatusFound, "/results")

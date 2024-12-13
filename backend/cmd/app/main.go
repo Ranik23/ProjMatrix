@@ -3,10 +3,18 @@ package main
 import (
 	"ProjMatrix/internal/api/routes"
 	"ProjMatrix/internal/config"
+	"ProjMatrix/internal/entity"
+	"encoding/gob"
 	"fmt"
+	"github.com/gin-contrib/sessions"
+	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
 	"log"
 )
+
+func init() {
+	gob.Register(entity.CalculationResult{})
+}
 
 func main() {
 	cfg, err := config.LoadConfig("configs/config.yaml")
@@ -26,6 +34,18 @@ func main() {
 	router.Static("/css", "../frontend/css")
 	router.Static("/js", "../frontend/js")
 	router.LoadHTMLGlob("../frontend/views/*")
+
+	// Хранилище для сессий (cookie-based)
+	store := cookie.NewStore([]byte("champ_and_anton_key"))
+	store.Options(sessions.Options{
+		MaxAge:   3600,  // время жизни сессии
+		Path:     "/",   // доступ ко всей проге
+		HttpOnly: true,  // cookie недоступны из JS
+		Secure:   false, // true ставить для https в production
+	})
+
+	// добавили middleware для работы с сессиями
+	router.Use(sessions.Sessions("champ_and_anton_key", store))
 
 	routes.RegisterHTMLRoutes(router)
 	routes.RegisterAPIRoutes(router)

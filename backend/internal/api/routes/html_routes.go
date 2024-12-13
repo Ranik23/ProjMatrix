@@ -2,7 +2,9 @@ package routes
 
 import (
 	"ProjMatrix/internal/entity"
+	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
+	"log"
 	"net/http"
 )
 
@@ -12,11 +14,19 @@ func RegisterHTMLRoutes(router *gin.Engine) {
 	})
 
 	router.GET("/results", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "results.html", gin.H{
-			"OperationType":    entity.ResultOfCalculations.OperationType,
-			"ResultMatrix":     entity.ResultOfCalculations.ResultMatrix,
-			"TimeCalc":         entity.ResultOfCalculations.TimeCalc,
-			"TimeParallelCalc": entity.ResultOfCalculations.TimeParallelCalc,
-		})
+		session := sessions.Default(c)
+		value := session.Get("calculationResult")
+
+		if result, ok := value.(entity.CalculationResult); ok {
+			c.HTML(http.StatusOK, "results.html", gin.H{
+				"OperationType":    result.OperationType,
+				"ResultMatrix":     result.ResultMatrix,
+				"TimeCalc":         result.TimeCalc,
+				"TimeParallelCalc": result.TimeParallelCalc,
+			})
+		} else {
+			log.Printf("Ошибка получения результата: %+v \n", value)
+			c.JSON(http.StatusNotFound, gin.H{"error": "Результат не найден. Выполните вычисление заново."})
+		}
 	})
 }

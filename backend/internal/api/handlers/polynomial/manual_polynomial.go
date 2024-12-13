@@ -6,6 +6,7 @@ import (
 	mtrx "ProjMatrix/pkg/matrix"
 	"ProjMatrix/pkg/wpool"
 	"fmt"
+	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -15,7 +16,8 @@ import (
 func handleManualPolynomial(c *gin.Context, p *entity.Polynomial) error {
 	log.Printf("Обработка ручного ввода полинома: %+v\n", *p)
 
-	//parallel_result := ParallelPolynomialCalculation()
+	session := sessions.Default(c)
+
 	matrix, err := mtrx.BuildMatrix(p.Matrix, p.MatrixSize.Rows, p.MatrixSize.Columns)
 	if err != nil {
 		return fmt.Errorf("не удалось считать матрицу: %w", err)
@@ -36,11 +38,17 @@ func handleManualPolynomial(c *gin.Context, p *entity.Polynomial) error {
 	pool.Wait()
 	pool.Stop()
 
-	entity.ResultOfCalculations = entity.CalculationResult{
+	result := entity.CalculationResult{
 		OperationType:    p.OperationType,
 		ResultMatrix:     resultMatrix,
 		TimeCalc:         timeCalc,
 		TimeParallelCalc: par_timeCalc, // заглушка
+	}
+
+	session.Set("calculationResult", result)
+	err = session.Save()
+	if err != nil {
+		return fmt.Errorf("ошибка сохранения сессии: %w\n", err)
 	}
 
 	c.Redirect(http.StatusFound, "/results")

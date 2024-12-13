@@ -6,6 +6,3 @@ type CalculationResult struct {
 	TimeCalc         float64     `json:"timeCalc"`         // Время последовательных вычислений (в секундах)
 	TimeParallelCalc float64     `json:"timeParallelCalc"` // Время параллельных вычислений (в секундах)
 }
-
-// ResultOfCalculations Глобальная переменная для результатов вычислений
-var ResultOfCalculations CalculationResult

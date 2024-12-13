@@ -6,6 +6,7 @@ import (
 	mtrx "ProjMatrix/pkg/matrix"
 	"ProjMatrix/pkg/wpool"
 	"fmt"
+	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -14,6 +15,8 @@ import (
 
 func handleGeneratedPolynomial(c *gin.Context, p *entity.Polynomial) error {
 	log.Printf("Обработка генерации полинома: %+v\n", *p)
+
+	session := sessions.Default(c)
 
 	matrix := mtrx.GenerateMatrix(p.MatrixSize.Rows, p.MatrixSize.Columns)
 	coefficients := mtrx.GenerateCoefficients(p.Degree)
@@ -33,11 +36,17 @@ func handleGeneratedPolynomial(c *gin.Context, p *entity.Polynomial) error {
 	pool.Wait()
 	pool.Stop()
 
-	entity.ResultOfCalculations = entity.CalculationResult{
+	result := entity.CalculationResult{
 		OperationType:    p.OperationType,
 		ResultMatrix:     nil,
 		TimeCalc:         timeCalc,
 		TimeParallelCalc: par_timeCalc, // заглушка
+	}
+
+	session.Set("calculationResult", result)
+	err = session.Save()
+	if err != nil {
+		return fmt.Errorf("ошибка сохранения сессии: %w\n", err)
 	}
 
 	c.Redirect(http.StatusFound, "/results")

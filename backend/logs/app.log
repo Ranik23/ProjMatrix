@@ -605,3 +605,35 @@
 2024/12/12 21:57:22 Получена структура LinearForm: {manual-linear-form 3 {3 3} [[223523 2 5 5 55 23 23 535 5] [3 5 235 23 5 23 5 23 52] [52 34 52 35 23 5 52 253 23]] [15 543 2]}
 2024/12/12 21:57:42 Обработка генерации линейной формы: {OperationType:generate-linear-form MatrixCount:206 MatrixSize:{Rows:200 Columns:200} Matrices:[] Coefficients:[]}
 2024/12/12 21:57:42 Получена структура LinearForm: {generate-linear-form 206 {200 200} [] []}
+2024/12/12 22:41:07 Configuration loaded
+2024/12/12 22:41:07 Starting the ProjMatrix server on 8080
+2024/12/12 22:43:04 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[41 41234 24 12 124 124 4 124 421] Degree:6 Coefficients:[5345 35 3 53 5 345]}
+2024/12/12 22:43:04 Получена структура Polynomial: {manual-polynomial {3 3} [41 41234 24 12 124 124 4 124 421] 6 [5345 35 3 53 5 345]}
+2024/12/12 22:43:43 Обработка генерации полинома: {OperationType:generate-polynomial MatrixSize:{Rows:500 Columns:500} Matrix:[] Degree:150 Coefficients:[]}
+2024/12/12 22:44:32 Получена структура Polynomial: {generate-polynomial {500 500} [] 150 []}
+2024/12/12 22:45:37 Обработка генерации линейной формы: {OperationType:generate-linear-form MatrixCount:1000 MatrixSize:{Rows:500 Columns:500} Matrices:[] Coefficients:[]}
+2024/12/12 22:45:40 Получена структура LinearForm: {generate-linear-form 1000 {500 500} [] []}
+2024/12/12 22:45:56 Обработка генерации линейной формы: {OperationType:generate-linear-form MatrixCount:1000 MatrixSize:{Rows:1000 Columns:1000} Matrices:[] Coefficients:[]}
+2024/12/12 22:46:56 Получена структура LinearForm: {generate-linear-form 1000 {1000 1000} [] []}
+2024/12/13 10:06:39 Configuration loaded
+2024/12/13 10:06:39 Starting the ProjMatrix server on 8080
+2024/12/13 10:07:38 Обработка генерации полинома: {OperationType:generate-polynomial MatrixSize:{Rows:300 Columns:300} Matrix:[] Degree:15 Coefficients:[]}
+2024/12/13 10:07:39 Ошибка при обработке вычислений: %!w(*fmt.wrapError=&{ошибка сохранения сессии: securecookie: error - caused by: securecookie: error - caused by: gob: type not registered for interface: entity.CalculationResult
+ [{1  {1  0x1400039a160}}]})
+2024/12/13 10:07:39 Получена структура Polynomial: {generate-polynomial {300 300} [] 15 []}
+2024/12/13 10:22:49 Configuration loaded
+2024/12/13 10:22:49 Starting the ProjMatrix server on 8080
+2024/12/13 10:22:54 Обработка генерации полинома: {OperationType:generate-polynomial MatrixSize:{Rows:300 Columns:300} Matrix:[] Degree:15 Coefficients:[]}
+2024/12/13 10:22:55 Получена структура Polynomial: {generate-polynomial {300 300} [] 15 []}
+2024/12/13 10:23:15 Обработка генерации полинома: {OperationType:generate-polynomial MatrixSize:{Rows:500 Columns:500} Matrix:[] Degree:100 Coefficients:[]}
+2024/12/13 10:23:56 Получена структура Polynomial: {generate-polynomial {500 500} [] 100 []}
+2024/12/13 10:24:09 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[14124 1234 12 34 13412 4 123 4 124] Degree:5 Coefficients:[4123 4 12 41 4]}
+2024/12/13 10:24:09 Получена структура Polynomial: {manual-polynomial {3 3} [14124 1234 12 34 13412 4 123 4 124] 5 [4123 4 12 41 4]}
+2024/12/13 10:24:26 Обработка ручного ввода линейной формы: {OperationType:manual-linear-form MatrixCount:3 MatrixSize:{Rows:3 Columns:3} Matrices:[[41 12 42 24 1424 41 2 4 4] [14 1 234 4 2 1 21 4 12] [4 123 4 4 412 41 1 12 4]] Coefficients:[1 234 12]}
+2024/12/13 10:24:26 Получена структура LinearForm: {manual-linear-form 3 {3 3} [[41 12 42 24 1424 41 2 4 4] [14 1 234 4 2 1 21 4 12] [4 123 4 4 412 41 1 12 4]] [1 234 12]}
+2024/12/13 10:24:35 Обработка генерации линейной формы: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/13 10:24:35 Получена структура LinearForm: {generate-linear-form 100 {100 100} [] []}
+2024/12/13 10:24:58 Configuration loaded
+2024/12/13 10:24:58 Starting the ProjMatrix server on 8080
+2024/12/13 10:25:08 Обработка генерации полинома: {OperationType:generate-polynomial MatrixSize:{Rows:100 Columns:100} Matrix:[] Degree:10 Coefficients:[]}
+2024/12/13 10:25:08 Получена структура Polynomial: {generate-polynomial {100 100} [] 10 []}
