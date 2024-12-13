@@ -19,7 +19,7 @@ func ProcessRequest(c *gin.Context, rawData map[string]interface{}) error {
 	case "manual-polynomial", "generate-polynomial":
 		var polynomial entity.Polynomial
 		if err := mapToStruct(rawData, &polynomial); err != nil {
-			return fmt.Errorf("invalid data for Polynomial: %w", err)
+			return fmt.Errorf("invalid data for a Polynomial: %w", err)
 		}
 		handPol.HandlePolynomial(c, &polynomial, operationType)
 

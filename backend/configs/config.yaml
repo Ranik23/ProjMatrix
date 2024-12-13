@@ -6,4 +6,4 @@ app:
 logging:
   level: "info"
   format: "json"
-  file: "/Users/champ001/GolandProjects/ProjMatrix/backend/logs/app.log"
+  file: "logs/app.log"

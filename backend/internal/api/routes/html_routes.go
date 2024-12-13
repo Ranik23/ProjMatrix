@@ -25,8 +25,8 @@ func RegisterHTMLRoutes(router *gin.Engine) {
 				"TimeParallelCalc": result.TimeParallelCalc,
 			})
 		} else {
-			log.Printf("Ошибка получения результата: %+v \n", value)
-			c.JSON(http.StatusNotFound, gin.H{"error": "Результат не найден. Выполните вычисление заново."})
+			log.Printf("Error getting the result: %+v \n", value)
+			c.JSON(http.StatusNotFound, gin.H{"error": "The result was not found. Perform the calculation again."})
 		}
 	})
 }

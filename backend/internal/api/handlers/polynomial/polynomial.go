@@ -12,19 +12,19 @@ func HandlePolynomial(c *gin.Context, p *entity.Polynomial, operationType string
 	case "manual-polynomial":
 		err := handleManualPolynomial(c, p)
 		if err != nil {
-			log.Printf("Ошибка при обработке вычислений: %w\n", err)
+			log.Printf("Error in processing calculations: %w\n", err)
 			c.JSON(http.StatusBadRequest, gin.H{"error": err})
 			return
 		}
 	case "generate-polynomial":
 		err := handleGeneratedPolynomial(c, p)
 		if err != nil {
-			log.Printf("Ошибка при обработке вычислений: %w\n", err)
+			log.Printf("Error in processing calculations: %w\n", err)
 			c.JSON(http.StatusBadRequest, gin.H{"error": err})
 			return
 		}
 	default:
-		log.Printf("Неизвестный operationType для полинома: %s\n", operationType)
+		log.Printf("Unknown operationType for the polynomial: %s\n", operationType)
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Unknown operationType"})
 		return
 	}

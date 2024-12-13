@@ -58,7 +58,7 @@ func ParallelPolynomialCalculation(matrix, identityMatrix [][]float64, coefficie
 
 func ParallelMatrixMultiply(a, b [][]float64, pool *wpool.WorkerPool) ([][]float64, error) {
 	if len(a) == 0 || len(b) == 0 || len(a[0]) != len(b) {
-		return nil, errors.New("матрицы несовместимы для умножения")
+		return nil, errors.New("matrices are incompatible for multiplication")
 	}
 
 	rowsA, colsA := len(a), len(a[0])

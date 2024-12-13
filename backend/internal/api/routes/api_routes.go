@@ -12,13 +12,13 @@ func RegisterAPIRoutes(router *gin.Engine) {
 		var rawData map[string]interface{}
 
 		if err := c.ShouldBindJSON(&rawData); err != nil {
-			log.Println("Ошибка привязки JSON:", err)
+			log.Println("JSON binding error:", err)
 			c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid JSON"})
 			return
 		}
 
 		if err := request.ProcessRequest(c, rawData); err != nil {
-			log.Println("Ошибка обработки запроса:", err)
+			log.Println("Request processing error:", err)
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 			return
 		}

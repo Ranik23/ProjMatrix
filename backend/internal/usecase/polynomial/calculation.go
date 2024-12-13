@@ -11,10 +11,10 @@ func PolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []fl
 	start := time.Now()
 
 	if len(matrix) == 0 || len(identityMatrix) == 0 {
-		return nil, 0, errors.New("матрица или единичная матрица пустые")
+		return nil, 0, errors.New("the matrix or the unit matrix is empty")
 	}
 	if len(matrix) != len(matrix[0]) {
-		return nil, 0, errors.New("матрица должна быть квадратной")
+		return nil, 0, errors.New("the matrix must be square")
 	}
 
 	n := len(matrix)
@@ -38,7 +38,7 @@ func PolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []fl
 
 		currentPower, err = mtrx.MatrixMultiply(currentPower, matrix)
 		if err != nil {
-			return nil, 0, fmt.Errorf("не удалось вычислить Матричный Полином: %w", err)
+			return nil, 0, fmt.Errorf("the Matrix Polynomial could not be calculated: %w", err)
 		}
 
 		for i := 0; i < n; i++ {

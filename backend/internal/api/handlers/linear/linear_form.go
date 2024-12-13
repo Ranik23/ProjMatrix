@@ -12,19 +12,19 @@ func HandleLinearForm(c *gin.Context, l *entity.LinearForm, operationType string
 	case "manual-linear-form":
 		err := handleManualLinearForm(c, l)
 		if err != nil {
-			log.Printf("Ошибка при обработке вычислений: %w\n", err)
+			log.Printf("Error in processing calculations: %w\n", err)
 			c.JSON(http.StatusBadRequest, gin.H{"error": err})
 			return
 		}
 	case "generate-linear-form":
 		err := handleGeneratedLinearForm(c, l)
 		if err != nil {
-			log.Printf("Ошибка при обработке вычислений: %w\n", err)
+			log.Printf("Error in processing calculations: %w\n", err)
 			c.JSON(http.StatusBadRequest, gin.H{"error": err})
 			return
 		}
 	default:
-		log.Printf("Неизвестный operationType для линейной формы: %s\n", operationType)
+		log.Printf("Unknown operationType for a linear form: %s\n", operationType)
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Unknown operationType"})
 		return
 	}

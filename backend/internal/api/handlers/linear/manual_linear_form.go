@@ -14,25 +14,25 @@ import (
 )
 
 func handleManualLinearForm(c *gin.Context, l *entity.LinearForm) error {
-	log.Printf("Обработка ручного ввода линейной формы: %+v\n", *l)
+	log.Printf("Processing manual input of a linear form: %+v\n", *l)
 
 	session := sessions.Default(c)
 
 	matrices, err := mtrx.BuildMatrices(l.Matrices, l.MatrixSize.Rows, l.MatrixSize.Columns)
 	if err != nil {
-		return fmt.Errorf("не сформировать матрицу: %w", err)
+		return fmt.Errorf("the matrix could not be formed: %w", err)
 	}
 	resultMatrix, timeCalc, err := linear.LinearFormCalculation(matrices, l.Coefficients)
 	if err != nil {
-		return fmt.Errorf("не удалось вычислить матричную линейную форму: %w", err)
+		return fmt.Errorf("the matrix linear form could not be calculated: %w", err)
 	}
 
 	pool := wpool.NewWorkerPool(runtime.NumCPU())
 	pool.Start()
 
-	_, par_timeCalc, err := linear.ParallelLinearFormCalculation(matrices, l.Coefficients, pool)
+	_, parTimeCalc, err := linear.ParallelLinearFormCalculation(matrices, l.Coefficients, pool)
 	if err != nil {
-		return fmt.Errorf("не удалось вычислить матричную линейную форму: %w", err)
+		return fmt.Errorf("the matrix linear form could not be calculated in parallel: %w", err)
 	}
 	pool.Wait()
 	pool.Stop()
@@ -41,14 +41,14 @@ func handleManualLinearForm(c *gin.Context, l *entity.LinearForm) error {
 		OperationType:    l.OperationType,
 		ResultMatrix:     resultMatrix,
 		TimeCalc:         timeCalc,
-		TimeParallelCalc: par_timeCalc,
+		TimeParallelCalc: parTimeCalc,
 	}
 
 	// сохраняем результат в сессию
 	session.Set("calculationResult", result)
 	err = session.Save()
 	if err != nil {
-		return fmt.Errorf("ошибка сохранения сессии: %w\n", err)
+		return fmt.Errorf("error saving the session: %w\n", err)
 	}
 
 	c.Redirect(http.StatusFound, "/results")

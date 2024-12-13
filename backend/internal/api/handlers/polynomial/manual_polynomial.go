@@ -14,18 +14,18 @@ import (
 )
 
 func handleManualPolynomial(c *gin.Context, p *entity.Polynomial) error {
-	log.Printf("Обработка ручного ввода полинома: %+v\n", *p)
+	log.Printf("Processing the manual input of a polynomial: %+v\n", *p)
 
 	session := sessions.Default(c)
 
 	matrix, err := mtrx.BuildMatrix(p.Matrix, p.MatrixSize.Rows, p.MatrixSize.Columns)
 	if err != nil {
-		return fmt.Errorf("не удалось считать матрицу: %w", err)
+		return fmt.Errorf("the matrix could not be read: %w", err)
 	}
 	identityMatrix := mtrx.GenerateIdentityMatrix(p.MatrixSize.Rows)
 	resultMatrix, timeCalc, err := pol.PolynomialCalculation(matrix, identityMatrix, p.Coefficients)
 	if err != nil {
-		return fmt.Errorf("не удалось вычислить полином: %w", err)
+		return fmt.Errorf("the polynomial could not be calculated: %w", err)
 	}
 
 	pool := wpool.NewWorkerPool(runtime.NumCPU())
@@ -33,7 +33,7 @@ func handleManualPolynomial(c *gin.Context, p *entity.Polynomial) error {
 
 	_, par_timeCalc, err := pol.ParallelPolynomialCalculation(matrix, identityMatrix, p.Coefficients, pool)
 	if err != nil {
-		return fmt.Errorf("не удалось вычислить полином: %w", err)
+		return fmt.Errorf("the polynomial could not be calculated in parallel: %w", err)
 	}
 	pool.Wait()
 	pool.Stop()
@@ -48,7 +48,7 @@ func handleManualPolynomial(c *gin.Context, p *entity.Polynomial) error {
 	session.Set("calculationResult", result)
 	err = session.Save()
 	if err != nil {
-		return fmt.Errorf("ошибка сохранения сессии: %w\n", err)
+		return fmt.Errorf("error saving the session: %w\n", err)
 	}
 
 	c.Redirect(http.StatusFound, "/results")

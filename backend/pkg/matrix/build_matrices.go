@@ -9,7 +9,7 @@ func BuildMatrices(arrays [][]float64, rows, cols int) ([][][]float64, error) {
 	for _, array := range arrays {
 		matrix, err := BuildMatrix(array, rows, cols)
 		if err != nil {
-			return nil, fmt.Errorf("ошибка при создании матрицы: %w", err)
+			return nil, fmt.Errorf("error when creating the matrix: %w", err)
 		}
 		matrices = append(matrices, matrix)
 	}

@@ -14,7 +14,7 @@ import (
 )
 
 func handleGeneratedPolynomial(c *gin.Context, p *entity.Polynomial) error {
-	log.Printf("Обработка генерации полинома: %+v\n", *p)
+	log.Printf("Processing of polynomial generation: %+v\n", *p)
 
 	session := sessions.Default(c)
 
@@ -24,14 +24,14 @@ func handleGeneratedPolynomial(c *gin.Context, p *entity.Polynomial) error {
 	identityMatrix := mtrx.GenerateIdentityMatrix(p.MatrixSize.Rows)
 	_, timeCalc, err := pol.PolynomialCalculation(matrix, identityMatrix, coefficients)
 	if err != nil {
-		return fmt.Errorf("не удалось вычислить полином: %w", err)
+		return fmt.Errorf("the polynomial could not be calculated: %w", err)
 	}
 
 	pool := wpool.NewWorkerPool(runtime.NumCPU())
 	pool.Start()
-	_, par_timeCalc, err := pol.ParallelPolynomialCalculation(matrix, identityMatrix, coefficients, pool)
+	_, parTimeCalc, err := pol.ParallelPolynomialCalculation(matrix, identityMatrix, coefficients, pool)
 	if err != nil {
-		return fmt.Errorf("не удалось вычислить полином: %w", err)
+		return fmt.Errorf("the polynomial could not be calculated in parallel: %w", err)
 	}
 	pool.Wait()
 	pool.Stop()
@@ -40,13 +40,13 @@ func handleGeneratedPolynomial(c *gin.Context, p *entity.Polynomial) error {
 		OperationType:    p.OperationType,
 		ResultMatrix:     nil,
 		TimeCalc:         timeCalc,
-		TimeParallelCalc: par_timeCalc, // заглушка
+		TimeParallelCalc: parTimeCalc, // заглушка
 	}
 
 	session.Set("calculationResult", result)
 	err = session.Save()
 	if err != nil {
-		return fmt.Errorf("ошибка сохранения сессии: %w\n", err)
+		return fmt.Errorf("error saving the session: %w\n", err)
 	}
 
 	c.Redirect(http.StatusFound, "/results")

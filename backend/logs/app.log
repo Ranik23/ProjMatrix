@@ -643,3 +643,11 @@
 2024/12/13 10:41:55 Обработка ручного ввода полинома: {OperationType:manual-polynomial MatrixSize:{Rows:3 Columns:3} Matrix:[1 1234 12 12 4 1 4 4 1] Degree:4 Coefficients:[1124 1 4 14]}
 2024/12/13 10:42:02 Обработка генерации линейной формы: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:3 Columns:3} Matrices:[] Coefficients:[]}
 2024/12/13 10:42:12 Обработка ручного ввода линейной формы: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[41 234 12412 24 1 4 12 4 1]] Coefficients:[4]}
+2024/12/13 10:59:33 Configuration loaded
+2024/12/13 10:59:33 Starting the ProjMatrix server on 8080
+2024/12/13 11:12:16 Configuration loaded
+2024/12/13 11:12:16 Starting the ProjMatrix server on 8080
+2024/12/13 11:12:38 Processing the manual input of a polynomial: {OperationType:manual-polynomial MatrixSize:{Rows:5 Columns:5} Matrix:[23 5523 23 5 55 52 32 535 2 45 23 535 23 5 2332 523 5 32 5 5235 532 2353 5 23 35] Degree:6 Coefficients:[5 23 5 235 23 5]}
+2024/12/13 11:12:48 Processing of polynomial generation: {OperationType:generate-polynomial MatrixSize:{Rows:300 Columns:300} Matrix:[] Degree:60 Coefficients:[]}
+2024/12/13 11:13:06 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:2 MatrixSize:{Rows:3 Columns:3} Matrices:[[34 3 5 23 552 23 25 0 25] [23 5 35 52 35 23 2 5 3]] Coefficients:[235 23]}
+2024/12/13 11:13:13 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:200 MatrixSize:{Rows:3 Columns:3} Matrices:[] Coefficients:[]}

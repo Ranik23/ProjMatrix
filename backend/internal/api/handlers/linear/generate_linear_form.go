@@ -14,7 +14,7 @@ import (
 )
 
 func handleGeneratedLinearForm(c *gin.Context, l *entity.LinearForm) error {
-	log.Printf("Обработка генерации линейной формы: %+v\n", *l)
+	log.Printf("Processing of linear shape generation: %+v\n", *l)
 
 	session := sessions.Default(c)
 
@@ -28,15 +28,15 @@ func handleGeneratedLinearForm(c *gin.Context, l *entity.LinearForm) error {
 
 	_, timeCalc, err := linear.LinearFormCalculation(matrices, coefficients)
 	if err != nil {
-		return fmt.Errorf("не удалось вычислить матричную линейную форму: %w", err)
+		return fmt.Errorf("the matrix linear form could not be calculated: %w", err)
 	}
 
 	pool := wpool.NewWorkerPool(runtime.NumCPU())
 	pool.Start()
 
-	_, par_timeCalc, err := linear.ParallelLinearFormCalculation(matrices, coefficients, pool)
+	_, parTimeCalc, err := linear.ParallelLinearFormCalculation(matrices, coefficients, pool)
 	if err != nil {
-		return fmt.Errorf("не удалось вычислить матричную линейную форму: %w", err)
+		return fmt.Errorf("the matrix linear form could not be calculated in parallel: %w", err)
 	}
 	pool.Wait()
 	pool.Stop()
@@ -45,13 +45,13 @@ func handleGeneratedLinearForm(c *gin.Context, l *entity.LinearForm) error {
 		OperationType:    l.OperationType,
 		ResultMatrix:     nil,
 		TimeCalc:         timeCalc,
-		TimeParallelCalc: par_timeCalc,
+		TimeParallelCalc: parTimeCalc,
 	}
 
 	session.Set("calculationResult", result)
 	err = session.Save()
 	if err != nil {
-		return fmt.Errorf("ошибка сохранения сессии: %w\n", err)
+		return fmt.Errorf("error saving the session: %w\n", err)
 	}
 
 	c.Redirect(http.StatusFound, "/results")

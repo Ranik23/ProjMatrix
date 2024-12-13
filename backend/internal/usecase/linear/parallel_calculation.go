@@ -10,11 +10,11 @@ import (
 func ParallelLinearFormCalculation(matrices [][][]float64, coefficients []float64, pool *wpool.WorkerPool) ([][]float64, float64, error) {
 	start := time.Now()
 	if len(matrices) == 0 || len(coefficients) == 0 {
-		return nil, 0, errors.New("массив матриц или массив коэффициентов пуст")
+		return nil, 0, errors.New("the array of matrices or the array of coefficients is empty")
 	}
 
 	if len(matrices) != len(coefficients) {
-		return nil, 0, errors.New("количество матриц и коэффициентов должно совпадать")
+		return nil, 0, errors.New("the number of matrices and coefficients must match")
 	}
 
 	rows, cols := len(matrices[0]), len(matrices[0][0])
