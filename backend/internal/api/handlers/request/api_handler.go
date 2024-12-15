@@ -9,7 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func ProcessRequest(c *gin.Context, rawData map[string]interface{}) error {
+func ProcessRequest(c *gin.Context, rawData map[string]interface{}, workerClient entity.WorkersClient) error {
 	operationType, ok := rawData["operationType"].(string)
 	if !ok {
 		return fmt.Errorf("invalid or missing operationType")
@@ -21,14 +21,14 @@ func ProcessRequest(c *gin.Context, rawData map[string]interface{}) error {
 		if err := mapToStruct(rawData, &polynomial); err != nil {
 			return fmt.Errorf("invalid data for a Polynomial: %w", err)
 		}
-		handPol.HandlePolynomial(c, &polynomial, operationType)
+		handPol.HandlePolynomial(c, &polynomial, operationType, workerClient)
 
 	case "manual-linear-form", "generate-linear-form":
 		var linearForm entity.LinearForm
 		if err := mapToStruct(rawData, &linearForm); err != nil {
 			return fmt.Errorf("invalid data for LinearForm: %w", err)
 		}
-		handLin.HandleLinearForm(c, &linearForm, operationType)
+		handLin.HandleLinearForm(c, &linearForm, operationType, workerClient)
 
 	default:
 		return fmt.Errorf("unknown operationType: %s", operationType)

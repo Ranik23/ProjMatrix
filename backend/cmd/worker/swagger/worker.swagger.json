@@ -1,0 +1,134 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "proto/worker.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "WorkerService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {},
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "workerGetLinearFormCalculationResponse": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "type": "string"
+        },
+        "resultMatrix": {
+          "type": "string",
+          "format": "byte"
+        },
+        "time": {
+          "type": "number",
+          "format": "double"
+        },
+        "operationType": {
+          "type": "string"
+        }
+      }
+    },
+    "workerGetParallelLinearFormCalculationResponse": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "type": "string"
+        },
+        "resultMatrix": {
+          "type": "string",
+          "format": "byte"
+        },
+        "time": {
+          "type": "number",
+          "format": "double"
+        },
+        "operationType": {
+          "type": "string"
+        }
+      }
+    },
+    "workerGetParallelPolynomialCalculationResponse": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "type": "string"
+        },
+        "resultMatrix": {
+          "type": "string"
+        },
+        "time": {
+          "type": "number",
+          "format": "double"
+        },
+        "operationType": {
+          "type": "string"
+        }
+      }
+    },
+    "workerGetPolynomialCalculationResponse": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "type": "string"
+        },
+        "resultMatrix": {
+          "type": "string"
+        },
+        "time": {
+          "type": "number",
+          "format": "double"
+        },
+        "operationType": {
+          "type": "string"
+        }
+      }
+    },
+    "workerGetStatusResponse": {
+      "type": "object",
+      "properties": {
+        "workerId": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

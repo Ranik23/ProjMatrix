@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func RegisterHTMLRoutes(router *gin.Engine) {
+func RegisterHTMLRoutes(router *gin.Engine, workerClient entity.WorkersClient) {
 	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})

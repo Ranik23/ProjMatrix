@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func HandlePolynomial(c *gin.Context, p *entity.Polynomial, operationType string) {
+func HandlePolynomial(c *gin.Context, p *entity.Polynomial, operationType string, workerClient entity.WorkersClient) {
 	switch operationType {
 	case "manual-polynomial":
 		err := handleManualPolynomial(c, p)
