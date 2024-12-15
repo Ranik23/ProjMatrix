@@ -651,3 +651,297 @@
 2024/12/13 11:12:48 Processing of polynomial generation: {OperationType:generate-polynomial MatrixSize:{Rows:300 Columns:300} Matrix:[] Degree:60 Coefficients:[]}
 2024/12/13 11:13:06 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:2 MatrixSize:{Rows:3 Columns:3} Matrices:[[34 3 5 23 552 23 25 0 25] [23 5 35 52 35 23 2 5 3]] Coefficients:[235 23]}
 2024/12/13 11:13:13 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:200 MatrixSize:{Rows:3 Columns:3} Matrices:[] Coefficients:[]}
+2024/12/14 19:49:12 Configuration loaded
+2024/12/14 19:49:12 Starting the ProjMatrix server on 8080
+2024/12/14 21:55:07 Configuration loaded
+2024/12/14 21:55:07 Starting the ProjMatrix server on 8080
+2024/12/14 22:20:34 Configuration loaded
+2024/12/14 22:20:34 Starting the ProjMatrix server on 8080
+2024/12/14 22:23:01 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[1 1 1 1 1 1 1 1 1]] Coefficients:[]}
+2024/12/14 22:23:01 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: the array of matrices or the array of coefficients is empty 0x1400049e750})
+2024/12/14 22:25:10 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:4 MatrixSize:{Rows:10 Columns:10} Matrices:[] Coefficients:[]}
+2024/12/14 22:25:25 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:10000 Columns:10000} Matrices:[] Coefficients:[]}
+2024/12/14 22:25:53 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:1000 Columns:1000} Matrices:[] Coefficients:[]}
+2024/12/14 22:26:28 Configuration loaded
+2024/12/14 22:26:28 Starting the ProjMatrix server on 8080
+2024/12/14 23:56:22 Configuration loaded
+2024/12/14 23:56:22 Starting the ProjMatrix server on 8080
+2024/12/14 23:58:10 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[12 123 0 43 543 123 543 23 12]] Coefficients:[]}
+2024/12/14 23:58:10 [91 91 91 49 50 44 49 50 51 44 48 93 44 91 52 51 44 53 52 51 44 49 50 51 93 44 91 53 52 51 44 50 51 44 49 50 93 93 93]
+2024/12/14 23:58:10 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: the array of matrices or the array of coefficients is empty 0x14000397060})
+2024/12/15 00:09:54 Configuration loaded
+2024/12/15 00:09:54 Starting the ProjMatrix server on 8080
+2024/12/15 00:10:17 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[5 5 5 6 5 3 2 1 5]] Coefficients:[]}
+2024/12/15 00:10:17 [91 91 91 53 44 53 44 53 93 44 91 54 44 53 44 51 93 44 91 50 44 49 44 53 93 93 93]
+2024/12/15 00:10:17 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unknown desc = the array of matrices or the array of coefficients is empty 0x1400061a138})
+2024/12/15 00:11:28 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[5 5 5 6 5 3 2 1 5]] Coefficients:[]}
+2024/12/15 00:11:28 [91 91 91 53 44 53 44 53 93 44 91 54 44 53 44 51 93 44 91 50 44 49 44 53 93 93 93]
+2024/12/15 00:11:28 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unknown desc = the array of matrices or the array of coefficients is empty 0x1400024e128})
+2024/12/15 00:12:49 Configuration loaded
+2024/12/15 00:12:49 Starting the ProjMatrix server on 8080
+2024/12/15 00:13:03 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[1 1 1 2 3 4 5 6 7]] Coefficients:[]}
+2024/12/15 00:13:03 [91 91 91 49 44 49 44 49 93 44 91 50 44 51 44 52 93 44 91 53 44 54 44 55 93 93 93]
+2024/12/15 00:13:03 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unknown desc = the array of matrices or the array of coefficients is empty 0x140000be970})
+2024/12/15 00:14:13 Error getting the result: <nil> 
+2024/12/15 00:14:26 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[1 2 3 4 5 6 7 8 9]] Coefficients:[]}
+2024/12/15 00:14:26 [91 91 91 49 44 50 44 51 93 44 91 52 44 53 44 54 93 44 91 55 44 56 44 57 93 93 93]
+2024/12/15 00:14:26 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unknown desc = the array of matrices or the array of coefficients is empty 0x1400059a098})
+2024/12/15 00:16:29 Configuration loaded
+2024/12/15 00:16:29 Starting the ProjMatrix server on 8080
+2024/12/15 00:16:45 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[1 2 3 4 5 6 7 8 9]] Coefficients:[]}
+2024/12/15 00:16:45 [91 91 91 49 44 50 44 51 93 44 91 52 44 53 44 54 93 44 91 55 44 56 44 57 93 93 93]
+2024/12/15 00:16:45 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unknown desc = the array of matrices or the array of coefficients is empty 0x140000a6028})
+2024/12/15 00:18:11 Configuration loaded
+2024/12/15 00:18:11 Starting the ProjMatrix server on 8080
+2024/12/15 00:18:24 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[1 2 3 4 54 3 2 2 1]] Coefficients:[]}
+2024/12/15 00:18:24 [91 91 91 49 44 50 44 51 93 44 91 52 44 53 52 44 51 93 44 91 50 44 50 44 49 93 93 93]
+2024/12/15 00:18:24 []
+2024/12/15 00:18:24 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unknown desc = the array of matrices or the array of coefficients is empty 0x140000be9d0})
+2024/12/15 00:18:36 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[1 2 3 4 54 3 2 2 1]] Coefficients:[]}
+2024/12/15 00:18:36 [91 91 91 49 44 50 44 51 93 44 91 52 44 53 52 44 51 93 44 91 50 44 50 44 49 93 93 93]
+2024/12/15 00:18:36 []
+2024/12/15 00:18:36 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unknown desc = the array of matrices or the array of coefficients is empty 0x14000018040})
+2024/12/15 00:19:58 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[1 2 3 4 54 3 2 2 1]] Coefficients:[4]}
+2024/12/15 00:19:58 [91 91 91 49 44 50 44 51 93 44 91 52 44 53 52 44 51 93 44 91 50 44 50 44 49 93 93 93]
+2024/12/15 00:19:58 [4]
+2024/12/15 01:28:10 Configuration loaded
+2024/12/15 01:28:10 Starting the ProjMatrix server on 8080
+2024/12/15 01:28:29 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[1 2 3 4 5 6 7 8 9]] Coefficients:[12]}
+2024/12/15 01:34:42 Configuration loaded
+2024/12/15 01:34:42 Starting the ProjMatrix server on 8080
+2024/12/15 01:35:10 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:10 Columns:10} Matrices:[] Coefficients:[]}
+2024/12/15 01:46:42 Configuration loaded
+2024/12/15 01:46:42 Starting the ProjMatrix server on 8080
+2024/12/15 01:47:02 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:9 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 01:47:02 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160688
+ [0x14000472000]})
+2024/12/15 01:47:02 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160688
+ [0x14000472000]})
+2024/12/15 01:47:53 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:2 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 01:47:53 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160656
+ [0x140000316c0]})
+2024/12/15 01:47:53 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160656
+ [0x140000316c0]})
+2024/12/15 01:48:03 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:2 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 01:48:03 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160664
+ [0x14000031300]})
+2024/12/15 01:48:03 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160664
+ [0x14000031300]})
+2024/12/15 01:48:07 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:2 MatrixSize:{Rows:10 Columns:10} Matrices:[] Coefficients:[]}
+2024/12/15 01:52:31 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 01:52:31 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160680
+ [0x14000472b00]})
+2024/12/15 01:52:31 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160680
+ [0x14000472b00]})
+2024/12/15 01:55:00 Configuration loaded
+2024/12/15 01:55:00 Starting the ProjMatrix server on 8080
+2024/12/15 01:55:06 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 01:55:06 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160680
+ [0x14000105390]})
+2024/12/15 01:55:06 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160680
+ [0x14000105390]})
+2024/12/15 01:55:29 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 01:55:29 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = ResourceExhausted desc = grpc: received message larger than max (18683473 vs. 4194304) 0x1400057a038})
+2024/12/15 01:55:29 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = ResourceExhausted desc = grpc: received message larger than max (18683473 vs. 4194304) 0x1400057a038})
+2024/12/15 02:01:27 Configuration loaded
+2024/12/15 02:01:27 Starting the ProjMatrix server on 8080
+2024/12/15 02:01:43 Configuration loaded
+2024/12/15 02:01:43 Starting the ProjMatrix server on 8080
+2024/12/15 02:02:05 Configuration loaded
+2024/12/15 02:02:05 Starting the ProjMatrix server on 8080
+2024/12/15 02:02:20 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:5 MatrixSize:{Rows:5 Columns:5} Matrices:[] Coefficients:[]}
+2024/12/15 02:02:20 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000fa0f0})
+2024/12/15 02:02:20 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000fa0f0})
+2024/12/15 02:02:40 Configuration loaded
+2024/12/15 02:02:40 Starting the ProjMatrix server on 8080
+2024/12/15 02:03:27 Configuration loaded
+2024/12/15 02:03:27 Starting the ProjMatrix server on 8080
+2024/12/15 02:04:37 Configuration loaded
+2024/12/15 02:04:37 Starting the ProjMatrix server on 8080
+2024/12/15 02:07:04 Configuration loaded
+2024/12/15 02:07:04 Starting the ProjMatrix server on 8080
+2024/12/15 02:07:13 Configuration loaded
+2024/12/15 02:07:13 Starting the ProjMatrix server on 8080
+2024/12/15 02:07:22 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:5 MatrixSize:{Rows:5 Columns:5} Matrices:[] Coefficients:[]}
+2024/12/15 02:07:44 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:10 Columns:10} Matrices:[] Coefficients:[]}
+2024/12/15 02:08:03 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 02:08:03 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = ResourceExhausted desc = grpc: received message larger than max (18683330 vs. 4194304) 0x14000598038})
+2024/12/15 02:08:03 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = ResourceExhausted desc = grpc: received message larger than max (18683330 vs. 4194304) 0x14000598038})
+2024/12/15 02:08:48 Configuration loaded
+2024/12/15 02:08:48 Starting the ProjMatrix server on 8080
+2024/12/15 02:09:00 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 02:09:01 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000076088})
+2024/12/15 02:09:01 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000076088})
+2024/12/15 02:11:10 Configuration loaded
+2024/12/15 02:11:10 Starting the ProjMatrix server on 8080
+2024/12/15 02:11:12 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 02:11:13 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140005940e0})
+2024/12/15 02:11:13 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140005940e0})
+2024/12/15 02:20:49 Configuration loaded
+2024/12/15 02:20:49 Starting the ProjMatrix server on 8080
+2024/12/15 02:21:10 Configuration loaded
+2024/12/15 02:21:10 Starting the ProjMatrix server on 8080
+2024/12/15 02:21:16 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 02:21:16 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000be4d8})
+2024/12/15 02:21:16 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000be4d8})
+2024/12/15 02:22:46 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:9 MatrixSize:{Rows:50 Columns:50} Matrices:[] Coefficients:[]}
+2024/12/15 02:22:46 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000be6b0})
+2024/12/15 02:22:46 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000be6b0})
+2024/12/15 02:23:24 Configuration loaded
+2024/12/15 02:23:24 Starting the ProjMatrix server on 8080
+2024/12/15 02:23:27 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:9 MatrixSize:{Rows:50 Columns:50} Matrices:[] Coefficients:[]}
+2024/12/15 02:23:27 Need parallel: false
+2024/12/15 02:23:27 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000076030})
+2024/12/15 02:23:27 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000076030})
+2024/12/15 02:35:30 Configuration loaded
+2024/12/15 02:35:30 Starting the ProjMatrix server on 8080
+2024/12/15 02:37:21 Configuration loaded
+2024/12/15 02:37:21 Starting the ProjMatrix server on 8080
+2024/12/15 02:37:30 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:9 MatrixSize:{Rows:50 Columns:50} Matrices:[] Coefficients:[]}
+2024/12/15 02:37:30 Need parallel: false
+2024/12/15 02:38:05 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:25 Columns:25} Matrices:[] Coefficients:[]}
+2024/12/15 02:38:05 Need parallel: true
+2024/12/15 02:38:05 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000012018})
+2024/12/15 02:38:05 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000012018})
+2024/12/15 02:47:24 Configuration loaded
+2024/12/15 02:47:24 Starting the ProjMatrix server on 8080
+2024/12/15 02:47:33 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:250 Columns:250} Matrices:[] Coefficients:[]}
+2024/12/15 02:47:34 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000516048})
+2024/12/15 02:47:34 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000516048})
+2024/12/15 02:48:04 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 02:48:04 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000378048})
+2024/12/15 02:48:04 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000378048})
+2024/12/15 02:48:09 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 02:48:09 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140003a6038})
+2024/12/15 02:48:09 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140003a6038})
+2024/12/15 02:48:16 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:10 Columns:10} Matrices:[] Coefficients:[]}
+2024/12/15 02:48:16 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000378080})
+2024/12/15 02:48:16 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000378080})
+2024/12/15 02:48:44 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:10 Columns:10} Matrices:[] Coefficients:[]}
+2024/12/15 02:48:44 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140003780c8})
+2024/12/15 02:48:44 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140003780c8})
+2024/12/15 02:48:55 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:3 Columns:3} Matrices:[] Coefficients:[]}
+2024/12/15 02:48:55 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000378158})
+2024/12/15 02:48:55 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000378158})
+2024/12/15 02:49:14 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:9 MatrixSize:{Rows:3 Columns:3} Matrices:[] Coefficients:[]}
+2024/12/15 02:49:14 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000378188})
+2024/12/15 02:49:14 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000378188})
+2024/12/15 02:49:16 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[] Coefficients:[]}
+2024/12/15 02:49:16 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140005161e8})
+2024/12/15 02:49:16 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140005161e8})
+2024/12/15 02:49:24 Configuration loaded
+2024/12/15 02:49:24 Starting the ProjMatrix server on 8080
+2024/12/15 02:49:35 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:1 Columns:1} Matrices:[] Coefficients:[]}
+2024/12/15 02:49:35 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000512128})
+2024/12/15 02:49:35 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000512128})
+2024/12/15 02:51:07 Processing of polynomial generation: {OperationType:generate-polynomial MatrixSize:{Rows:1000 Columns:1000} Matrix:[] Degree:2 Coefficients:[]}
+2024/12/15 02:52:46 Configuration loaded
+2024/12/15 02:52:46 Starting the ProjMatrix server on 8080
+2024/12/15 02:53:18 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:5 MatrixSize:{Rows:1 Columns:3} Matrices:[] Coefficients:[]}
+2024/12/15 02:53:18 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000160f0})
+2024/12/15 02:53:18 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000160f0})
+2024/12/15 02:53:44 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[1 1 1 1 1 1 1 1 1]] Coefficients:[4]}
+2024/12/15 02:53:44 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000c25d0})
+2024/12/15 02:53:44 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000c25d0})
+2024/12/15 02:54:36 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[] Coefficients:[]}
+2024/12/15 02:54:36 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x1400010e058})
+2024/12/15 02:54:36 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x1400010e058})
+2024/12/15 02:54:44 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 02:54:44 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x1400010e050})
+2024/12/15 02:54:44 Error in processing calculations: %!w(*fmt.wrapError=&{failed to create stream: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x1400010e050})
+2024/12/15 02:58:59 Configuration loaded
+2024/12/15 02:58:59 Starting the ProjMatrix server on 8080
+2024/12/15 02:59:03 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 02:59:03 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x1400011c4d8})
+2024/12/15 02:59:03 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x1400011c4d8})
+2024/12/15 02:59:41 Configuration loaded
+2024/12/15 02:59:41 Starting the ProjMatrix server on 8080
+2024/12/15 02:59:45 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 02:59:45 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000cc048})
+2024/12/15 02:59:45 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140000cc048})
+2024/12/15 03:01:32 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 03:01:32 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x1400068a030})
+2024/12/15 03:01:32 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x1400068a030})
+2024/12/15 03:01:35 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 03:01:35 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140001124f8})
+2024/12/15 03:01:35 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140001124f8})
+2024/12/15 03:01:46 Configuration loaded
+2024/12/15 03:01:46 Starting the ProjMatrix server on 8080
+2024/12/15 03:01:50 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 03:01:50 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000234030})
+2024/12/15 03:01:50 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000234030})
+2024/12/15 03:01:54 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:10 Columns:10} Matrices:[] Coefficients:[]}
+2024/12/15 03:01:54 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140002340d8})
+2024/12/15 03:01:54 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x140002340d8})
+2024/12/15 03:01:55 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:10 Columns:10} Matrices:[] Coefficients:[]}
+2024/12/15 03:01:55 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000614060})
+2024/12/15 03:01:55 Error in processing calculations: %!w(*fmt.wrapError=&{the matrix linear form could not be calculated: rpc error: code = Unavailable desc = connection error: desc = "error reading server preface: http2: frame too large" 0x14000614060})
+2024/12/15 03:02:27 Configuration loaded
+2024/12/15 03:02:27 Starting the ProjMatrix server on 8080
+2024/12/15 03:02:30 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:10 Columns:10} Matrices:[] Coefficients:[]}
+2024/12/15 03:02:39 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:3 Columns:3} Matrices:[] Coefficients:[]}
+2024/12/15 03:03:24 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:5 MatrixSize:{Rows:5 Columns:5} Matrices:[] Coefficients:[]}
+2024/12/15 03:03:36 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 03:03:36 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160668
+ [0x140000a8370]})
+2024/12/15 03:03:36 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160668
+ [0x140000a8370]})
+2024/12/15 03:04:10 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 03:04:10 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160680
+ [0x140000a8340]})
+2024/12/15 03:04:10 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160680
+ [0x140000a8340]})
+2024/12/15 03:04:17 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:10 Columns:10} Matrices:[] Coefficients:[]}
+2024/12/15 03:04:25 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:5 MatrixSize:{Rows:5 Columns:5} Matrices:[] Coefficients:[]}
+2024/12/15 03:04:37 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:3 Columns:3} Matrices:[] Coefficients:[]}
+2024/12/15 03:04:50 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:100 MatrixSize:{Rows:3 Columns:3} Matrices:[] Coefficients:[]}
+2024/12/15 03:14:12 Configuration loaded
+2024/12/15 03:14:12 Starting the ProjMatrix server on 8080
+2024/12/15 03:14:21 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:5 Columns:5} Matrices:[] Coefficients:[]}
+2024/12/15 03:15:03 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:5 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 03:15:03 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160656
+ [0x140000a6490]})
+2024/12/15 03:15:03 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160656
+ [0x140000a6490]})
+2024/12/15 03:16:20 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:5 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 03:16:20 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160684
+ [0x140005100d0]})
+2024/12/15 03:16:20 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160684
+ [0x140005100d0]})
+2024/12/15 03:16:39 Processing manual input of a linear form: {OperationType:manual-linear-form MatrixCount:1 MatrixSize:{Rows:3 Columns:3} Matrices:[[1 2 4 5 6 7 1 1 1]] Coefficients:[4]}
+2024/12/15 03:24:36 Configuration loaded
+2024/12/15 03:24:36 Starting the ProjMatrix server on 8080
+2024/12/15 03:24:57 Configuration loaded
+2024/12/15 03:24:57 Starting the ProjMatrix server on 8080
+2024/12/15 03:25:14 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:5 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 03:25:14 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160664
+ [0x14000031660]})
+2024/12/15 03:25:14 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160664
+ [0x14000031660]})
+2024/12/15 03:26:04 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:100 Columns:100} Matrices:[] Coefficients:[]}
+2024/12/15 03:26:04 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160668
+ [0x14000246320]})
+2024/12/15 03:26:04 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 160668
+ [0x14000246320]})
+2024/12/15 03:26:10 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:55 Columns:55} Matrices:[] Coefficients:[]}
+2024/12/15 03:26:10 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 49048
+ [0x14000031490]})
+2024/12/15 03:26:10 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 49048
+ [0x14000031490]})
+2024/12/15 03:26:13 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:2 Columns:55} Matrices:[] Coefficients:[]}
+2024/12/15 03:26:21 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:25 Columns:25} Matrices:[] Coefficients:[]}
+2024/12/15 03:26:21 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 10600
+ [0x14000469760]})
+2024/12/15 03:26:21 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 10600
+ [0x14000469760]})
+2024/12/15 03:26:39 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:10 MatrixSize:{Rows:25 Columns:25} Matrices:[] Coefficients:[]}
+2024/12/15 03:26:39 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 10600
+ [0x14000469b20]})
+2024/12/15 03:26:39 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 10600
+ [0x14000469b20]})
+2024/12/15 03:26:54 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:25 Columns:25} Matrices:[] Coefficients:[]}
+2024/12/15 03:26:54 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 10600
+ [0x140003fa440]})
+2024/12/15 03:26:54 Error in processing calculations: %!w(*fmt.wrapError=&{error saving the session: securecookie: the value is too long: 10600
+ [0x140003fa440]})
+2024/12/15 03:26:57 Processing of linear shape generation: {OperationType:generate-linear-form MatrixCount:1 MatrixSize:{Rows:5 Columns:5} Matrices:[] Coefficients:[]}

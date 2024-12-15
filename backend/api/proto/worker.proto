@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+package worker;
+
+option go_package = "github.com/ProjMatrix/api/proto";
+
+service WorkerService {
+  rpc GetStatus(GetStatusRequest) returns (GetStatusResponse);
+  rpc GetLinearFormCalculation(GetLinearFormCalculationRequest) returns (GetLinearFormCalculationResponse);
+  rpc GetParallelLinearFormCalculation(stream GetParallelLinearFormCalculationRequest) returns (stream GetParallelLinearFormCalculationResponse);
+  rpc GetPolynomialCalculation(GetPolynomialCalculationRequest) returns (GetPolynomialCalculationResponse);
+  rpc GetParallelPolynomialCalculation(GetParallelPolynomialCalculationRequest) returns (GetParallelPolynomialCalculationResponse);
+}
+
+
+message GetPolynomialCalculationRequest {
+  string matrix = 1;
+  repeated double coefficients = 2;
+}
+
+message GetPolynomialCalculationResponse {
+  string operation = 1;
+  string resultMatrix = 2;
+  double time = 3;
+  string operation_type = 4;
+}
+
+message GetParallelPolynomialCalculationRequest {
+  string matrix = 1;
+  repeated double coefficients = 2;
+}
+
+message GetParallelPolynomialCalculationResponse {
+  string operation = 1;
+  string resultMatrix = 2;
+  double time = 3;
+  string operation_type = 4;
+}
+
+message GetParallelLinearFormCalculationRequest {
+  bytes matrix = 1;
+  repeated double coefficients = 2;
+}
+
+message GetParallelLinearFormCalculationResponse {
+  string operation = 1;
+  bytes resultMatrix = 2;
+  double time = 3;
+  string operation_type = 4;
+}
+
+
+message GetLinearFormCalculationRequest {
+  bytes matrix = 1;
+  repeated double coefficients = 2;
+}
+
+message GetLinearFormCalculationResponse {
+  string operation = 1;
+  bytes resultMatrix = 2;
+  double time = 3;
+  string operation_type = 4;
+}
+
+message GetStatusRequest {
+  string worker_id = 1;
+}
+
+message GetStatusResponse {
+  string worker_id = 1;
+  string status = 2;
+}
