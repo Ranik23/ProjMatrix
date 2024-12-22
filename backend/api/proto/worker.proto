@@ -6,12 +6,16 @@ option go_package = "github.com/ProjMatrix/api/proto";
 
 service WorkerService {
   rpc GetStatus(GetStatusRequest) returns (GetStatusResponse);
-  rpc GetLinearFormCalculation(GetLinearFormCalculationRequest) returns (GetLinearFormCalculationResponse);
-  rpc GetParallelLinearFormCalculation(stream GetParallelLinearFormCalculationRequest) returns (stream GetParallelLinearFormCalculationResponse);
-  rpc GetPolynomialCalculation(GetPolynomialCalculationRequest) returns (GetPolynomialCalculationResponse);
-  rpc GetParallelPolynomialCalculation(GetParallelPolynomialCalculationRequest) returns (GetParallelPolynomialCalculationResponse);
+  rpc GetLinearFormCalculation(stream Chunk) returns (stream GetLinearFormCalculationResponse);
+  rpc GetParallelLinearFormCalculation(stream Chunk) returns (stream GetParallelLinearFormCalculationResponse);
+  rpc GetPolynomialCalculation(stream Chunk) returns (stream GetPolynomialCalculationResponse);
+  rpc GetParallelPolynomialCalculation(stream Chunk) returns (stream GetParallelPolynomialCalculationResponse);
 }
 
+
+message Chunk {
+  bytes Content = 1;
+}
 
 message GetPolynomialCalculationRequest {
   string matrix = 1;
@@ -20,9 +24,8 @@ message GetPolynomialCalculationRequest {
 
 message GetPolynomialCalculationResponse {
   string operation = 1;
-  string resultMatrix = 2;
+  string key = 2;
   double time = 3;
-  string operation_type = 4;
 }
 
 message GetParallelPolynomialCalculationRequest {
@@ -32,21 +35,17 @@ message GetParallelPolynomialCalculationRequest {
 
 message GetParallelPolynomialCalculationResponse {
   string operation = 1;
-  string resultMatrix = 2;
+  string key = 2;
   double time = 3;
-  string operation_type = 4;
 }
 
-message GetParallelLinearFormCalculationRequest {
-  bytes matrix = 1;
-  repeated double coefficients = 2;
-}
+
+
 
 message GetParallelLinearFormCalculationResponse {
   string operation = 1;
-  bytes resultMatrix = 2;
+  string key =2;
   double time = 3;
-  string operation_type = 4;
 }
 
 
@@ -57,9 +56,8 @@ message GetLinearFormCalculationRequest {
 
 message GetLinearFormCalculationResponse {
   string operation = 1;
-  bytes resultMatrix = 2;
+  string key = 2;
   double time = 3;
-  string operation_type = 4;
 }
 
 message GetStatusRequest {

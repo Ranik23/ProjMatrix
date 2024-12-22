@@ -9,7 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func ProcessRequest(c *gin.Context, rawData map[string]interface{}, workerClient entity.WorkersClient) error {
+func ProcessRequest(c *gin.Context, rawData map[string]interface{}, workerClient *entity.WorkersClient) error {
 	operationType, ok := rawData["operationType"].(string)
 	if !ok {
 		return fmt.Errorf("invalid or missing operationType")

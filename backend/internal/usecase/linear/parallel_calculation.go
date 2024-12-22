@@ -1,20 +1,25 @@
 package linear
 
 import (
+	"ProjMatrix/internal/converter"
+	"ProjMatrix/internal/entity"
+	"ProjMatrix/pkg/repository"
 	"ProjMatrix/pkg/wpool"
+	"context"
 	"errors"
 	"sync"
 	"time"
 )
 
-func ParallelLinearFormCalculation(matrices [][][]float64, coefficients []float64, pool *wpool.WorkerPool) ([][]float64, float64, error) {
+func ParallelLinearFormCalculation(matrices [][][]float64, coefficients []float64, pool *wpool.WorkerPool, s repository.PgRepository) (string, float64, error) {
 	start := time.Now()
+	ctx := context.Background()
 	if len(matrices) == 0 || len(coefficients) == 0 {
-		return nil, 0, errors.New("the array of matrices or the array of coefficients is empty")
+		return "", 0, errors.New("the array of matrices or the array of coefficients is empty")
 	}
 
 	if len(matrices) != len(coefficients) {
-		return nil, 0, errors.New("the number of matrices and coefficients must match")
+		return "", 0, errors.New("the number of matrices and coefficients must match")
 	}
 
 	rows, cols := len(matrices[0]), len(matrices[0][0])
@@ -56,5 +61,8 @@ func ParallelLinearFormCalculation(matrices [][][]float64, coefficients []float6
 
 	elapsed := time.Since(start).Seconds()
 
-	return result, elapsed, nil
+	session := entity.GenerateSessionID()
+	s.Save(ctx, session, elapsed, converter.MatrixToByte(result))
+
+	return session, elapsed, nil
 }

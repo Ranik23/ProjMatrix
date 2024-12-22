@@ -4,8 +4,11 @@ package main
 import (
 	"ProjMatrix/internal/worker"
 	"ProjMatrix/internal/worker/mw"
+	"ProjMatrix/pkg/repository"
+	"context"
 	"flag"
 	"fmt"
+	"github.com/jackc/pgx/v5/pgxpool"
 	"google.golang.org/grpc/reflection"
 	"log"
 	"net"
@@ -17,6 +20,8 @@ import (
 	"google.golang.org/grpc"
 )
 
+const psqlDSN = "postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable"
+
 var (
 	port     = flag.Int("port", 50051, "Worker port to listen on")
 	workerId = flag.String("id", "", "Worker ID")
@@ -24,7 +29,7 @@ var (
 
 func main() {
 	flag.Parse()
-
+	ctx := context.Background()
 	if *workerId == "" {
 		*workerId = fmt.Sprintf("worker-%d", *port)
 	}
@@ -37,14 +42,26 @@ func main() {
 
 	grpcServer := grpc.NewServer(serverOpts...)
 
+	con, err := pgxpool.New(ctx, psqlDSN)
+	if err != nil {
+		log.Fatalf("Error connecting to the database: %v", err)
+	}
+
+	pgRepository := repository.NewPgRepository(con)
 	// Create worker processor (implement your specific job processing logic)
 
 	// Create worker service
-	workerService := worker.NewWorkerService(*workerId)
-
+	workerService := worker.NewWorkerService(*workerId, pgRepository)
 	// Register worker service
 	reflection.Register(grpcServer)
 	pb.RegisterWorkerServiceServer(grpcServer, workerService)
+
+	workerService.Wp.Start()
+
+	defer func() {
+		workerService.Wp.Wait()
+		workerService.Wp.Start()
+	}()
 
 	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", *port))
 	if err != nil {

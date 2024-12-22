@@ -11,12 +11,17 @@ import (
 type Config struct {
 	App     AppConfig     `yaml:"app"`
 	Logging LoggingConfig `yaml:"logging"`
+	Db      DbConfig      `yaml:"db"`
 }
 
 type AppConfig struct {
 	Name        string `yaml:"name"`
 	Environment string `yaml:"environment"`
 	Port        int    `yaml:"port"`
+}
+
+type DbConfig struct {
+	DSN string `yaml:"host"`
 }
 
 type LoggingConfig struct {

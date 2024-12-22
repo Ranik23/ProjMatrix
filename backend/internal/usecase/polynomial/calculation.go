@@ -1,20 +1,25 @@
 package polynomial
 
 import (
+	"ProjMatrix/internal/converter"
+	"ProjMatrix/internal/entity"
 	mtrx "ProjMatrix/pkg/matrix"
+	"ProjMatrix/pkg/repository"
+	"context"
 	"errors"
 	"fmt"
+	"log"
 	"time"
 )
 
-func PolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []float64) ([][]float64, float64, error) {
+func PolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []float64, s repository.PgRepository) (string, float64, error) {
 	start := time.Now()
-
+	ctx := context.Background()
 	if len(matrix) == 0 || len(identityMatrix) == 0 {
-		return nil, 0, errors.New("the matrix or the unit matrix is empty")
+		return "", 0, errors.New("the matrix or the unit matrix is empty")
 	}
 	if len(matrix) != len(matrix[0]) {
-		return nil, 0, errors.New("the matrix must be square")
+		return "", 0, errors.New("the matrix must be square")
 	}
 
 	n := len(matrix)
@@ -38,7 +43,7 @@ func PolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []fl
 
 		currentPower, err = mtrx.MatrixMultiply(currentPower, matrix)
 		if err != nil {
-			return nil, 0, fmt.Errorf("the Matrix Polynomial could not be calculated: %w", err)
+			return "", 0, fmt.Errorf("the Matrix Polynomial could not be calculated: %w", err)
 		}
 
 		for i := 0; i < n; i++ {
@@ -49,5 +54,12 @@ func PolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []fl
 	}
 
 	elapsed := time.Since(start).Seconds()
-	return result, elapsed, nil
+
+	session := entity.GenerateSessionID()
+	err = s.Save(ctx, session, elapsed, converter.MatrixToByte(result))
+	if err != nil {
+		log.Println("Saving error")
+	}
+
+	return session, elapsed, nil
 }

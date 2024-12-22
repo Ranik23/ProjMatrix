@@ -51,16 +51,12 @@
         "operation": {
           "type": "string"
         },
-        "resultMatrix": {
-          "type": "string",
-          "format": "byte"
+        "key": {
+          "type": "string"
         },
         "time": {
           "type": "number",
           "format": "double"
-        },
-        "operationType": {
-          "type": "string"
         }
       }
     },
@@ -70,16 +66,12 @@
         "operation": {
           "type": "string"
         },
-        "resultMatrix": {
-          "type": "string",
-          "format": "byte"
+        "key": {
+          "type": "string"
         },
         "time": {
           "type": "number",
           "format": "double"
-        },
-        "operationType": {
-          "type": "string"
         }
       }
     },
@@ -89,15 +81,12 @@
         "operation": {
           "type": "string"
         },
-        "resultMatrix": {
+        "key": {
           "type": "string"
         },
         "time": {
           "type": "number",
           "format": "double"
-        },
-        "operationType": {
-          "type": "string"
         }
       }
     },
@@ -107,15 +96,12 @@
         "operation": {
           "type": "string"
         },
-        "resultMatrix": {
+        "key": {
           "type": "string"
         },
         "time": {
           "type": "number",
           "format": "double"
-        },
-        "operationType": {
-          "type": "string"
         }
       }
     },

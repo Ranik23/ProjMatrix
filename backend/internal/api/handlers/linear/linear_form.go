@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func HandleLinearForm(c *gin.Context, l *entity.LinearForm, operationType string, workerClient entity.WorkersClient) {
+func HandleLinearForm(c *gin.Context, l *entity.LinearForm, operationType string, workerClient *entity.WorkersClient) {
 	switch operationType {
 	case "manual-linear-form":
 		err := handleManualLinearForm(c, l, workerClient)

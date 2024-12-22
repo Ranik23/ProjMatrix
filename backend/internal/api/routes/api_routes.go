@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func RegisterAPIRoutes(router *gin.Engine, workerClient entity.WorkersClient) {
+func RegisterAPIRoutes(router *gin.Engine, workerClient *entity.WorkersClient) {
 	router.POST("/api/submit", func(c *gin.Context) {
 		var rawData map[string]interface{}
 

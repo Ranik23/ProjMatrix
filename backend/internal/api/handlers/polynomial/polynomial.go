@@ -7,17 +7,17 @@ import (
 	"net/http"
 )
 
-func HandlePolynomial(c *gin.Context, p *entity.Polynomial, operationType string, workerClient entity.WorkersClient) {
+func HandlePolynomial(c *gin.Context, p *entity.Polynomial, operationType string, workerClient *entity.WorkersClient) {
 	switch operationType {
 	case "manual-polynomial":
-		err := handleManualPolynomial(c, p)
+		err := handleManualPolynomial(c, p, workerClient)
 		if err != nil {
 			log.Printf("Error in processing calculations: %w\n", err)
 			c.JSON(http.StatusBadRequest, gin.H{"error": err})
 			return
 		}
 	case "generate-polynomial":
-		err := handleGeneratedPolynomial(c, p)
+		err := handleGeneratedPolynomial(c, p, workerClient)
 		if err != nil {
 			log.Printf("Error in processing calculations: %w\n", err)
 			c.JSON(http.StatusBadRequest, gin.H{"error": err})

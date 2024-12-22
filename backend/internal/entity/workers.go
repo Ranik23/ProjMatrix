@@ -1,6 +1,9 @@
 package entity
 
-import "ProjMatrix/pkg/proto"
+import (
+	"ProjMatrix/pkg/proto"
+	"ProjMatrix/pkg/repository"
+)
 
 type Worker struct {
 	Client    proto.WorkerServiceClient // Протовский воркер
@@ -10,6 +13,23 @@ type Worker struct {
 type WorkersClient struct {
 	FirstWorker  Worker // Первый воркер
 	SecondWorker Worker // Второй воркер
+	PgRepository repository.PgRepository
+	Session      string
+}
+
+func NewWorkersClient(firstWorker proto.WorkerServiceClient, secondWorker proto.WorkerServiceClient, pgRepo repository.PgRepository, session string) *WorkersClient {
+	return &WorkersClient{
+		FirstWorker: Worker{
+			Client:    firstWorker,
+			Valuation: 0,
+		},
+		SecondWorker: Worker{
+			Client:    secondWorker,
+			Valuation: 0,
+		},
+		PgRepository: pgRepo,
+		Session:      session,
+	}
 }
 
 func (wc *WorkersClient) GetLeastLoadedWorker() Worker {
