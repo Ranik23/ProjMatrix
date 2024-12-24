@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func handleGeneratedLinearForm(c *gin.Context, l *entity.LinearForm, workerClient entity.WorkersClient) error {
+func handleGeneratedLinearForm(c *gin.Context, l *entity.LinearForm, workerClient *entity.WorkersClient) error {
 	log.Printf("Processing of linear shape generation: %+v\n", *l)
 
 	matrices := make([][][]float64, l.MatrixCount)
@@ -37,11 +37,13 @@ func handleGeneratedLinearForm(c *gin.Context, l *entity.LinearForm, workerClien
 		needParallel = true
 	}
 
+	log.Println("Need parallel:", needParallel)
+
 	switch needParallel {
 	case false:
 		worker := workerClient.GetLeastLoadedWorker()
 		worker.Valuation++
-		err := generateNotParallel(c, matrices, coefficients, worker.Client)
+		err := generateNotParallel(c, matrices, coefficients, worker.Client, workerClient)
 		worker.Valuation--
 		if err != nil {
 			log.Printf("Error in processing calculations: %w\n", err)
@@ -51,7 +53,7 @@ func handleGeneratedLinearForm(c *gin.Context, l *entity.LinearForm, workerClien
 	case true:
 		worker := workerClient.GetLeastLoadedWorker()
 		worker.Valuation++
-		err := generateParallel(c, matrices, coefficients, worker.Client)
+		err := generateParallel(c, matrices, coefficients, worker.Client, workerClient)
 		worker.Valuation--
 		if err != nil {
 			log.Printf("Error in processing calculations: %w\n", err)

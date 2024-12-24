@@ -35,6 +35,106 @@ var (
 	_ = sort.Sort
 )
 
+// Validate checks the field values on Chunk with the rules defined in the
+// proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *Chunk) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on Chunk with the rules defined in the
+// proto definition for this message. If any rules are violated, the result is
+// a list of violation errors wrapped in ChunkMultiError, or nil if none found.
+func (m *Chunk) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *Chunk) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	// no validation rules for Content
+
+	if len(errors) > 0 {
+		return ChunkMultiError(errors)
+	}
+
+	return nil
+}
+
+// ChunkMultiError is an error wrapping multiple validation errors returned by
+// Chunk.ValidateAll() if the designated constraints aren't met.
+type ChunkMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m ChunkMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m ChunkMultiError) AllErrors() []error { return m }
+
+// ChunkValidationError is the validation error returned by Chunk.Validate if
+// the designated constraints aren't met.
+type ChunkValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ChunkValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ChunkValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ChunkValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ChunkValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ChunkValidationError) ErrorName() string { return "ChunkValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ChunkValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sChunk.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ChunkValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ChunkValidationError{}
+
 // Validate checks the field values on GetPolynomialCalculationRequest with the
 // rules defined in the proto definition for this message. If any rules are
 // violated, the first error encountered is returned, or nil if there are no violations.
@@ -165,11 +265,9 @@ func (m *GetPolynomialCalculationResponse) validate(all bool) error {
 
 	// no validation rules for Operation
 
-	// no validation rules for ResultMatrix
+	// no validation rules for Key
 
 	// no validation rules for Time
-
-	// no validation rules for OperationType
 
 	if len(errors) > 0 {
 		return GetPolynomialCalculationResponseMultiError(errors)
@@ -387,11 +485,9 @@ func (m *GetParallelPolynomialCalculationResponse) validate(all bool) error {
 
 	// no validation rules for Operation
 
-	// no validation rules for ResultMatrix
+	// no validation rules for Key
 
 	// no validation rules for Time
-
-	// no validation rules for OperationType
 
 	if len(errors) > 0 {
 		return GetParallelPolynomialCalculationResponseMultiError(errors)
@@ -475,114 +571,6 @@ var _ interface {
 	ErrorName() string
 } = GetParallelPolynomialCalculationResponseValidationError{}
 
-// Validate checks the field values on GetParallelLinearFormCalculationRequest
-// with the rules defined in the proto definition for this message. If any
-// rules are violated, the first error encountered is returned, or nil if
-// there are no violations.
-func (m *GetParallelLinearFormCalculationRequest) Validate() error {
-	return m.validate(false)
-}
-
-// ValidateAll checks the field values on
-// GetParallelLinearFormCalculationRequest with the rules defined in the proto
-// definition for this message. If any rules are violated, the result is a
-// list of violation errors wrapped in
-// GetParallelLinearFormCalculationRequestMultiError, or nil if none found.
-func (m *GetParallelLinearFormCalculationRequest) ValidateAll() error {
-	return m.validate(true)
-}
-
-func (m *GetParallelLinearFormCalculationRequest) validate(all bool) error {
-	if m == nil {
-		return nil
-	}
-
-	var errors []error
-
-	// no validation rules for Matrix
-
-	if len(errors) > 0 {
-		return GetParallelLinearFormCalculationRequestMultiError(errors)
-	}
-
-	return nil
-}
-
-// GetParallelLinearFormCalculationRequestMultiError is an error wrapping
-// multiple validation errors returned by
-// GetParallelLinearFormCalculationRequest.ValidateAll() if the designated
-// constraints aren't met.
-type GetParallelLinearFormCalculationRequestMultiError []error
-
-// Error returns a concatenation of all the error messages it wraps.
-func (m GetParallelLinearFormCalculationRequestMultiError) Error() string {
-	var msgs []string
-	for _, err := range m {
-		msgs = append(msgs, err.Error())
-	}
-	return strings.Join(msgs, "; ")
-}
-
-// AllErrors returns a list of validation violation errors.
-func (m GetParallelLinearFormCalculationRequestMultiError) AllErrors() []error { return m }
-
-// GetParallelLinearFormCalculationRequestValidationError is the validation
-// error returned by GetParallelLinearFormCalculationRequest.Validate if the
-// designated constraints aren't met.
-type GetParallelLinearFormCalculationRequestValidationError struct {
-	field  string
-	reason string
-	cause  error
-	key    bool
-}
-
-// Field function returns field value.
-func (e GetParallelLinearFormCalculationRequestValidationError) Field() string { return e.field }
-
-// Reason function returns reason value.
-func (e GetParallelLinearFormCalculationRequestValidationError) Reason() string { return e.reason }
-
-// Cause function returns cause value.
-func (e GetParallelLinearFormCalculationRequestValidationError) Cause() error { return e.cause }
-
-// Key function returns key value.
-func (e GetParallelLinearFormCalculationRequestValidationError) Key() bool { return e.key }
-
-// ErrorName returns error name.
-func (e GetParallelLinearFormCalculationRequestValidationError) ErrorName() string {
-	return "GetParallelLinearFormCalculationRequestValidationError"
-}
-
-// Error satisfies the builtin error interface
-func (e GetParallelLinearFormCalculationRequestValidationError) Error() string {
-	cause := ""
-	if e.cause != nil {
-		cause = fmt.Sprintf(" | caused by: %v", e.cause)
-	}
-
-	key := ""
-	if e.key {
-		key = "key for "
-	}
-
-	return fmt.Sprintf(
-		"invalid %sGetParallelLinearFormCalculationRequest.%s: %s%s",
-		key,
-		e.field,
-		e.reason,
-		cause)
-}
-
-var _ error = GetParallelLinearFormCalculationRequestValidationError{}
-
-var _ interface {
-	Field() string
-	Reason() string
-	Key() bool
-	Cause() error
-	ErrorName() string
-} = GetParallelLinearFormCalculationRequestValidationError{}
-
 // Validate checks the field values on GetParallelLinearFormCalculationResponse
 // with the rules defined in the proto definition for this message. If any
 // rules are violated, the first error encountered is returned, or nil if
@@ -609,11 +597,9 @@ func (m *GetParallelLinearFormCalculationResponse) validate(all bool) error {
 
 	// no validation rules for Operation
 
-	// no validation rules for ResultMatrix
+	// no validation rules for Key
 
 	// no validation rules for Time
-
-	// no validation rules for OperationType
 
 	if len(errors) > 0 {
 		return GetParallelLinearFormCalculationResponseMultiError(errors)
@@ -827,11 +813,9 @@ func (m *GetLinearFormCalculationResponse) validate(all bool) error {
 
 	// no validation rules for Operation
 
-	// no validation rules for ResultMatrix
+	// no validation rules for Key
 
 	// no validation rules for Time
-
-	// no validation rules for OperationType
 
 	if len(errors) > 0 {
 		return GetLinearFormCalculationResponseMultiError(errors)

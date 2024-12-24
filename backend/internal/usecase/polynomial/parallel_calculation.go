@@ -1,21 +1,26 @@
 package polynomial
 
 import (
+	"ProjMatrix/internal/converter"
+	"ProjMatrix/internal/entity"
+	"ProjMatrix/pkg/repository"
 	"ProjMatrix/pkg/wpool"
+	"context"
 	"errors"
 	"fmt"
+	"log"
 	"sync"
 	"time"
 )
 
-func ParallelPolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []float64, pool *wpool.WorkerPool) ([][]float64, float64, error) {
+func ParallelPolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []float64, pool *wpool.WorkerPool, s repository.PgRepository) (string, float64, error) {
 	start := time.Now()
-
+	ctx := context.Background()
 	if len(matrix) == 0 || len(identityMatrix) == 0 {
-		return nil, 0, errors.New("матрица или единичная матрица пустые")
+		return "", 0, errors.New("матрица или единичная матрица пустые")
 	}
 	if len(matrix) != len(matrix[0]) {
-		return nil, 0, errors.New("матрица должна быть квадратной")
+		return "", 0, errors.New("матрица должна быть квадратной")
 	}
 
 	n := len(matrix)
@@ -39,7 +44,7 @@ func ParallelPolynomialCalculation(matrix, identityMatrix [][]float64, coefficie
 	for m := 1; m < len(coefficients); m++ {
 		currentPower, err = ParallelMatrixMultiply(currentPower, matrix, pool)
 		if err != nil {
-			return nil, 0, fmt.Errorf("не удалось вычислить Матричный Полином: %w", err)
+			return "", 0, fmt.Errorf("не удалось вычислить Матричный Полином: %w", err)
 		}
 
 		pool.Submit(func() {
@@ -53,7 +58,13 @@ func ParallelPolynomialCalculation(matrix, identityMatrix [][]float64, coefficie
 
 	pool.Wait()
 	elapsed := time.Since(start).Seconds()
-	return result, elapsed, nil
+
+	session := entity.GenerateSessionID()
+	err = s.Save(ctx, session, elapsed, converter.MatrixToByte(result))
+	if err != nil {
+		log.Println("Saving error")
+	}
+	return session, elapsed, nil
 }
 
 func ParallelMatrixMultiply(a, b [][]float64, pool *wpool.WorkerPool) ([][]float64, error) {

@@ -1,19 +1,24 @@
 package linear
 
 import (
+	"ProjMatrix/internal/converter"
+	"ProjMatrix/internal/entity"
+	"ProjMatrix/pkg/repository"
+	"context"
 	"errors"
+	"log"
 	"time"
 )
 
-func LinearFormCalculation(matrices [][][]float64, coefficients []float64) ([][]float64, float64, error) {
+func LinearFormCalculation(matrices [][][]float64, coefficients []float64, s repository.PgRepository) (string, float64, error) {
 	start := time.Now()
-
+	ctx := context.Background()
 	if len(matrices) == 0 || len(coefficients) == 0 {
-		return nil, 0, errors.New("the array of matrices or the array of coefficients is empty")
+		return "", 0, errors.New("the array of matrices or the array of coefficients is empty")
 	}
 
 	if len(matrices) != len(coefficients) {
-		return nil, 0, errors.New("the number of matrices and coefficients must match")
+		return "", 0, errors.New("the number of matrices and coefficients must match")
 	}
 
 	rows, cols := len(matrices[0]), len(matrices[0][0])
@@ -34,5 +39,11 @@ func LinearFormCalculation(matrices [][][]float64, coefficients []float64) ([][]
 
 	elapsed := time.Since(start).Seconds()
 
-	return result, elapsed, nil
+	session := entity.GenerateSessionID()
+	err := s.Save(ctx, session, elapsed, converter.MatrixToByte(result))
+	if err != nil {
+		log.Println("Saving error")
+	}
+
+	return session, elapsed, nil
 }

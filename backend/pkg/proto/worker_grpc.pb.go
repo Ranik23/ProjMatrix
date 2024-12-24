@@ -31,10 +31,10 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type WorkerServiceClient interface {
 	GetStatus(ctx context.Context, in *GetStatusRequest, opts ...grpc.CallOption) (*GetStatusResponse, error)
-	GetLinearFormCalculation(ctx context.Context, in *GetLinearFormCalculationRequest, opts ...grpc.CallOption) (*GetLinearFormCalculationResponse, error)
-	GetParallelLinearFormCalculation(ctx context.Context, opts ...grpc.CallOption) (grpc.BidiStreamingClient[GetParallelLinearFormCalculationRequest, GetParallelLinearFormCalculationResponse], error)
-	GetPolynomialCalculation(ctx context.Context, in *GetPolynomialCalculationRequest, opts ...grpc.CallOption) (*GetPolynomialCalculationResponse, error)
-	GetParallelPolynomialCalculation(ctx context.Context, in *GetParallelPolynomialCalculationRequest, opts ...grpc.CallOption) (*GetParallelPolynomialCalculationResponse, error)
+	GetLinearFormCalculation(ctx context.Context, opts ...grpc.CallOption) (grpc.BidiStreamingClient[Chunk, GetLinearFormCalculationResponse], error)
+	GetParallelLinearFormCalculation(ctx context.Context, opts ...grpc.CallOption) (grpc.BidiStreamingClient[Chunk, GetParallelLinearFormCalculationResponse], error)
+	GetPolynomialCalculation(ctx context.Context, opts ...grpc.CallOption) (grpc.BidiStreamingClient[Chunk, GetPolynomialCalculationResponse], error)
+	GetParallelPolynomialCalculation(ctx context.Context, opts ...grpc.CallOption) (grpc.BidiStreamingClient[Chunk, GetParallelPolynomialCalculationResponse], error)
 }
 
 type workerServiceClient struct {
@@ -55,58 +55,67 @@ func (c *workerServiceClient) GetStatus(ctx context.Context, in *GetStatusReques
 	return out, nil
 }
 
-func (c *workerServiceClient) GetLinearFormCalculation(ctx context.Context, in *GetLinearFormCalculationRequest, opts ...grpc.CallOption) (*GetLinearFormCalculationResponse, error) {
+func (c *workerServiceClient) GetLinearFormCalculation(ctx context.Context, opts ...grpc.CallOption) (grpc.BidiStreamingClient[Chunk, GetLinearFormCalculationResponse], error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(GetLinearFormCalculationResponse)
-	err := c.cc.Invoke(ctx, WorkerService_GetLinearFormCalculation_FullMethodName, in, out, cOpts...)
+	stream, err := c.cc.NewStream(ctx, &WorkerService_ServiceDesc.Streams[0], WorkerService_GetLinearFormCalculation_FullMethodName, cOpts...)
 	if err != nil {
 		return nil, err
 	}
-	return out, nil
-}
-
-func (c *workerServiceClient) GetParallelLinearFormCalculation(ctx context.Context, opts ...grpc.CallOption) (grpc.BidiStreamingClient[GetParallelLinearFormCalculationRequest, GetParallelLinearFormCalculationResponse], error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	stream, err := c.cc.NewStream(ctx, &WorkerService_ServiceDesc.Streams[0], WorkerService_GetParallelLinearFormCalculation_FullMethodName, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	x := &grpc.GenericClientStream[GetParallelLinearFormCalculationRequest, GetParallelLinearFormCalculationResponse]{ClientStream: stream}
+	x := &grpc.GenericClientStream[Chunk, GetLinearFormCalculationResponse]{ClientStream: stream}
 	return x, nil
 }
 
 // This type alias is provided for backwards compatibility with existing code that references the prior non-generic stream type by name.
-type WorkerService_GetParallelLinearFormCalculationClient = grpc.BidiStreamingClient[GetParallelLinearFormCalculationRequest, GetParallelLinearFormCalculationResponse]
+type WorkerService_GetLinearFormCalculationClient = grpc.BidiStreamingClient[Chunk, GetLinearFormCalculationResponse]
 
-func (c *workerServiceClient) GetPolynomialCalculation(ctx context.Context, in *GetPolynomialCalculationRequest, opts ...grpc.CallOption) (*GetPolynomialCalculationResponse, error) {
+func (c *workerServiceClient) GetParallelLinearFormCalculation(ctx context.Context, opts ...grpc.CallOption) (grpc.BidiStreamingClient[Chunk, GetParallelLinearFormCalculationResponse], error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(GetPolynomialCalculationResponse)
-	err := c.cc.Invoke(ctx, WorkerService_GetPolynomialCalculation_FullMethodName, in, out, cOpts...)
+	stream, err := c.cc.NewStream(ctx, &WorkerService_ServiceDesc.Streams[1], WorkerService_GetParallelLinearFormCalculation_FullMethodName, cOpts...)
 	if err != nil {
 		return nil, err
 	}
-	return out, nil
+	x := &grpc.GenericClientStream[Chunk, GetParallelLinearFormCalculationResponse]{ClientStream: stream}
+	return x, nil
 }
 
-func (c *workerServiceClient) GetParallelPolynomialCalculation(ctx context.Context, in *GetParallelPolynomialCalculationRequest, opts ...grpc.CallOption) (*GetParallelPolynomialCalculationResponse, error) {
+// This type alias is provided for backwards compatibility with existing code that references the prior non-generic stream type by name.
+type WorkerService_GetParallelLinearFormCalculationClient = grpc.BidiStreamingClient[Chunk, GetParallelLinearFormCalculationResponse]
+
+func (c *workerServiceClient) GetPolynomialCalculation(ctx context.Context, opts ...grpc.CallOption) (grpc.BidiStreamingClient[Chunk, GetPolynomialCalculationResponse], error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(GetParallelPolynomialCalculationResponse)
-	err := c.cc.Invoke(ctx, WorkerService_GetParallelPolynomialCalculation_FullMethodName, in, out, cOpts...)
+	stream, err := c.cc.NewStream(ctx, &WorkerService_ServiceDesc.Streams[2], WorkerService_GetPolynomialCalculation_FullMethodName, cOpts...)
 	if err != nil {
 		return nil, err
 	}
-	return out, nil
+	x := &grpc.GenericClientStream[Chunk, GetPolynomialCalculationResponse]{ClientStream: stream}
+	return x, nil
 }
+
+// This type alias is provided for backwards compatibility with existing code that references the prior non-generic stream type by name.
+type WorkerService_GetPolynomialCalculationClient = grpc.BidiStreamingClient[Chunk, GetPolynomialCalculationResponse]
+
+func (c *workerServiceClient) GetParallelPolynomialCalculation(ctx context.Context, opts ...grpc.CallOption) (grpc.BidiStreamingClient[Chunk, GetParallelPolynomialCalculationResponse], error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	stream, err := c.cc.NewStream(ctx, &WorkerService_ServiceDesc.Streams[3], WorkerService_GetParallelPolynomialCalculation_FullMethodName, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &grpc.GenericClientStream[Chunk, GetParallelPolynomialCalculationResponse]{ClientStream: stream}
+	return x, nil
+}
+
+// This type alias is provided for backwards compatibility with existing code that references the prior non-generic stream type by name.
+type WorkerService_GetParallelPolynomialCalculationClient = grpc.BidiStreamingClient[Chunk, GetParallelPolynomialCalculationResponse]
 
 // WorkerServiceServer is the server API for WorkerService service.
 // All implementations must embed UnimplementedWorkerServiceServer
 // for forward compatibility.
 type WorkerServiceServer interface {
 	GetStatus(context.Context, *GetStatusRequest) (*GetStatusResponse, error)
-	GetLinearFormCalculation(context.Context, *GetLinearFormCalculationRequest) (*GetLinearFormCalculationResponse, error)
-	GetParallelLinearFormCalculation(grpc.BidiStreamingServer[GetParallelLinearFormCalculationRequest, GetParallelLinearFormCalculationResponse]) error
-	GetPolynomialCalculation(context.Context, *GetPolynomialCalculationRequest) (*GetPolynomialCalculationResponse, error)
-	GetParallelPolynomialCalculation(context.Context, *GetParallelPolynomialCalculationRequest) (*GetParallelPolynomialCalculationResponse, error)
+	GetLinearFormCalculation(grpc.BidiStreamingServer[Chunk, GetLinearFormCalculationResponse]) error
+	GetParallelLinearFormCalculation(grpc.BidiStreamingServer[Chunk, GetParallelLinearFormCalculationResponse]) error
+	GetPolynomialCalculation(grpc.BidiStreamingServer[Chunk, GetPolynomialCalculationResponse]) error
+	GetParallelPolynomialCalculation(grpc.BidiStreamingServer[Chunk, GetParallelPolynomialCalculationResponse]) error
 	mustEmbedUnimplementedWorkerServiceServer()
 }
 
@@ -120,17 +129,17 @@ type UnimplementedWorkerServiceServer struct{}
 func (UnimplementedWorkerServiceServer) GetStatus(context.Context, *GetStatusRequest) (*GetStatusResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetStatus not implemented")
 }
-func (UnimplementedWorkerServiceServer) GetLinearFormCalculation(context.Context, *GetLinearFormCalculationRequest) (*GetLinearFormCalculationResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetLinearFormCalculation not implemented")
+func (UnimplementedWorkerServiceServer) GetLinearFormCalculation(grpc.BidiStreamingServer[Chunk, GetLinearFormCalculationResponse]) error {
+	return status.Errorf(codes.Unimplemented, "method GetLinearFormCalculation not implemented")
 }
-func (UnimplementedWorkerServiceServer) GetParallelLinearFormCalculation(grpc.BidiStreamingServer[GetParallelLinearFormCalculationRequest, GetParallelLinearFormCalculationResponse]) error {
+func (UnimplementedWorkerServiceServer) GetParallelLinearFormCalculation(grpc.BidiStreamingServer[Chunk, GetParallelLinearFormCalculationResponse]) error {
 	return status.Errorf(codes.Unimplemented, "method GetParallelLinearFormCalculation not implemented")
 }
-func (UnimplementedWorkerServiceServer) GetPolynomialCalculation(context.Context, *GetPolynomialCalculationRequest) (*GetPolynomialCalculationResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetPolynomialCalculation not implemented")
+func (UnimplementedWorkerServiceServer) GetPolynomialCalculation(grpc.BidiStreamingServer[Chunk, GetPolynomialCalculationResponse]) error {
+	return status.Errorf(codes.Unimplemented, "method GetPolynomialCalculation not implemented")
 }
-func (UnimplementedWorkerServiceServer) GetParallelPolynomialCalculation(context.Context, *GetParallelPolynomialCalculationRequest) (*GetParallelPolynomialCalculationResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetParallelPolynomialCalculation not implemented")
+func (UnimplementedWorkerServiceServer) GetParallelPolynomialCalculation(grpc.BidiStreamingServer[Chunk, GetParallelPolynomialCalculationResponse]) error {
+	return status.Errorf(codes.Unimplemented, "method GetParallelPolynomialCalculation not implemented")
 }
 func (UnimplementedWorkerServiceServer) mustEmbedUnimplementedWorkerServiceServer() {}
 func (UnimplementedWorkerServiceServer) testEmbeddedByValue()                       {}
@@ -171,66 +180,33 @@ func _WorkerService_GetStatus_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkerService_GetLinearFormCalculation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetLinearFormCalculationRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(WorkerServiceServer).GetLinearFormCalculation(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: WorkerService_GetLinearFormCalculation_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(WorkerServiceServer).GetLinearFormCalculation(ctx, req.(*GetLinearFormCalculationRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _WorkerService_GetParallelLinearFormCalculation_Handler(srv interface{}, stream grpc.ServerStream) error {
-	return srv.(WorkerServiceServer).GetParallelLinearFormCalculation(&grpc.GenericServerStream[GetParallelLinearFormCalculationRequest, GetParallelLinearFormCalculationResponse]{ServerStream: stream})
+func _WorkerService_GetLinearFormCalculation_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(WorkerServiceServer).GetLinearFormCalculation(&grpc.GenericServerStream[Chunk, GetLinearFormCalculationResponse]{ServerStream: stream})
 }
 
 // This type alias is provided for backwards compatibility with existing code that references the prior non-generic stream type by name.
-type WorkerService_GetParallelLinearFormCalculationServer = grpc.BidiStreamingServer[GetParallelLinearFormCalculationRequest, GetParallelLinearFormCalculationResponse]
+type WorkerService_GetLinearFormCalculationServer = grpc.BidiStreamingServer[Chunk, GetLinearFormCalculationResponse]
 
-func _WorkerService_GetPolynomialCalculation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetPolynomialCalculationRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(WorkerServiceServer).GetPolynomialCalculation(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: WorkerService_GetPolynomialCalculation_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(WorkerServiceServer).GetPolynomialCalculation(ctx, req.(*GetPolynomialCalculationRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+func _WorkerService_GetParallelLinearFormCalculation_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(WorkerServiceServer).GetParallelLinearFormCalculation(&grpc.GenericServerStream[Chunk, GetParallelLinearFormCalculationResponse]{ServerStream: stream})
 }
 
-func _WorkerService_GetParallelPolynomialCalculation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetParallelPolynomialCalculationRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(WorkerServiceServer).GetParallelPolynomialCalculation(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: WorkerService_GetParallelPolynomialCalculation_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(WorkerServiceServer).GetParallelPolynomialCalculation(ctx, req.(*GetParallelPolynomialCalculationRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+// This type alias is provided for backwards compatibility with existing code that references the prior non-generic stream type by name.
+type WorkerService_GetParallelLinearFormCalculationServer = grpc.BidiStreamingServer[Chunk, GetParallelLinearFormCalculationResponse]
+
+func _WorkerService_GetPolynomialCalculation_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(WorkerServiceServer).GetPolynomialCalculation(&grpc.GenericServerStream[Chunk, GetPolynomialCalculationResponse]{ServerStream: stream})
 }
+
+// This type alias is provided for backwards compatibility with existing code that references the prior non-generic stream type by name.
+type WorkerService_GetPolynomialCalculationServer = grpc.BidiStreamingServer[Chunk, GetPolynomialCalculationResponse]
+
+func _WorkerService_GetParallelPolynomialCalculation_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(WorkerServiceServer).GetParallelPolynomialCalculation(&grpc.GenericServerStream[Chunk, GetParallelPolynomialCalculationResponse]{ServerStream: stream})
+}
+
+// This type alias is provided for backwards compatibility with existing code that references the prior non-generic stream type by name.
+type WorkerService_GetParallelPolynomialCalculationServer = grpc.BidiStreamingServer[Chunk, GetParallelPolynomialCalculationResponse]
 
 // WorkerService_ServiceDesc is the grpc.ServiceDesc for WorkerService service.
 // It's only intended for direct use with grpc.RegisterService,
@@ -243,23 +219,29 @@ var WorkerService_ServiceDesc = grpc.ServiceDesc{
 			MethodName: "GetStatus",
 			Handler:    _WorkerService_GetStatus_Handler,
 		},
-		{
-			MethodName: "GetLinearFormCalculation",
-			Handler:    _WorkerService_GetLinearFormCalculation_Handler,
-		},
-		{
-			MethodName: "GetPolynomialCalculation",
-			Handler:    _WorkerService_GetPolynomialCalculation_Handler,
-		},
-		{
-			MethodName: "GetParallelPolynomialCalculation",
-			Handler:    _WorkerService_GetParallelPolynomialCalculation_Handler,
-		},
 	},
 	Streams: []grpc.StreamDesc{
 		{
+			StreamName:    "GetLinearFormCalculation",
+			Handler:       _WorkerService_GetLinearFormCalculation_Handler,
+			ServerStreams: true,
+			ClientStreams: true,
+		},
+		{
 			StreamName:    "GetParallelLinearFormCalculation",
 			Handler:       _WorkerService_GetParallelLinearFormCalculation_Handler,
+			ServerStreams: true,
+			ClientStreams: true,
+		},
+		{
+			StreamName:    "GetPolynomialCalculation",
+			Handler:       _WorkerService_GetPolynomialCalculation_Handler,
+			ServerStreams: true,
+			ClientStreams: true,
+		},
+		{
+			StreamName:    "GetParallelPolynomialCalculation",
+			Handler:       _WorkerService_GetParallelPolynomialCalculation_Handler,
 			ServerStreams: true,
 			ClientStreams: true,
 		},
