@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-func ParallelLinearFormCalculation(matrices [][][]float64, coefficients []float64, pool *wpool.WorkerPool, s repository.PgRepository) (string, float64, error) {
+func ParallelLinearFormCalculation(matrices [][][]float64, coefficients []float64, pool *wpool.WorkerPool, s *repository.PgRepository) (string, float64, error) {
 	start := time.Now()
 	ctx := context.Background()
 	if len(matrices) == 0 || len(coefficients) == 0 {

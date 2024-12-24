@@ -13,7 +13,7 @@ import (
 	"time"
 )
 
-func ParallelPolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []float64, pool *wpool.WorkerPool, s repository.PgRepository) (string, float64, error) {
+func ParallelPolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []float64, pool *wpool.WorkerPool, s *repository.PgRepository) (string, float64, error) {
 	start := time.Now()
 	ctx := context.Background()
 	if len(matrix) == 0 || len(identityMatrix) == 0 {

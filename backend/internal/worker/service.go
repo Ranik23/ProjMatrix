@@ -12,10 +12,10 @@ type Service struct {
 	status entity.WorkerStatus
 	Wp     *wpool.WorkerPool
 	pb.UnimplementedWorkerServiceServer
-	PgRepository repository.PgRepository
+	PgRepository *repository.PgRepository
 }
 
-func NewWorkerService(id string, pgRepository repository.PgRepository) *Service {
+func NewWorkerService(id string, pgRepository *repository.PgRepository) *Service {
 	return &Service{
 		id:           id,
 		status:       entity.WorkerStatusReady,

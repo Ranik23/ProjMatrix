@@ -6,6 +6,6 @@ type PgRepository struct {
 	pool *pgxpool.Pool
 }
 
-func NewPgRepository(p *pgxpool.Pool) PgRepository {
-	return PgRepository{pool: p}
+func NewPgRepository(p *pgxpool.Pool) *PgRepository {
+	return &PgRepository{pool: p}
 }

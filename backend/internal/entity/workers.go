@@ -13,11 +13,11 @@ type Worker struct {
 type WorkersClient struct {
 	FirstWorker  Worker // Первый воркер
 	SecondWorker Worker // Второй воркер
-	PgRepository repository.PgRepository
+	PgRepository *repository.PgRepository
 	Session      string
 }
 
-func NewWorkersClient(firstWorker proto.WorkerServiceClient, secondWorker proto.WorkerServiceClient, pgRepo repository.PgRepository, session string) *WorkersClient {
+func NewWorkersClient(firstWorker proto.WorkerServiceClient, secondWorker proto.WorkerServiceClient, pgRepo *repository.PgRepository, session string) *WorkersClient {
 	return &WorkersClient{
 		FirstWorker: Worker{
 			Client:    firstWorker,

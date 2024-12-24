@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func LinearFormCalculation(matrices [][][]float64, coefficients []float64, s repository.PgRepository) (string, float64, error) {
+func LinearFormCalculation(matrices [][][]float64, coefficients []float64, s *repository.PgRepository) (string, float64, error) {
 	start := time.Now()
 	ctx := context.Background()
 	if len(matrices) == 0 || len(coefficients) == 0 {

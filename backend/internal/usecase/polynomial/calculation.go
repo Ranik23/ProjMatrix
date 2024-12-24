@@ -12,7 +12,7 @@ import (
 	"time"
 )
 
-func PolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []float64, s repository.PgRepository) (string, float64, error) {
+func PolynomialCalculation(matrix, identityMatrix [][]float64, coefficients []float64, s *repository.PgRepository) (string, float64, error) {
 	start := time.Now()
 	ctx := context.Background()
 	if len(matrix) == 0 || len(identityMatrix) == 0 {
